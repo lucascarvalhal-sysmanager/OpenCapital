@@ -13,7 +13,7 @@ import { OCSymbol, OCLogo } from "@/components/oc-logo";
 
 /* ─── Helpers ─── */
 function ColorDot({ color }: { color: string }) {
-  return <span className="inline-block h-3 w-3 shrink-0 rounded-full border border-white/10" style={{ backgroundColor: color }} />;
+  return <span className="inline-block h-3 w-3 shrink-0 rounded-full border border-black/10" style={{ backgroundColor: color }} />;
 }
 
 function SubHeading({ children }: { children: React.ReactNode }) {
@@ -93,7 +93,7 @@ export default function DesignSystemPage() {
             { name: "--gradient-text", css: "linear-gradient(90deg, #34D399 0%, #6EE7B7 100%)" },
             { name: "--gradient-surface", css: "linear-gradient(180deg, rgba(52,211,153,0.05) 0%, transparent 100%)" },
           ].map((g) => (
-            <div key={g.name} className="overflow-hidden rounded-xl border border-white/6">
+            <div key={g.name} className="overflow-hidden rounded-xl border border-black/6">
               <div className="h-16" style={{ background: g.css }} />
               <div className="bg-[var(--bg-secondary)] p-3">
                 <p className="font-mono text-xs text-[var(--color-signal-green)]">{g.name}</p>
@@ -240,10 +240,10 @@ export default function DesignSystemPage() {
       <Section id="spacing-grid" num="02" title="Spacing & Grid" subtitle="Sistema de grid fluido de 12 colunas com breakpoints responsivos, baseado na unidade espacial de 4px.">
         {/* ── Breakpoints Table ── */}
         <SubHeading>Breakpoints</SubHeading>
-        <div className="overflow-x-auto rounded-xl border border-white/6">
+        <div className="overflow-x-auto rounded-xl border border-black/6">
           <table className="w-full text-left text-sm">
             <thead>
-              <tr className="border-b border-white/6 bg-[var(--bg-secondary)]">
+              <tr className="border-b border-black/6 bg-[var(--bg-secondary)]">
                 <th className="px-4 py-3 font-mono text-xs font-bold text-[var(--color-signal-green)]">Breakpoint</th>
                 <th className="px-4 py-3 font-mono text-xs font-bold text-[var(--color-signal-green)]">Range</th>
                 <th className="px-4 py-3 font-mono text-xs font-bold text-[var(--color-signal-green)]">Columns</th>
@@ -259,7 +259,7 @@ export default function DesignSystemPage() {
                 { bp: "Desktop", range: "1024–1440px", cols: 12, gutter: "24px", margin: "64px", max: "1280px" },
                 { bp: "Wide", range: ">1440px", cols: 12, gutter: "32px", margin: "auto", max: "1440px" },
               ].map((r) => (
-                <tr key={r.bp} className="border-b border-white/6">
+                <tr key={r.bp} className="border-b border-black/6">
                   <td className="px-4 py-3 font-semibold text-[var(--text-primary)]">{r.bp}</td>
                   <td className="px-4 py-3">{r.range}</td>
                   <td className="px-4 py-3">{r.cols}</td>
@@ -287,28 +287,28 @@ export default function DesignSystemPage() {
         <SubHeading>Bento Grid</SubHeading>
         <Label>Cards de conteúdo dispostos em arranjo bento, abrangendo diferentes larguras de coluna.</Label>
         <div className="grid grid-cols-12 gap-4">
-          <div className="col-span-12 flex h-28 items-center justify-center rounded-2xl border border-white/6 bg-[var(--bg-secondary)] font-mono text-xs text-[var(--text-tertiary)] sm:col-span-8">
+          <div className="col-span-12 flex h-28 items-center justify-center rounded-2xl border border-black/6 bg-[var(--bg-secondary)] font-mono text-xs text-[var(--text-tertiary)] sm:col-span-8">
             span 8
           </div>
-          <div className="col-span-12 flex h-28 items-center justify-center rounded-2xl border border-white/6 bg-[var(--bg-secondary)] font-mono text-xs text-[var(--text-tertiary)] sm:col-span-4">
+          <div className="col-span-12 flex h-28 items-center justify-center rounded-2xl border border-black/6 bg-[var(--bg-secondary)] font-mono text-xs text-[var(--text-tertiary)] sm:col-span-4">
             span 4
           </div>
-          <div className="col-span-6 flex h-28 items-center justify-center rounded-2xl border border-white/6 bg-[var(--bg-secondary)] font-mono text-xs text-[var(--text-tertiary)] sm:col-span-4">
+          <div className="col-span-6 flex h-28 items-center justify-center rounded-2xl border border-black/6 bg-[var(--bg-secondary)] font-mono text-xs text-[var(--text-tertiary)] sm:col-span-4">
             span 4
           </div>
-          <div className="col-span-6 flex h-28 items-center justify-center rounded-2xl border border-white/6 bg-[var(--bg-secondary)] font-mono text-xs text-[var(--text-tertiary)] sm:col-span-4">
+          <div className="col-span-6 flex h-28 items-center justify-center rounded-2xl border border-black/6 bg-[var(--bg-secondary)] font-mono text-xs text-[var(--text-tertiary)] sm:col-span-4">
             span 4
           </div>
-          <div className="col-span-12 flex h-28 items-center justify-center rounded-2xl border border-white/6 bg-[var(--bg-secondary)] font-mono text-xs text-[var(--text-tertiary)] sm:col-span-4">
+          <div className="col-span-12 flex h-28 items-center justify-center rounded-2xl border border-black/6 bg-[var(--bg-secondary)] font-mono text-xs text-[var(--text-tertiary)] sm:col-span-4">
             span 4
           </div>
-          <div className="col-span-12 flex h-28 items-center justify-center rounded-2xl border border-white/6 bg-[var(--bg-secondary)] font-mono text-xs text-[var(--text-tertiary)] sm:col-span-6">
+          <div className="col-span-12 flex h-28 items-center justify-center rounded-2xl border border-black/6 bg-[var(--bg-secondary)] font-mono text-xs text-[var(--text-tertiary)] sm:col-span-6">
             span 6
           </div>
-          <div className="col-span-12 flex h-28 items-center justify-center rounded-2xl border border-white/6 bg-[var(--bg-secondary)] font-mono text-xs text-[var(--text-tertiary)] sm:col-span-6">
+          <div className="col-span-12 flex h-28 items-center justify-center rounded-2xl border border-black/6 bg-[var(--bg-secondary)] font-mono text-xs text-[var(--text-tertiary)] sm:col-span-6">
             span 6
           </div>
-          <div className="col-span-12 flex h-40 items-center justify-center rounded-2xl border border-white/6 bg-[var(--bg-secondary)] font-mono text-xs text-[var(--text-tertiary)]">
+          <div className="col-span-12 flex h-40 items-center justify-center rounded-2xl border border-black/6 bg-[var(--bg-secondary)] font-mono text-xs text-[var(--text-tertiary)]">
             span 12 — full width
           </div>
         </div>
@@ -442,13 +442,13 @@ export default function DesignSystemPage() {
           <div>
             <p className="mb-3 font-mono text-xs text-[var(--text-tertiary)]">Secondary</p>
             <div className="flex flex-wrap items-center gap-3">
-              <button className="inline-flex h-8 items-center gap-1.5 rounded-lg border border-white/12 bg-transparent px-3 text-xs font-semibold text-[var(--text-primary)] transition hover:border-white/20 hover:bg-white/5">
+              <button className="inline-flex h-8 items-center gap-1.5 rounded-lg border border-black/12 bg-transparent px-3 text-xs font-semibold text-[var(--text-primary)] transition hover:border-black/20 hover:bg-black/5">
                 Button SM
               </button>
-              <button className="inline-flex h-10 items-center gap-2 rounded-lg border border-white/12 bg-transparent px-5 text-sm font-semibold text-[var(--text-primary)] transition hover:border-white/20 hover:bg-white/5">
+              <button className="inline-flex h-10 items-center gap-2 rounded-lg border border-black/12 bg-transparent px-5 text-sm font-semibold text-[var(--text-primary)] transition hover:border-black/20 hover:bg-black/5">
                 Button MD
               </button>
-              <button className="inline-flex h-12 items-center gap-2 rounded-lg border border-white/12 bg-transparent px-6 text-sm font-semibold text-[var(--text-primary)] transition hover:border-white/20 hover:bg-white/5">
+              <button className="inline-flex h-12 items-center gap-2 rounded-lg border border-black/12 bg-transparent px-6 text-sm font-semibold text-[var(--text-primary)] transition hover:border-black/20 hover:bg-black/5">
                 Button LG
                 <ChevronRight size={16} />
               </button>
@@ -458,13 +458,13 @@ export default function DesignSystemPage() {
           <div>
             <p className="mb-3 font-mono text-xs text-[var(--text-tertiary)]">Ghost</p>
             <div className="flex flex-wrap items-center gap-3">
-              <button className="inline-flex h-8 items-center gap-1.5 rounded-lg bg-transparent px-3 text-xs font-medium text-[var(--text-secondary)] transition hover:bg-white/5 hover:text-[var(--text-primary)]">
+              <button className="inline-flex h-8 items-center gap-1.5 rounded-lg bg-transparent px-3 text-xs font-medium text-[var(--text-secondary)] transition hover:bg-black/5 hover:text-[var(--text-primary)]">
                 Button SM
               </button>
-              <button className="inline-flex h-10 items-center gap-2 rounded-lg bg-transparent px-5 text-sm font-medium text-[var(--text-secondary)] transition hover:bg-white/5 hover:text-[var(--text-primary)]">
+              <button className="inline-flex h-10 items-center gap-2 rounded-lg bg-transparent px-5 text-sm font-medium text-[var(--text-secondary)] transition hover:bg-black/5 hover:text-[var(--text-primary)]">
                 Button MD
               </button>
-              <button className="inline-flex h-12 items-center gap-2 rounded-lg bg-transparent px-6 text-sm font-medium text-[var(--text-secondary)] transition hover:bg-white/5 hover:text-[var(--text-primary)]">
+              <button className="inline-flex h-12 items-center gap-2 rounded-lg bg-transparent px-6 text-sm font-medium text-[var(--text-secondary)] transition hover:bg-black/5 hover:text-[var(--text-primary)]">
                 Button LG
               </button>
             </div>
@@ -493,12 +493,12 @@ export default function DesignSystemPage() {
 </button>
 
 {/* Secondary */}
-<button className="h-10 rounded-lg border border-white/12 px-5 text-sm font-semibold text-[var(--text-primary)]">
+<button className="h-10 rounded-lg border border-black/12 px-5 text-sm font-semibold text-[var(--text-primary)]">
   Action
 </button>
 
 {/* Ghost */}
-<button className="h-10 rounded-lg px-5 text-sm font-medium text-[var(--text-secondary)] hover:bg-white/5">
+<button className="h-10 rounded-lg px-5 text-sm font-medium text-[var(--text-secondary)] hover:bg-black/5">
   Action
 </button>
 
@@ -515,7 +515,7 @@ export default function DesignSystemPage() {
           {/* Text Input */}
           <div className="flex flex-col gap-2">
             <label className="text-xs font-medium text-[var(--text-secondary)]">Label</label>
-            <div className="flex h-10 items-center rounded-lg border border-white/10 bg-[var(--bg-secondary)] px-3 text-sm text-[var(--text-primary)] transition focus-within:border-[var(--color-signal-green)]/40">
+            <div className="flex h-10 items-center rounded-lg border border-black/10 bg-[var(--bg-secondary)] px-3 text-sm text-[var(--text-primary)] transition focus-within:border-[var(--color-signal-green)]/40">
               <span className="text-[var(--text-tertiary)]">Placeholder text</span>
             </div>
           </div>
@@ -523,7 +523,7 @@ export default function DesignSystemPage() {
           {/* Money Input */}
           <div className="flex flex-col gap-2">
             <label className="text-xs font-medium text-[var(--text-secondary)]">Valor</label>
-            <div className="flex h-10 items-center rounded-lg border border-white/10 bg-[var(--bg-secondary)] px-3 font-mono text-sm text-[var(--text-primary)]">
+            <div className="flex h-10 items-center rounded-lg border border-black/10 bg-[var(--bg-secondary)] px-3 font-mono text-sm text-[var(--text-primary)]">
               <span className="mr-2 text-[var(--text-tertiary)]">R$</span>
               <span>12.450,00</span>
             </div>
@@ -532,7 +532,7 @@ export default function DesignSystemPage() {
           {/* Search Input */}
           <div className="flex flex-col gap-2">
             <label className="text-xs font-medium text-[var(--text-secondary)]">Buscar</label>
-            <div className="flex h-10 items-center gap-2 rounded-lg border border-white/10 bg-[var(--bg-secondary)] px-3 text-sm">
+            <div className="flex h-10 items-center gap-2 rounded-lg border border-black/10 bg-[var(--bg-secondary)] px-3 text-sm">
               <Search size={14} className="text-[var(--text-tertiary)]" />
               <span className="text-[var(--text-tertiary)]">Buscar ativos...</span>
             </div>
@@ -574,7 +574,7 @@ export default function DesignSystemPage() {
         {/* ───────── BADGES ───────── */}
         <SubHeading>Badges</SubHeading>
         <div className="flex flex-wrap gap-3">
-          <span className="inline-flex items-center rounded-full bg-white/5 px-3 py-1 text-xs font-medium text-[var(--text-secondary)]">Default</span>
+          <span className="inline-flex items-center rounded-full bg-black/5 px-3 py-1 text-xs font-medium text-[var(--text-secondary)]">Default</span>
           <span className="inline-flex items-center rounded-full bg-[var(--color-profit)]/10 px-3 py-1 text-xs font-medium text-[var(--color-profit)]">Success</span>
           <span className="inline-flex items-center rounded-full bg-[var(--color-loss)]/10 px-3 py-1 text-xs font-medium text-[var(--color-loss)]">Danger</span>
           <span className="inline-flex items-center rounded-full bg-[var(--color-caution)]/10 px-3 py-1 text-xs font-medium text-[var(--color-caution)]">Warning</span>
@@ -623,7 +623,7 @@ export default function DesignSystemPage() {
         <Label>Três variantes de card para diferentes contextos de elevação.</Label>
         <div className="grid gap-6 sm:grid-cols-3">
           {/* Default */}
-          <div className="rounded-2xl border border-white/6 bg-[var(--bg-secondary)] p-6">
+          <div className="rounded-2xl border border-black/6 bg-[var(--bg-secondary)] p-6">
             <p className="mb-2 font-mono text-[10px] uppercase tracking-widest text-[var(--text-tertiary)]">Default</p>
             <h4 className="text-lg font-semibold">Título do Card</h4>
             <p className="mt-2 text-sm text-[var(--text-secondary)]">Borda sutil e fundo secundário. Usado para agrupamento padrão de conteúdo.</p>
@@ -635,7 +635,7 @@ export default function DesignSystemPage() {
             <p className="mt-2 text-sm text-[var(--text-secondary)]">Borda com glow verde para conteúdo destacado e CTAs.</p>
           </div>
           {/* Surface */}
-          <div className="rounded-2xl border border-white/6 p-6" style={{ background: "linear-gradient(180deg, rgba(52,211,153,0.05) 0%, var(--bg-secondary) 100%)" }}>
+          <div className="rounded-2xl border border-black/6 p-6" style={{ background: "linear-gradient(180deg, rgba(52,211,153,0.05) 0%, var(--bg-secondary) 100%)" }}>
             <p className="mb-2 font-mono text-[10px] uppercase tracking-widest text-[var(--text-tertiary)]">Surface</p>
             <h4 className="text-lg font-semibold">Título do Card</h4>
             <p className="mt-2 text-sm text-[var(--text-secondary)]">Overlay de gradiente na superfície para seções premium.</p>
@@ -664,12 +664,12 @@ export default function DesignSystemPage() {
 
           {/* Mini Data Table */}
           <div className="glow-card overflow-hidden rounded-2xl bg-[var(--bg-secondary)]">
-            <div className="border-b border-white/6 px-4 py-3">
+            <div className="border-b border-black/6 px-4 py-3">
               <p className="text-xs font-semibold text-[var(--text-tertiary)]">Principais Ativos</p>
             </div>
             <table className="w-full">
               <thead>
-                <tr className="border-b border-white/6 text-left text-[10px] uppercase tracking-widest text-[var(--text-tertiary)]">
+                <tr className="border-b border-black/6 text-left text-[10px] uppercase tracking-widest text-[var(--text-tertiary)]">
                   <th className="px-4 py-2">Ativo</th>
                   <th className="px-4 py-2 text-right">Preço</th>
                   <th className="px-4 py-2 text-right">Variação</th>
@@ -682,7 +682,7 @@ export default function DesignSystemPage() {
                   { asset: "PETR4", price: "R$ 38,72", change: "-0.5%", up: false },
                   { asset: "VALE3", price: "R$ 67,14", change: "+2.1%", up: true },
                 ].map((r) => (
-                  <tr key={r.asset} className="border-b border-white/6">
+                  <tr key={r.asset} className="border-b border-black/6">
                     <td className="px-4 py-2.5 font-mono font-semibold">{r.asset}</td>
                     <td className="px-4 py-2.5 text-right font-mono text-xs text-[var(--text-secondary)]">{r.price}</td>
                     <td className={`px-4 py-2.5 text-right font-mono text-xs font-semibold ${r.up ? "text-[var(--color-profit)]" : "text-[var(--color-loss)]"}`}>{r.change}</td>
@@ -723,14 +723,14 @@ export default function DesignSystemPage() {
           <div className="flex flex-col gap-3">
             <p className="font-mono text-xs text-[var(--text-tertiary)]">Modal (miniature preview)</p>
             <div className="relative flex h-64 items-center justify-center rounded-2xl bg-[var(--bg-primary)]/80 backdrop-blur-sm" style={{ border: "1px solid var(--border-default)" }}>
-              <div className="w-4/5 max-w-xs rounded-2xl border border-white/10 bg-[var(--bg-secondary)] p-5 shadow-2xl">
+              <div className="w-4/5 max-w-xs rounded-2xl border border-black/10 bg-[var(--bg-secondary)] p-5 shadow-2xl">
                 <div className="mb-1 flex items-center justify-between">
                   <h4 className="text-sm font-semibold">Confirmar operação</h4>
                   <XCircle size={14} className="text-[var(--text-tertiary)]" />
                 </div>
                 <p className="text-xs text-[var(--text-secondary)]">Deseja confirmar a compra de 100 unidades de PETR4?</p>
                 <div className="mt-4 flex gap-2">
-                  <button className="h-7 flex-1 rounded-lg border border-white/10 text-xs font-medium text-[var(--text-secondary)]">Cancelar</button>
+                  <button className="h-7 flex-1 rounded-lg border border-black/10 text-xs font-medium text-[var(--text-secondary)]">Cancelar</button>
                   <button className="h-7 flex-1 rounded-lg bg-[var(--color-signal-green)] text-xs font-semibold text-[var(--color-capital-black)]">Confirmar</button>
                 </div>
               </div>
@@ -782,7 +782,7 @@ export default function DesignSystemPage() {
         <div className="grid gap-6 sm:grid-cols-2">
           {/* Dot Grid */}
           <div className="flex flex-col gap-3">
-            <div className="flex h-40 items-center justify-center rounded-2xl border border-white/6" style={{ backgroundImage: "radial-gradient(circle, rgba(52,211,153,0.06) 1px, transparent 1px)", backgroundSize: "24px 24px" }}>
+            <div className="flex h-40 items-center justify-center rounded-2xl border border-black/6" style={{ backgroundImage: "radial-gradient(circle, rgba(52,211,153,0.06) 1px, transparent 1px)", backgroundSize: "24px 24px" }}>
               <span className="rounded-full bg-[var(--bg-primary)]/80 px-3 py-1 font-mono text-xs text-[var(--text-tertiary)]">Dot Grid</span>
             </div>
             <CodeBlock lang="CSS" code={`background-image: radial-gradient(
@@ -794,7 +794,7 @@ background-size: 24px 24px;`} />
 
           {/* Scanlines */}
           <div className="flex flex-col gap-3">
-            <div className="flex h-40 items-center justify-center rounded-2xl border border-white/6 bg-[var(--bg-secondary)]" style={{ backgroundImage: "repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(255,255,255,0.02) 3px, rgba(255,255,255,0.02) 4px)" }}>
+            <div className="flex h-40 items-center justify-center rounded-2xl border border-black/6 bg-[var(--bg-secondary)]" style={{ backgroundImage: "repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(255,255,255,0.02) 3px, rgba(255,255,255,0.02) 4px)" }}>
               <span className="rounded-full bg-[var(--bg-primary)]/80 px-3 py-1 font-mono text-xs text-[var(--text-tertiary)]">Scanlines</span>
             </div>
             <CodeBlock lang="CSS" code={`background-image: repeating-linear-gradient(
@@ -806,7 +806,7 @@ background-size: 24px 24px;`} />
 
           {/* Noise / Grain */}
           <div className="flex flex-col gap-3">
-            <div className="relative flex h-40 items-center justify-center overflow-hidden rounded-2xl border border-white/6 bg-[var(--bg-secondary)]">
+            <div className="relative flex h-40 items-center justify-center overflow-hidden rounded-2xl border border-black/6 bg-[var(--bg-secondary)]">
               <svg className="absolute inset-0 h-full w-full opacity-[0.03]">
                 <filter id="noise">
                   <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" stitchTiles="stitch" />
@@ -824,7 +824,7 @@ background-size: 24px 24px;`} />
 
           {/* Blueprint Grid */}
           <div className="flex flex-col gap-3">
-            <div className="flex h-40 items-center justify-center rounded-2xl border border-white/6 bg-[var(--bg-secondary)]" style={{ backgroundImage: "linear-gradient(rgba(52,211,153,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(52,211,153,0.04) 1px, transparent 1px)", backgroundSize: "32px 32px" }}>
+            <div className="flex h-40 items-center justify-center rounded-2xl border border-black/6 bg-[var(--bg-secondary)]" style={{ backgroundImage: "linear-gradient(rgba(52,211,153,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(52,211,153,0.04) 1px, transparent 1px)", backgroundSize: "32px 32px" }}>
               <span className="rounded-full bg-[var(--bg-primary)]/80 px-3 py-1 font-mono text-xs text-[var(--text-tertiary)]">Blueprint Grid</span>
             </div>
             <CodeBlock lang="CSS" code={`background-image:
@@ -876,14 +876,14 @@ background-size: 32px 32px;`} />
           {/* Dashed */}
           <div className="flex flex-col gap-2">
             <p className="font-mono text-xs text-[var(--text-tertiary)]">Dashed Divider</p>
-            <div className="border-t border-dashed border-white/10" />
+            <div className="border-t border-dashed border-black/10" />
           </div>
           {/* Double */}
           <div className="flex flex-col gap-2">
             <p className="font-mono text-xs text-[var(--text-tertiary)]">Double Line</p>
             <div className="space-y-1">
-              <div className="h-px bg-white/6" />
-              <div className="h-px bg-white/6" />
+              <div className="h-px bg-black/6" />
+              <div className="h-px bg-black/6" />
             </div>
           </div>
         </div>
@@ -966,10 +966,10 @@ background-size: 32px 32px;`} />
 
         {/* ── Animation Specs Table ── */}
         <SubHeading>Especificações de Animação</SubHeading>
-        <div className="overflow-x-auto rounded-xl border border-white/6">
+        <div className="overflow-x-auto rounded-xl border border-black/6">
           <table className="w-full text-left text-sm">
             <thead>
-              <tr className="border-b border-white/6 bg-[var(--bg-secondary)]">
+              <tr className="border-b border-black/6 bg-[var(--bg-secondary)]">
                 <th className="px-4 py-3 font-mono text-xs font-bold text-[var(--color-signal-green)]">Animation</th>
                 <th className="px-4 py-3 font-mono text-xs font-bold text-[var(--color-signal-green)]">Duration</th>
                 <th className="px-4 py-3 font-mono text-xs font-bold text-[var(--color-signal-green)]">Easing</th>
@@ -986,7 +986,7 @@ background-size: 32px 32px;`} />
                 { name: "Capital Reveal", dur: "800ms", ease: "ease-out", use: "Entrada de hero/seção" },
                 { name: "Shine Sweep", dur: "3000ms", ease: "linear", use: "Destaque de elemento premium" },
               ].map((a) => (
-                <tr key={a.name} className="border-b border-white/6">
+                <tr key={a.name} className="border-b border-black/6">
                   <td className="px-4 py-3 font-mono font-semibold text-[var(--text-primary)]">{a.name}</td>
                   <td className="px-4 py-3 font-mono">{a.dur}</td>
                   <td className="px-4 py-3 font-mono">{a.ease}</td>
@@ -1026,14 +1026,14 @@ background-size: 32px 32px;`} />
         <div className="grid gap-6 sm:grid-cols-2">
           {/* Dark bg */}
           <div className="flex flex-col gap-3">
-            <div className="flex h-40 items-center justify-center rounded-2xl border border-white/6 bg-[var(--bg-primary)]">
+            <div className="flex h-40 items-center justify-center rounded-2xl border border-black/6 bg-[var(--bg-primary)]">
               <OCLogo size="lg" color="var(--text-primary)" />
             </div>
             <p className="font-mono text-[10px] text-[var(--text-tertiary)]">Versão principal, fundo escuro</p>
           </div>
           {/* Light bg */}
           <div className="flex flex-col gap-3">
-            <div className="flex h-40 items-center justify-center rounded-2xl border border-white/6 bg-[var(--color-capital-white)]">
+            <div className="flex h-40 items-center justify-center rounded-2xl border border-black/6 bg-[var(--color-capital-white)]">
               <OCLogo size="lg" color="#0A0A0A" />
             </div>
             <p className="font-mono text-[10px] text-[var(--text-tertiary)]">Versão principal, fundo claro</p>
@@ -1046,7 +1046,7 @@ background-size: 32px 32px;`} />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {/* Ecossistema — Logo + Símbolo completo */}
           <div className="flex flex-col gap-3">
-            <div className="flex h-28 items-center justify-center rounded-xl border border-white/6 bg-[var(--bg-secondary)]">
+            <div className="flex h-28 items-center justify-center rounded-xl border border-black/6 bg-[var(--bg-secondary)]">
               <OCLogo size="md" color="var(--text-primary)" />
             </div>
             <div>
@@ -1056,7 +1056,7 @@ background-size: 32px 32px;`} />
           </div>
           {/* Sociedade — Apenas símbolo */}
           <div className="flex flex-col gap-3">
-            <div className="flex h-28 items-center justify-center rounded-xl border border-white/6 bg-[var(--bg-secondary)]">
+            <div className="flex h-28 items-center justify-center rounded-xl border border-black/6 bg-[var(--bg-secondary)]">
               <OCSymbol size={48} color="var(--text-primary)" />
             </div>
             <div>
@@ -1066,7 +1066,7 @@ background-size: 32px 32px;`} />
           </div>
           {/* Inteligência — Meio símbolo */}
           <div className="flex flex-col gap-3">
-            <div className="flex h-28 items-center justify-center rounded-xl border border-white/6 bg-[var(--bg-secondary)]">
+            <div className="flex h-28 items-center justify-center rounded-xl border border-black/6 bg-[var(--bg-secondary)]">
               <OCSymbol size={48} color="var(--text-primary)" variant="half" />
             </div>
             <div>
@@ -1076,7 +1076,7 @@ background-size: 32px 32px;`} />
           </div>
           {/* theCapital */}
           <div className="flex flex-col gap-3">
-            <div className="flex h-28 items-center justify-center rounded-xl border border-white/6 bg-[var(--bg-secondary)]">
+            <div className="flex h-28 items-center justify-center rounded-xl border border-black/6 bg-[var(--bg-secondary)]">
               <span className="inline-flex items-center gap-1.5">
                 <span className="text-lg font-semibold tracking-tight text-[var(--text-primary)]">theCapital</span>
                 <OCSymbol size={22} color="var(--text-primary)" />
@@ -1089,7 +1089,7 @@ background-size: 32px 32px;`} />
           </div>
           {/* theOpenCapital */}
           <div className="flex flex-col gap-3">
-            <div className="flex h-28 items-center justify-center rounded-xl border border-white/6 bg-[var(--bg-secondary)]">
+            <div className="flex h-28 items-center justify-center rounded-xl border border-black/6 bg-[var(--bg-secondary)]">
               <span className="text-lg font-semibold tracking-tight text-[var(--text-primary)]">theOpenCapital</span>
             </div>
             <div>
@@ -1099,7 +1099,7 @@ background-size: 32px 32px;`} />
           </div>
           {/* OpenCapital · AI */}
           <div className="flex flex-col gap-3">
-            <div className="flex h-28 items-center justify-center rounded-xl border border-white/6 bg-[var(--bg-secondary)]">
+            <div className="flex h-28 items-center justify-center rounded-xl border border-black/6 bg-[var(--bg-secondary)]">
               <span className="text-lg tracking-tight text-[var(--text-primary)]"><span className="font-semibold">OpenCapital</span> · AI</span>
             </div>
             <div>
@@ -1114,19 +1114,19 @@ background-size: 32px 32px;`} />
         <Label>Versões monocromáticas para contextos sem cor ou impressão.</Label>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <div className="flex flex-col gap-3">
-            <div className="flex h-28 items-center justify-center rounded-xl border border-white/6 bg-[var(--bg-primary)]">
+            <div className="flex h-28 items-center justify-center rounded-xl border border-black/6 bg-[var(--bg-primary)]">
               <OCLogo size="md" color="white" />
             </div>
             <p className="text-[10px] text-[var(--text-tertiary)]">Monocromático branco, fundos escuros</p>
           </div>
           <div className="flex flex-col gap-3">
-            <div className="flex h-28 items-center justify-center rounded-xl border border-white/6 bg-[var(--color-capital-white)]">
+            <div className="flex h-28 items-center justify-center rounded-xl border border-black/6 bg-[var(--color-capital-white)]">
               <OCLogo size="md" color="#0A0A0A" />
             </div>
             <p className="text-[10px] text-[var(--text-tertiary)]">Monocromático preto, fundos claros e impressão P&amp;B</p>
           </div>
           <div className="flex flex-col gap-3">
-            <div className="flex h-28 items-center justify-center rounded-xl border border-white/6 bg-[var(--color-capital-white)]">
+            <div className="flex h-28 items-center justify-center rounded-xl border border-black/6 bg-[var(--color-capital-white)]">
               <span className="inline-flex items-center gap-1.5 opacity-20">
                 <span className="text-lg font-semibold tracking-tight text-[#0A0A0A]">OpenCapital</span>
                 <OCSymbol size={22} color="#0A0A0A" />
@@ -1157,21 +1157,21 @@ background-size: 32px 32px;`} />
         <SubHeading>Tamanhos Mínimos</SubHeading>
         <Label>Respeitar os tamanhos mínimos garante legibilidade em todos os contextos.</Label>
         <div className="grid gap-6 sm:grid-cols-3">
-          <div className="flex flex-col items-center gap-3 rounded-xl border border-white/6 bg-[var(--bg-secondary)] p-6">
+          <div className="flex flex-col items-center gap-3 rounded-xl border border-black/6 bg-[var(--bg-secondary)] p-6">
             <OCLogo size="sm" color="var(--text-primary)" />
             <div className="text-center">
               <p className="font-mono text-xs text-[var(--color-signal-green)]">24px</p>
               <p className="text-[10px] text-[var(--text-tertiary)]">MÍN. DIGITAL (logo completo)</p>
             </div>
           </div>
-          <div className="flex flex-col items-center gap-3 rounded-xl border border-white/6 bg-[var(--bg-secondary)] p-6">
+          <div className="flex flex-col items-center gap-3 rounded-xl border border-black/6 bg-[var(--bg-secondary)] p-6">
             <OCSymbol size={16} color="var(--text-primary)" />
             <div className="text-center">
               <p className="font-mono text-xs text-[var(--color-signal-green)]">16px</p>
               <p className="text-[10px] text-[var(--text-tertiary)]">MÍN. DIGITAL (apenas símbolo)</p>
             </div>
           </div>
-          <div className="flex flex-col items-center gap-3 rounded-xl border border-white/6 bg-[var(--bg-secondary)] p-6">
+          <div className="flex flex-col items-center gap-3 rounded-xl border border-black/6 bg-[var(--bg-secondary)] p-6">
             <OCLogo size="sm" color="var(--text-primary)" />
             <div className="text-center">
               <p className="font-mono text-xs text-[var(--color-signal-green)]">8mm</p>

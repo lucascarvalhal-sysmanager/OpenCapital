@@ -23,7 +23,7 @@ export function Section({ id, num, title, subtitle, children, className }: { id:
 export function Swatch({ name, hex, textDark }: { name: string; hex: string; textDark?: boolean }) {
   return (
     <div className="flex flex-col gap-2">
-      <div className="h-24 w-full rounded-2xl border border-white/6" style={{ backgroundColor: hex }} />
+      <div className="h-24 w-full rounded-2xl border border-black/6" style={{ backgroundColor: hex }} />
       <span className={`text-sm font-medium ${textDark ? "text-[var(--text-secondary)]" : "text-[var(--text-primary)]"}`}>{name}</span>
       <span className="font-mono text-xs text-[var(--text-tertiary)]">{hex}</span>
     </div>
@@ -62,7 +62,7 @@ export function ArchetypeBar({ name, percentage, description }: { name: string; 
 /* ─── Typography Sample ─── */
 export function TypeSample({ label, size, weight, mono, text }: { label: string; size: string; weight: string; mono?: boolean; text?: string }) {
   return (
-    <div className="flex flex-col gap-1 border-b border-white/6 pb-4">
+    <div className="flex flex-col gap-1 border-b border-black/6 pb-4">
       <div className="flex items-center gap-3">
         <span className="font-mono text-xs text-[var(--text-tertiary)]">{label}</span>
         <span className="font-mono text-xs text-[var(--color-iron)]">{size} / {weight}</span>
@@ -79,7 +79,7 @@ export function AnimationDemo({ name, description, className, children }: { name
   return (
     <div className="glow-card overflow-hidden rounded-2xl bg-[var(--bg-secondary)]">
       <div className={`flex h-32 items-center justify-center ${className}`}>{children}</div>
-      <div className="border-t border-white/6 p-4">
+      <div className="border-t border-black/6 p-4">
         <p className="text-sm font-semibold">{name}</p>
         <p className="mt-1 text-xs text-[var(--text-tertiary)]">{description}</p>
       </div>
@@ -124,7 +124,7 @@ export function NamingLetter({ letter, meaning, concept }: { letter: string; mea
 /* ─── Code Block ─── */
 export function CodeBlock({ code, lang }: { code: string; lang?: string }) {
   return (
-    <div className="overflow-x-auto rounded-xl border border-white/6 bg-[var(--bg-secondary)] p-4">
+    <div className="overflow-x-auto rounded-xl border border-black/6 bg-[var(--bg-secondary)] p-4">
       <pre className="font-mono text-xs leading-relaxed text-[var(--text-secondary)]">
         {lang && <span className="mb-2 block text-[10px] font-bold uppercase tracking-widest text-[var(--text-tertiary)]">{lang}</span>}
         <code>{code}</code>
@@ -137,11 +137,11 @@ export function CodeBlock({ code, lang }: { code: string; lang?: string }) {
 export function ContrastRow({ combo, ratio, level }: { combo: string; ratio: string; level: string }) {
   const color = level === "AAA" ? "text-[var(--color-signal-green)]" : level === "AA" ? "text-[var(--color-caution)]" : "text-[var(--text-tertiary)]";
   return (
-    <div className="flex items-center justify-between border-b border-white/6 py-3">
+    <div className="flex items-center justify-between border-b border-black/6 py-3">
       <span className="text-sm text-[var(--text-secondary)]">{combo}</span>
       <div className="flex items-center gap-3">
         <span className="font-mono text-xs text-[var(--text-tertiary)]">{ratio}</span>
-        <span className={`rounded-full bg-white/5 px-2 py-0.5 font-mono text-[10px] font-bold ${color}`}>{level}</span>
+        <span className={`rounded-full bg-black/5 px-2 py-0.5 font-mono text-[10px] font-bold ${color}`}>{level}</span>
       </div>
     </div>
   );
@@ -150,7 +150,7 @@ export function ContrastRow({ combo, ratio, level }: { combo: string; ratio: str
 /* ─── Token Row ─── */
 export function TokenRow({ name, value, preview }: { name: string; value: string; preview?: React.ReactNode }) {
   return (
-    <div className="flex items-center gap-4 border-b border-white/6 py-2.5">
+    <div className="flex items-center gap-4 border-b border-black/6 py-2.5">
       <span className="w-36 shrink-0 font-mono text-xs text-[var(--color-signal-green)]">{name}</span>
       <span className="font-mono text-xs text-[var(--text-tertiary)]">{value}</span>
       {preview && <div className="ml-auto">{preview}</div>}

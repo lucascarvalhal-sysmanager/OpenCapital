@@ -22,7 +22,7 @@ function BackgroundCard({ bg, label, rule, logoColor }: { bg: string; label: str
       <div className="flex h-32 items-center justify-center px-6" style={{ background: bg }}>
         <OCLogo size="md" color={logoColor} />
       </div>
-      <div className="border-t border-white/6 bg-[var(--bg-secondary)] p-4">
+      <div className="border-t border-black/6 bg-[var(--bg-secondary)] p-4">
         <p className="text-xs font-semibold">{label}</p>
         <p className="mt-1 text-[10px] text-[var(--text-tertiary)]">{rule}</p>
       </div>
@@ -34,7 +34,7 @@ function BackgroundCard({ bg, label, rule, logoColor }: { bg: string; label: str
 function GradientSwatch({ name, css }: { name: string; css: string }) {
   return (
     <div className="flex flex-col gap-2">
-      <div className="h-24 w-full rounded-2xl border border-white/6" style={{ background: css }} />
+      <div className="h-24 w-full rounded-2xl border border-black/6" style={{ background: css }} />
       <span className="text-sm font-medium">{name}</span>
       <span className="font-mono text-[10px] leading-relaxed text-[var(--text-tertiary)]">{css}</span>
     </div>
@@ -118,11 +118,11 @@ export default function IdentidadeVisualPage() {
           <div className="glow-card flex flex-col gap-6 rounded-2xl bg-[var(--bg-secondary)] p-8">
             <h3 className="text-sm font-semibold text-[var(--color-signal-green)]">Regras de Uso</h3>
             <div className="space-y-4">
-              <div className="flex items-start gap-3 border-b border-white/6 pb-4">
+              <div className="flex items-start gap-3 border-b border-black/6 pb-4">
                 <span className="font-mono text-xs text-[var(--color-signal-green)]">SAFE ZONE</span>
                 <span className="text-sm text-[var(--text-secondary)]">Mínimo de 1x a altura do símbolo em todas as direções. Nenhum elemento pode invadir essa área.</span>
               </div>
-              <div className="flex items-start gap-3 border-b border-white/6 pb-4">
+              <div className="flex items-start gap-3 border-b border-black/6 pb-4">
                 <span className="font-mono text-xs text-[var(--color-signal-green)]">MÍN. DIGITAL</span>
                 <span className="text-sm text-[var(--text-secondary)]">24 px de altura do símbolo para telas digitais.</span>
               </div>
@@ -227,7 +227,7 @@ export default function IdentidadeVisualPage() {
             <TypeSample label="Body" size="16px" weight="Regular" />
             <TypeSample label="Body Small" size="14px" weight="Regular" />
             <TypeSample label="Caption" size="12px" weight="Medium" />
-            <div className="flex flex-col gap-1 border-b border-white/6 pb-4">
+            <div className="flex flex-col gap-1 border-b border-black/6 pb-4">
               <div className="flex items-center gap-3">
                 <span className="font-mono text-xs text-[var(--text-tertiary)]">Overline</span>
                 <span className="font-mono text-xs text-[var(--color-iron)]">11px / Bold</span>
@@ -299,15 +299,15 @@ export default function IdentidadeVisualPage() {
             <div className="glow-card rounded-2xl bg-[var(--bg-secondary)] p-6">
               <h3 className="mb-4 font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-green)]">Diretrizes de Estilo</h3>
               <div className="space-y-4">
-                <div className="border-b border-white/6 pb-3">
+                <div className="border-b border-black/6 pb-3">
                   <span className="text-xs font-semibold text-[var(--text-primary)]">Tom</span>
                   <p className="mt-1 text-sm text-[var(--text-secondary)]">Dark, atmosférico, tecnológico</p>
                 </div>
-                <div className="border-b border-white/6 pb-3">
+                <div className="border-b border-black/6 pb-3">
                   <span className="text-xs font-semibold text-[var(--text-primary)]">Tratamento</span>
                   <p className="mt-1 text-sm text-[var(--text-secondary)]">Alto contraste, desaturado com acentos verdes</p>
                 </div>
-                <div className="border-b border-white/6 pb-3">
+                <div className="border-b border-black/6 pb-3">
                   <span className="text-xs font-semibold text-[var(--text-primary)]">Temas</span>
                   <p className="mt-1 text-sm text-[var(--text-secondary)]">Dados, tecnologia, cidades à noite, terminais, gráficos</p>
                 </div>
@@ -331,7 +331,7 @@ export default function IdentidadeVisualPage() {
                   ))}
                 </div>
               </div>
-              <div className="border-t border-white/6 bg-[var(--bg-secondary)] p-4">
+              <div className="border-t border-black/6 bg-[var(--bg-secondary)] p-4">
                 <p className="text-xs font-semibold">Tratamento aplicado</p>
                 <p className="mt-1 text-[10px] text-[var(--text-tertiary)]">saturate(0.3) + contrast(1.2) + green overlay</p>
               </div>

@@ -33,7 +33,7 @@ export default function AplicacoesPage() {
             <span className="font-mono text-[10px] uppercase tracking-widest text-[var(--text-tertiary)]">
               Cartão de Visita · Frente
             </span>
-            <div className="glow-card flex aspect-[1.75/1] flex-col items-center justify-center rounded-2xl border border-white/6 bg-[var(--bg-secondary)] p-8">
+            <div className="glow-card flex aspect-[1.75/1] flex-col items-center justify-center rounded-2xl border border-black/6 bg-[var(--bg-secondary)] p-8">
               <div className="flex items-center gap-2.5">
                 <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[var(--color-signal-green)]/10">
                   <Activity size={18} className="text-[var(--color-signal-green)]" />
@@ -50,7 +50,7 @@ export default function AplicacoesPage() {
             <span className="font-mono text-[10px] uppercase tracking-widest text-[var(--text-tertiary)]">
               Cartão de Visita · Verso
             </span>
-            <div className="glow-card flex aspect-[1.75/1] flex-col justify-between rounded-2xl border border-white/6 bg-[var(--bg-secondary)] p-8">
+            <div className="glow-card flex aspect-[1.75/1] flex-col justify-between rounded-2xl border border-black/6 bg-[var(--bg-secondary)] p-8">
               <div>
                 <p className="text-lg font-bold">Maria Silva</p>
                 <p className="mt-0.5 text-sm text-[var(--color-signal-green)]">Head of Product</p>
@@ -77,7 +77,7 @@ export default function AplicacoesPage() {
             <span className="font-mono text-[10px] uppercase tracking-widest text-[var(--text-tertiary)]">
               Assinatura de Email
             </span>
-            <div className="glow-card rounded-2xl border border-white/6 bg-[var(--bg-secondary)] p-6">
+            <div className="glow-card rounded-2xl border border-black/6 bg-[var(--bg-secondary)] p-6">
               <div className="flex items-start gap-4">
                 <div className="h-full w-0.5 shrink-0 rounded-full bg-[var(--color-signal-green)]" />
                 <div className="space-y-1">
@@ -104,7 +104,7 @@ export default function AplicacoesPage() {
             <span className="font-mono text-[10px] uppercase tracking-widest text-[var(--text-tertiary)]">
               Cabeçalho do Site
             </span>
-            <div className="glow-card flex items-center justify-between rounded-2xl border border-white/6 bg-[var(--bg-secondary)] px-8 py-5">
+            <div className="glow-card flex items-center justify-between rounded-2xl border border-black/6 bg-[var(--bg-secondary)] px-8 py-5">
               <div className="flex items-center gap-2">
                 <Activity size={16} className="text-[var(--color-signal-green)]" />
                 <span className="font-mono text-xs font-bold uppercase tracking-[0.2em]">
@@ -126,7 +126,7 @@ export default function AplicacoesPage() {
             <span className="font-mono text-[10px] uppercase tracking-widest text-[var(--text-tertiary)]">
               Papel Timbrado
             </span>
-            <div className="glow-card rounded-2xl border border-white/6 bg-[var(--bg-secondary)] p-10">
+            <div className="glow-card rounded-2xl border border-black/6 bg-[var(--bg-secondary)] p-10">
               <div className="flex items-center gap-2.5">
                 <Activity size={16} className="text-[var(--color-signal-green)]" />
                 <span className="text-base font-bold tracking-tight">
@@ -138,10 +138,10 @@ export default function AplicacoesPage() {
                 São Paulo, 6 de março de 2026
               </p>
               <div className="mt-8 space-y-2">
-                <div className="h-2 w-3/4 rounded bg-white/4" />
-                <div className="h-2 w-5/6 rounded bg-white/4" />
-                <div className="h-2 w-2/3 rounded bg-white/4" />
-                <div className="h-2 w-4/5 rounded bg-white/4" />
+                <div className="h-2 w-3/4 rounded bg-black/4" />
+                <div className="h-2 w-5/6 rounded bg-black/4" />
+                <div className="h-2 w-2/3 rounded bg-black/4" />
+                <div className="h-2 w-4/5 rounded bg-black/4" />
               </div>
             </div>
           </div>
@@ -163,7 +163,7 @@ export default function AplicacoesPage() {
             <span className="font-mono text-[10px] uppercase tracking-widest text-[var(--text-tertiary)]">
               Instagram Post · 1:1
             </span>
-            <div className="glow-card flex aspect-square flex-col justify-between rounded-2xl border border-white/6 bg-[var(--bg-secondary)] p-8">
+            <div className="glow-card flex aspect-square flex-col justify-between rounded-2xl border border-black/6 bg-[var(--bg-secondary)] p-8">
               <Instagram size={20} className="text-[var(--text-tertiary)]" />
               <div className="space-y-3">
                 <p className="text-2xl font-bold leading-tight">
@@ -189,7 +189,7 @@ export default function AplicacoesPage() {
             <span className="font-mono text-[10px] uppercase tracking-widest text-[var(--text-tertiary)]">
               LinkedIn Banner · 4:1
             </span>
-            <div className="glow-card flex aspect-[4/1] items-center justify-between rounded-2xl border border-white/6 bg-[var(--bg-secondary)] px-10">
+            <div className="glow-card flex aspect-[4/1] items-center justify-between rounded-2xl border border-black/6 bg-[var(--bg-secondary)] px-10">
               <div className="space-y-1.5">
                 <div className="flex items-center gap-2">
                   <Activity size={16} className="text-[var(--color-signal-green)]" />
@@ -205,7 +205,7 @@ export default function AplicacoesPage() {
                 {["IA", "Dados", "Finanças"].map((tag) => (
                   <span
                     key={tag}
-                    className="rounded-full border border-white/10 px-3 py-1 font-mono text-[10px] text-[var(--text-tertiary)]"
+                    className="rounded-full border border-black/10 px-3 py-1 font-mono text-[10px] text-[var(--text-tertiary)]"
                   >
                     {tag}
                   </span>
@@ -219,7 +219,7 @@ export default function AplicacoesPage() {
             <span className="font-mono text-[10px] uppercase tracking-widest text-[var(--text-tertiary)]">
               Twitter/X Header · 3:1
             </span>
-            <div className="glow-card flex aspect-[3/1] items-center justify-center rounded-2xl border border-white/6 bg-[var(--bg-secondary)] px-10">
+            <div className="glow-card flex aspect-[3/1] items-center justify-center rounded-2xl border border-black/6 bg-[var(--bg-secondary)] px-10">
               <div className="flex items-center gap-4">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--color-signal-green)]/10">
                   <Activity size={24} className="text-[var(--color-signal-green)]" />
@@ -253,7 +253,7 @@ export default function AplicacoesPage() {
             <span className="font-mono text-[10px] uppercase tracking-widest text-[var(--text-tertiary)]">
               Slide · Título
             </span>
-            <div className="glow-card flex aspect-video flex-col items-center justify-center rounded-2xl border border-white/6 bg-[var(--bg-secondary)] p-12 text-center">
+            <div className="glow-card flex aspect-video flex-col items-center justify-center rounded-2xl border border-black/6 bg-[var(--bg-secondary)] p-12 text-center">
               <span className="text-4xl font-bold tracking-tight md:text-6xl">
                 OPEN<span className="text-[var(--color-signal-green)]">CAPITAL</span>
               </span>
@@ -269,7 +269,7 @@ export default function AplicacoesPage() {
             <span className="font-mono text-[10px] uppercase tracking-widest text-[var(--text-tertiary)]">
               Slide · Conteúdo
             </span>
-            <div className="glow-card flex aspect-video flex-col justify-between rounded-2xl border border-white/6 bg-[var(--bg-secondary)] p-10 md:p-14">
+            <div className="glow-card flex aspect-video flex-col justify-between rounded-2xl border border-black/6 bg-[var(--bg-secondary)] p-10 md:p-14">
               <div className="grid gap-8 md:grid-cols-3">
                 {[
                   {
@@ -297,7 +297,7 @@ export default function AplicacoesPage() {
                   </div>
                 ))}
               </div>
-              <div className="flex items-center justify-center gap-6 border-t border-white/6 pt-6">
+              <div className="flex items-center justify-center gap-6 border-t border-black/6 pt-6">
                 {["2.4M+ Data Points", "99.9% Uptime", "<50ms Latência"].map((stat) => (
                   <span key={stat} className="font-mono text-xs text-[var(--color-signal-green)]">
                     {stat}
@@ -312,7 +312,7 @@ export default function AplicacoesPage() {
             <span className="font-mono text-[10px] uppercase tracking-widest text-[var(--text-tertiary)]">
               Slide · Encerramento
             </span>
-            <div className="glow-card flex aspect-video flex-col items-center justify-center rounded-2xl border border-white/6 bg-[var(--bg-secondary)] p-12 text-center">
+            <div className="glow-card flex aspect-video flex-col items-center justify-center rounded-2xl border border-black/6 bg-[var(--bg-secondary)] p-12 text-center">
               <p className="text-2xl font-bold md:text-3xl">
                 Comece a operar com dados.
               </p>
@@ -347,7 +347,7 @@ export default function AplicacoesPage() {
             <span className="font-mono text-[10px] uppercase tracking-widest text-[var(--text-tertiary)]">
               Camiseta
             </span>
-            <div className="glow-card flex aspect-square flex-col items-center justify-center rounded-2xl border border-white/6 bg-[var(--bg-secondary)] p-8">
+            <div className="glow-card flex aspect-square flex-col items-center justify-center rounded-2xl border border-black/6 bg-[var(--bg-secondary)] p-8">
               <div className="flex h-32 w-28 flex-col items-center justify-center rounded-lg bg-[var(--bg-tertiary)]">
                 <span className="text-sm font-bold tracking-tight">
                   Open<span className="text-[var(--color-signal-green)]">Capital</span>
@@ -362,7 +362,7 @@ export default function AplicacoesPage() {
             <span className="font-mono text-[10px] uppercase tracking-widest text-[var(--text-tertiary)]">
               Adesivo
             </span>
-            <div className="glow-card flex aspect-square flex-col items-center justify-center rounded-2xl border border-white/6 bg-[var(--bg-secondary)] p-8">
+            <div className="glow-card flex aspect-square flex-col items-center justify-center rounded-2xl border border-black/6 bg-[var(--bg-secondary)] p-8">
               <div className="flex h-24 w-24 items-center justify-center rounded-full bg-[var(--bg-tertiary)]">
                 <Activity size={32} className="text-[var(--color-signal-green)]" />
               </div>
@@ -375,8 +375,8 @@ export default function AplicacoesPage() {
             <span className="font-mono text-[10px] uppercase tracking-widest text-[var(--text-tertiary)]">
               Caderno
             </span>
-            <div className="glow-card flex aspect-square flex-col items-center justify-center rounded-2xl border border-white/6 bg-[var(--bg-secondary)] p-8">
-              <div className="flex h-36 w-24 flex-col items-center justify-end rounded-lg border border-white/6 bg-[var(--bg-tertiary)] p-4">
+            <div className="glow-card flex aspect-square flex-col items-center justify-center rounded-2xl border border-black/6 bg-[var(--bg-secondary)] p-8">
+              <div className="flex h-36 w-24 flex-col items-center justify-end rounded-lg border border-black/6 bg-[var(--bg-tertiary)] p-4">
                 <span className="font-mono text-[8px] uppercase leading-tight tracking-[0.15em] text-[var(--text-tertiary)]">
                   The
                   <br />
@@ -392,8 +392,8 @@ export default function AplicacoesPage() {
             <span className="font-mono text-[10px] uppercase tracking-widest text-[var(--text-tertiary)]">
               Caneca
             </span>
-            <div className="glow-card flex aspect-square flex-col items-center justify-center rounded-2xl border border-white/6 bg-[var(--bg-secondary)] p-8">
-              <div className="flex h-24 w-20 items-center justify-center rounded-lg border-2 border-white/10 bg-[var(--bg-tertiary)]">
+            <div className="glow-card flex aspect-square flex-col items-center justify-center rounded-2xl border border-black/6 bg-[var(--bg-secondary)] p-8">
+              <div className="flex h-24 w-20 items-center justify-center rounded-lg border-2 border-black/10 bg-[var(--bg-tertiary)]">
                 <span className="text-[10px] font-bold tracking-tight">
                   Open<span className="text-[var(--color-signal-green)]">Capital</span>
                 </span>
@@ -419,7 +419,7 @@ export default function AplicacoesPage() {
             <span className="font-mono text-[10px] uppercase tracking-widest text-[var(--text-tertiary)]">
               Website · Hero
             </span>
-            <div className="glow-card rounded-2xl border border-white/6 bg-[var(--bg-secondary)]">
+            <div className="glow-card rounded-2xl border border-black/6 bg-[var(--bg-secondary)]">
               <div className="flex flex-col items-center justify-center px-8 py-16 text-center md:py-24">
                 <h3 className="max-w-2xl text-2xl font-bold leading-tight md:text-4xl">
                   The infrastructure for the new financial intelligence.
@@ -440,7 +440,7 @@ export default function AplicacoesPage() {
             <span className="font-mono text-[10px] uppercase tracking-widest text-[var(--text-tertiary)]">
               Website · Serviços
             </span>
-            <div className="glow-card rounded-2xl border border-white/6 bg-[var(--bg-secondary)] p-8 md:p-12">
+            <div className="glow-card rounded-2xl border border-black/6 bg-[var(--bg-secondary)] p-8 md:p-12">
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                 {[
                   { num: "01", icon: Brain, title: "Inteligência com IA" },
@@ -448,7 +448,7 @@ export default function AplicacoesPage() {
                   { num: "03", icon: Zap, title: "Analytics em Tempo Real" },
                   { num: "04", icon: Shield, title: "Gestão de Risco" },
                 ].map((svc) => (
-                  <div key={svc.num} className="group space-y-3 rounded-xl border border-white/6 bg-[var(--bg-tertiary)] p-5 transition hover:border-[var(--color-signal-green)]/30">
+                  <div key={svc.num} className="group space-y-3 rounded-xl border border-black/6 bg-[var(--bg-tertiary)] p-5 transition hover:border-[var(--color-signal-green)]/30">
                     <span className="font-mono text-xs text-[var(--color-signal-green)]">{svc.num}</span>
                     <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[var(--color-signal-green)]/10">
                       <svc.icon size={18} className="text-[var(--color-signal-green)]" />
@@ -466,7 +466,7 @@ export default function AplicacoesPage() {
             <span className="font-mono text-[10px] uppercase tracking-widest text-[var(--text-tertiary)]">
               Website · Sobre
             </span>
-            <div className="glow-card rounded-2xl border border-white/6 bg-[var(--bg-secondary)] p-8 md:p-12">
+            <div className="glow-card rounded-2xl border border-black/6 bg-[var(--bg-secondary)] p-8 md:p-12">
               <div className="flex flex-col items-center justify-center gap-6 text-center">
                 <p className="text-sm uppercase tracking-widest text-[var(--text-tertiary)]">Métricas Principais</p>
                 <div className="flex flex-wrap items-center justify-center gap-8">
@@ -502,7 +502,7 @@ export default function AplicacoesPage() {
           <span className="font-mono text-[10px] uppercase tracking-widest text-[var(--text-tertiary)]">
             Template de Newsletter
           </span>
-          <div className="glow-card overflow-hidden rounded-2xl border border-white/6">
+          <div className="glow-card overflow-hidden rounded-2xl border border-black/6">
             {/* Header */}
             <div className="flex items-center justify-between bg-[var(--bg-secondary)] px-8 py-6">
               <div className="flex items-center gap-2">
@@ -522,9 +522,9 @@ export default function AplicacoesPage() {
                 para operações automatizadas. Confira os principais insights abaixo.
               </p>
               <div className="mt-4 space-y-2">
-                <div className="h-2 w-full rounded bg-white/4" />
-                <div className="h-2 w-5/6 rounded bg-white/4" />
-                <div className="h-2 w-3/4 rounded bg-white/4" />
+                <div className="h-2 w-full rounded bg-black/4" />
+                <div className="h-2 w-5/6 rounded bg-black/4" />
+                <div className="h-2 w-3/4 rounded bg-black/4" />
               </div>
               <div className="mt-8 flex justify-center">
                 <span className="inline-flex items-center gap-2 rounded-full bg-[var(--color-signal-green)] px-6 py-2.5 text-sm font-semibold text-[var(--bg-primary)]">

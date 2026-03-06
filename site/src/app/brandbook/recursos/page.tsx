@@ -83,7 +83,7 @@ export default function RecursosPage() {
           {downloads.map((item) => (
             <div
               key={item.name}
-              className="glow-card group flex items-start gap-4 rounded-2xl border border-white/6 bg-[var(--bg-secondary)] p-5 transition"
+              className="glow-card group flex items-start gap-4 rounded-2xl border border-black/6 bg-[var(--bg-secondary)] p-5 transition"
             >
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--color-signal-green)]/10">
                 <Download size={18} className="text-[var(--color-signal-green)]" />
@@ -94,7 +94,7 @@ export default function RecursosPage() {
                   <FileTypeBadge type={item.icon} />
                 </div>
                 <p className="text-xs leading-relaxed text-[var(--text-tertiary)]">{item.description}</p>
-                <span className="mt-3 inline-block rounded-full border border-white/10 px-2.5 py-0.5 font-mono text-[10px] font-medium text-[var(--text-tertiary)]">
+                <span className="mt-3 inline-block rounded-full border border-black/10 px-2.5 py-0.5 font-mono text-[10px] font-medium text-[var(--text-tertiary)]">
                   Em breve
                 </span>
               </div>
@@ -140,7 +140,7 @@ export default function RecursosPage() {
 
       {/* ━━━ 03 — Changelog ━━━ */}
       <Section id="changelog" num="03" title="Changelog" subtitle="Histórico de versões do Brandbook e evolução da identidade visual.">
-        <div className="relative border-l-2 border-white/6 pl-8">
+        <div className="relative border-l-2 border-black/6 pl-8">
           {changelog.map((entry) => (
             <div key={entry.version} className="relative pb-12 last:pb-0">
               {/* Timeline dot */}
@@ -152,7 +152,7 @@ export default function RecursosPage() {
 
               <div
                 className={`rounded-2xl border bg-[var(--bg-secondary)] p-6 ${
-                  entry.current ? "border-[var(--color-signal-green)]/30" : "border-white/6"
+                  entry.current ? "border-[var(--color-signal-green)]/30" : "border-black/6"
                 }`}
               >
                 <div className="mb-4 flex items-center gap-3">
@@ -187,7 +187,7 @@ export default function RecursosPage() {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="glow-card group flex items-start justify-between gap-4 rounded-2xl border border-white/6 bg-[var(--bg-secondary)] p-5 transition hover:border-[var(--color-signal-green)]/20"
+              className="glow-card group flex items-start justify-between gap-4 rounded-2xl border border-black/6 bg-[var(--bg-secondary)] p-5 transition hover:border-[var(--color-signal-green)]/20"
             >
               <div>
                 <h3 className="mb-1 text-sm font-semibold transition group-hover:text-[var(--color-signal-green)]">{link.name}</h3>
