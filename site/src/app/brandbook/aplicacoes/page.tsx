@@ -1,6 +1,6 @@
 import { Section } from "@/components/brandbook-shared";
+import { OCSymbol, OCLogo } from "@/components/oc-logo";
 import {
-  Activity,
   ArrowUpRight,
   Mail,
   Phone,
@@ -34,14 +34,7 @@ export default function AplicacoesPage() {
               Cartão de Visita · Frente
             </span>
             <div className="glow-card flex aspect-[1.75/1] flex-col items-center justify-center rounded-2xl border border-black/6 bg-[var(--bg-secondary)] p-8">
-              <div className="flex items-center gap-2.5">
-                <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[var(--color-signal-green)]/10">
-                  <Activity size={18} className="text-[var(--color-signal-green)]" />
-                </div>
-                <span className="text-xl font-bold tracking-tight">
-                  Open<span className="text-[var(--color-signal-green)]">Capital</span>
-                </span>
-              </div>
+              <OCLogo size="md" color="var(--text-primary)" />
             </div>
           </div>
 
@@ -106,7 +99,7 @@ export default function AplicacoesPage() {
             </span>
             <div className="glow-card flex items-center justify-between rounded-2xl border border-black/6 bg-[var(--bg-secondary)] px-8 py-5">
               <div className="flex items-center gap-2">
-                <Activity size={16} className="text-[var(--color-signal-green)]" />
+                <OCSymbol size={16} color="var(--color-signal-green)" />
                 <span className="font-mono text-xs font-bold uppercase tracking-[0.2em]">
                   OpenCapital{" "}
                   <span className="text-[var(--text-tertiary)]">&mdash;</span>{" "}
@@ -127,12 +120,7 @@ export default function AplicacoesPage() {
               Papel Timbrado
             </span>
             <div className="glow-card rounded-2xl border border-black/6 bg-[var(--bg-secondary)] p-10">
-              <div className="flex items-center gap-2.5">
-                <Activity size={16} className="text-[var(--color-signal-green)]" />
-                <span className="text-base font-bold tracking-tight">
-                  Open<span className="text-[var(--color-signal-green)]">Capital</span>
-                </span>
-              </div>
+              <OCLogo size="sm" color="var(--text-primary)" />
               <div className="my-5 h-px w-16 bg-[var(--color-signal-green)]" />
               <p className="text-sm text-[var(--text-tertiary)]">
                 São Paulo, 6 de março de 2026
@@ -175,12 +163,7 @@ export default function AplicacoesPage() {
                   Dados agora podem operar por você.
                 </p>
               </div>
-              <div className="flex items-center gap-2">
-                <Activity size={14} className="text-[var(--color-signal-green)]" />
-                <span className="text-xs font-bold tracking-tight">
-                  Open<span className="text-[var(--color-signal-green)]">Capital</span>
-                </span>
-              </div>
+              <OCLogo size="sm" color="var(--text-primary)" />
             </div>
           </div>
 
@@ -191,14 +174,9 @@ export default function AplicacoesPage() {
             </span>
             <div className="glow-card flex aspect-[4/1] items-center justify-between rounded-2xl border border-black/6 bg-[var(--bg-secondary)] px-10">
               <div className="space-y-1.5">
-                <div className="flex items-center gap-2">
-                  <Activity size={16} className="text-[var(--color-signal-green)]" />
-                  <span className="text-lg font-bold tracking-tight">
-                    Open<span className="text-[var(--color-signal-green)]">Capital</span>
-                  </span>
-                </div>
+                <OCLogo size="md" color="var(--text-primary)" />
                 <p className="max-w-md text-xs text-[var(--text-secondary)]">
-                  The infrastructure for the new financial intelligence.
+                  A infraestrutura da nova inteligência financeira.
                 </p>
               </div>
               <div className="flex items-center gap-2">
@@ -222,14 +200,12 @@ export default function AplicacoesPage() {
             <div className="glow-card flex aspect-[3/1] items-center justify-center rounded-2xl border border-black/6 bg-[var(--bg-secondary)] px-10">
               <div className="flex items-center gap-4">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--color-signal-green)]/10">
-                  <Activity size={24} className="text-[var(--color-signal-green)]" />
+                  <OCSymbol size={24} color="var(--color-signal-green)" />
                 </div>
                 <div>
-                  <span className="text-2xl font-bold tracking-tight">
-                    Open<span className="text-[var(--color-signal-green)]">Capital</span>
-                  </span>
+                  <span className="text-2xl font-bold tracking-tight">OpenCapital</span>
                   <p className="text-xs text-[var(--text-tertiary)]">
-                    The infrastructure for the new financial intelligence.
+                    A infraestrutura da nova inteligência financeira.
                   </p>
                 </div>
               </div>
@@ -254,9 +230,7 @@ export default function AplicacoesPage() {
               Slide · Título
             </span>
             <div className="glow-card flex aspect-video flex-col items-center justify-center rounded-2xl border border-black/6 bg-[var(--bg-secondary)] p-12 text-center">
-              <span className="text-4xl font-bold tracking-tight md:text-6xl">
-                OPEN<span className="text-[var(--color-signal-green)]">CAPITAL</span>
-              </span>
+              <OCLogo size="lg" color="var(--text-primary)" />
               <p className="mt-4 max-w-lg text-sm text-[var(--text-secondary)] md:text-base">
                 A infraestrutura da nova inteligência financeira
               </p>
@@ -321,11 +295,8 @@ export default function AplicacoesPage() {
                 <p className="font-mono text-xs">+55 11 99999-9999</p>
                 <p>theopencapital.org</p>
               </div>
-              <div className="mt-6 flex items-center gap-2">
-                <Activity size={14} className="text-[var(--color-signal-green)]" />
-                <span className="text-sm font-bold tracking-tight">
-                  Open<span className="text-[var(--color-signal-green)]">Capital</span>
-                </span>
+              <div className="mt-6">
+                <OCLogo size="sm" color="var(--text-primary)" />
               </div>
             </div>
           </div>
@@ -349,9 +320,7 @@ export default function AplicacoesPage() {
             </span>
             <div className="glow-card flex aspect-square flex-col items-center justify-center rounded-2xl border border-black/6 bg-[var(--bg-secondary)] p-8">
               <div className="flex h-32 w-28 flex-col items-center justify-center rounded-lg bg-[var(--bg-tertiary)]">
-                <span className="text-sm font-bold tracking-tight">
-                  Open<span className="text-[var(--color-signal-green)]">Capital</span>
-                </span>
+                <OCLogo size="sm" color="var(--text-primary)" />
               </div>
               <p className="mt-4 text-xs text-[var(--text-tertiary)]">Algodão escuro, logo branco</p>
             </div>
@@ -364,7 +333,7 @@ export default function AplicacoesPage() {
             </span>
             <div className="glow-card flex aspect-square flex-col items-center justify-center rounded-2xl border border-black/6 bg-[var(--bg-secondary)] p-8">
               <div className="flex h-24 w-24 items-center justify-center rounded-full bg-[var(--bg-tertiary)]">
-                <Activity size={32} className="text-[var(--color-signal-green)]" />
+                <OCSymbol size={32} color="var(--color-signal-green)" />
               </div>
               <p className="mt-4 text-xs text-[var(--text-tertiary)]">Símbolo Signal Green, fundo escuro</p>
             </div>
@@ -394,9 +363,7 @@ export default function AplicacoesPage() {
             </span>
             <div className="glow-card flex aspect-square flex-col items-center justify-center rounded-2xl border border-black/6 bg-[var(--bg-secondary)] p-8">
               <div className="flex h-24 w-20 items-center justify-center rounded-lg border-2 border-black/10 bg-[var(--bg-tertiary)]">
-                <span className="text-[10px] font-bold tracking-tight">
-                  Open<span className="text-[var(--color-signal-green)]">Capital</span>
-                </span>
+                <OCLogo size="sm" color="var(--text-primary)" />
               </div>
               <p className="mt-4 text-xs text-[var(--text-tertiary)]">Wordmark minimalista</p>
             </div>
@@ -422,7 +389,7 @@ export default function AplicacoesPage() {
             <div className="glow-card rounded-2xl border border-black/6 bg-[var(--bg-secondary)]">
               <div className="flex flex-col items-center justify-center px-8 py-16 text-center md:py-24">
                 <h3 className="max-w-2xl text-2xl font-bold leading-tight md:text-4xl">
-                  The infrastructure for the new financial intelligence.
+                  A infraestrutura da nova inteligência financeira.
                 </h3>
                 <p className="mt-4 max-w-lg text-sm text-[var(--text-secondary)]">
                   A infraestrutura mudou. Quem opera com dados vence.
@@ -505,12 +472,7 @@ export default function AplicacoesPage() {
           <div className="glow-card overflow-hidden rounded-2xl border border-black/6">
             {/* Header */}
             <div className="flex items-center justify-between bg-[var(--bg-secondary)] px-8 py-6">
-              <div className="flex items-center gap-2">
-                <Activity size={16} className="text-[var(--color-signal-green)]" />
-                <span className="text-sm font-bold tracking-tight">
-                  Open<span className="text-[var(--color-signal-green)]">Capital</span>
-                </span>
-              </div>
+              <OCLogo size="sm" color="var(--text-primary)" />
               <span className="font-mono text-[10px] text-[var(--text-tertiary)]">Mar 2026</span>
             </div>
 
