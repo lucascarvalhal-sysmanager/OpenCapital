@@ -141,7 +141,7 @@ export default function IdentidadeVisualPage() {
           <BackgroundCard bg="linear-gradient(180deg, #0A0A0A 0%, #2A2A2A 100%)" label="Capital White" rule="Fundos escuros (#0A0A0A a #2A2A2A), usar Capital White ou Signal Green" logoColor="#F5F5F0" />
           <BackgroundCard bg="linear-gradient(180deg, #F5F5F0 0%, #FFFFFF 100%)" label="Capital Black" rule="Fundos claros (#F5F5F0 a #FFFFFF), usar Capital Black" logoColor="#0A0A0A" />
           <BackgroundCard bg="url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22><rect fill=%22%23333%22 width=%22100%22 height=%22100%22/><circle fill=%22%23444%22 cx=%2250%22 cy=%2250%22 r=%2240%22/></svg>') center/cover" label="Capital White + Shadow" rule="Imagem/Foto, Capital White com sutil text-shadow" logoColor="#F5F5F0" />
-          <BackgroundCard bg="#34D399" label="Capital Black" rule="Signal Green, usar Capital Black" logoColor="#0A0A0A" />
+          <BackgroundCard bg="#1C7C54" label="Capital Black" rule="Signal Green, usar Capital Black" logoColor="#0A0A0A" />
         </div>
       </Section>
 
@@ -152,10 +152,10 @@ export default function IdentidadeVisualPage() {
           <h3 className="mb-6 font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-green)]">Primárias</h3>
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5">
             <Swatch name="Capital Black" hex="#0A0A0A" />
-            <Swatch name="Signal Green" hex="#34D399" />
+            <Swatch name="Signal Green" hex="#1C7C54" />
             <Swatch name="Capital White" hex="#F5F5F0" textDark />
-            <Swatch name="Emerald Deep" hex="#059669" />
-            <Swatch name="Mint Glow" hex="#6EE7B7" textDark />
+            <Swatch name="Emerald Deep" hex="#145A3D" />
+            <Swatch name="Mint Glow" hex="#2A9D6E" textDark />
           </div>
         </div>
 
@@ -188,15 +188,15 @@ export default function IdentidadeVisualPage() {
       {/* ─── 05 GRADIENTES ─── */}
       <Section id="gradientes" num="05" title="Gradientes" subtitle="Gradientes compostos a partir da paleta primária, usados em destaques, CTAs e superfícies.">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <GradientSwatch name="Capital" css="linear-gradient(135deg, #059669 0%, #34D399 50%, #6EE7B7 100%)" />
-          <GradientSwatch name="Signal" css="linear-gradient(135deg, #34D399 0%, #6EE7B7 100%)" />
+          <GradientSwatch name="Capital" css="linear-gradient(135deg, #145A3D 0%, #1C7C54 50%, #2A9D6E 100%)" />
+          <GradientSwatch name="Signal" css="linear-gradient(135deg, #1C7C54 0%, #2A9D6E 100%)" />
           <GradientSwatch name="Depth" css="linear-gradient(180deg, #0A0A0A 0%, #1A1A1A 100%)" />
-          <GradientSwatch name="Text" css="linear-gradient(90deg, #34D399 0%, #6EE7B7 100%)" />
-          <GradientSwatch name="Surface" css="linear-gradient(180deg, rgba(52,211,153,0.12) 0%, transparent 100%)" />
+          <GradientSwatch name="Text" css="linear-gradient(90deg, #1C7C54 0%, #2A9D6E 100%)" />
+          <GradientSwatch name="Surface" css="linear-gradient(180deg, rgba(28,124,84,0.12) 0%, transparent 100%)" />
         </div>
 
         <div className="mt-8">
-          <CodeBlock lang="CSS" code={`/* Capital */\nlinear-gradient(135deg, #059669 0%, #34D399 50%, #6EE7B7 100%)\n\n/* Signal */\nlinear-gradient(135deg, #34D399 0%, #6EE7B7 100%)\n\n/* Depth */\nlinear-gradient(180deg, #0A0A0A 0%, #1A1A1A 100%)\n\n/* Text */\nlinear-gradient(90deg, #34D399 0%, #6EE7B7 100%)\n\n/* Surface */\nlinear-gradient(180deg, rgba(52,211,153,0.12) 0%, transparent 100%)`} />
+          <CodeBlock lang="CSS" code={`/* Capital */\nlinear-gradient(135deg, #145A3D 0%, #1C7C54 50%, #2A9D6E 100%)\n\n/* Signal */\nlinear-gradient(135deg, #1C7C54 0%, #2A9D6E 100%)\n\n/* Depth */\nlinear-gradient(180deg, #0A0A0A 0%, #1A1A1A 100%)\n\n/* Text */\nlinear-gradient(90deg, #1C7C54 0%, #2A9D6E 100%)\n\n/* Surface */\nlinear-gradient(180deg, rgba(28,124,84,0.12) 0%, transparent 100%)`} />
         </div>
       </Section>
 
@@ -324,10 +324,10 @@ export default function IdentidadeVisualPage() {
             {/* Visual treatment preview */}
             <div className="glow-card overflow-hidden rounded-2xl">
               <div className="relative flex h-48 items-center justify-center overflow-hidden bg-[var(--bg-secondary)]" style={{ filter: "saturate(0.3) contrast(1.2) brightness(0.8)" }}>
-                <div className="absolute inset-0 bg-gradient-to-br from-[#059669]/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-br from-[#145A3D]/20 to-transparent" />
                 <div className="grid grid-cols-6 gap-1 opacity-60">
                   {Array.from({ length: 24 }).map((_, i) => (
-                    <div key={i} className="h-4 w-8 rounded-sm" style={{ backgroundColor: i % 3 === 0 ? "#34D399" : i % 5 === 0 ? "#059669" : "#2A2A2A", opacity: 0.3 + Math.random() * 0.7 }} />
+                    <div key={i} className="h-4 w-8 rounded-sm" style={{ backgroundColor: i % 3 === 0 ? "#1C7C54" : i % 5 === 0 ? "#145A3D" : "#2A2A2A", opacity: 0.3 + Math.random() * 0.7 }} />
                   ))}
                 </div>
               </div>

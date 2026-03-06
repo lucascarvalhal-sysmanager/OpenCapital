@@ -38,12 +38,12 @@ export default function DesignSystemPage() {
         <Label>Paleta principal da marca, a fundação da identidade OpenCapital.</Label>
         <div className="space-y-0.5">
           <TokenRow name="--color-capital-black" value="#0A0A0A" preview={<ColorDot color="#0A0A0A" />} />
-          <TokenRow name="--color-signal-green" value="#34D399" preview={<ColorDot color="#34D399" />} />
+          <TokenRow name="--color-signal-green" value="#1C7C54" preview={<ColorDot color="#1C7C54" />} />
           <TokenRow name="--color-capital-white" value="#F5F5F0" preview={<ColorDot color="#F5F5F0" />} />
           <TokenRow name="--color-graphite" value="#1A1A1A" preview={<ColorDot color="#1A1A1A" />} />
           <TokenRow name="--color-slate" value="#2A2A2A" preview={<ColorDot color="#2A2A2A" />} />
-          <TokenRow name="--color-emerald-deep" value="#059669" preview={<ColorDot color="#059669" />} />
-          <TokenRow name="--color-mint-glow" value="#6EE7B7" preview={<ColorDot color="#6EE7B7" />} />
+          <TokenRow name="--color-emerald-deep" value="#145A3D" preview={<ColorDot color="#145A3D" />} />
+          <TokenRow name="--color-mint-glow" value="#2A9D6E" preview={<ColorDot color="#2A9D6E" />} />
         </div>
 
         {/* ── Colors: Neutral ── */}
@@ -80,18 +80,18 @@ export default function DesignSystemPage() {
           <TokenRow name="--text-tertiary" value="#6B7280" preview={<ColorDot color="#6B7280" />} />
           <TokenRow name="--border-default" value="rgba(255,255,255,0.06)" preview={<ColorDot color="rgba(255,255,255,0.06)" />} />
           <TokenRow name="--border-hover" value="rgba(255,255,255,0.12)" preview={<ColorDot color="rgba(255,255,255,0.12)" />} />
-          <TokenRow name="--border-active" value="rgba(52,211,153,0.3)" preview={<ColorDot color="rgba(52,211,153,0.3)" />} />
+          <TokenRow name="--border-active" value="rgba(28,124,84,0.3)" preview={<ColorDot color="rgba(28,124,84,0.3)" />} />
         </div>
 
         {/* ── Gradients ── */}
         <SubHeading>Gradientes</SubHeading>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {[
-            { name: "--gradient-capital", css: "linear-gradient(135deg, #059669 0%, #34D399 50%, #6EE7B7 100%)" },
-            { name: "--gradient-signal", css: "linear-gradient(135deg, #34D399 0%, #6EE7B7 100%)" },
+            { name: "--gradient-capital", css: "linear-gradient(135deg, #145A3D 0%, #1C7C54 50%, #2A9D6E 100%)" },
+            { name: "--gradient-signal", css: "linear-gradient(135deg, #1C7C54 0%, #2A9D6E 100%)" },
             { name: "--gradient-depth", css: "linear-gradient(180deg, #0A0A0A 0%, #1A1A1A 100%)" },
-            { name: "--gradient-text", css: "linear-gradient(90deg, #34D399 0%, #6EE7B7 100%)" },
-            { name: "--gradient-surface", css: "linear-gradient(180deg, rgba(52,211,153,0.05) 0%, transparent 100%)" },
+            { name: "--gradient-text", css: "linear-gradient(90deg, #1C7C54 0%, #2A9D6E 100%)" },
+            { name: "--gradient-surface", css: "linear-gradient(180deg, rgba(28,124,84,0.05) 0%, transparent 100%)" },
           ].map((g) => (
             <div key={g.name} className="overflow-hidden rounded-xl border border-black/6">
               <div className="h-16" style={{ background: g.css }} />
@@ -167,8 +167,8 @@ export default function DesignSystemPage() {
         </div>
         <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {[
-            { name: "--glow-green", value: "0 0 20px rgba(52,211,153,0.15)" },
-            { name: "--glow-green-strong", value: "0 0 40px rgba(52,211,153,0.25)" },
+            { name: "--glow-green", value: "0 0 20px rgba(28,124,84,0.15)" },
+            { name: "--glow-green-strong", value: "0 0 40px rgba(28,124,84,0.25)" },
             { name: "--glow-green-pulse", value: "pulse-green 2s infinite" },
           ].map((g) => (
             <div key={g.name} className="flex flex-col items-center gap-3">
@@ -211,7 +211,7 @@ export default function DesignSystemPage() {
           <CodeBlock lang="CSS" code={`:root {
   /* Primary */
   --color-capital-black: #0A0A0A;
-  --color-signal-green: #34D399;
+  --color-signal-green: #1C7C54;
   --color-capital-white: #F5F5F0;
 
   /* Spacing (base 4px) */
@@ -224,7 +224,7 @@ export default function DesignSystemPage() {
 
   /* Shadows */
   --shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
-  --glow-green: 0 0 20px rgba(52,211,153,0.15);
+  --glow-green: 0 0 20px rgba(28,124,84,0.15);
 
   /* Transitions */
   --transition-fast: 150ms ease;
@@ -343,18 +343,18 @@ export default function DesignSystemPage() {
         <SubHeading>Efeitos de Glow</SubHeading>
         <div className="grid gap-8 sm:grid-cols-2">
           <div className="flex flex-col gap-4">
-            <div className="flex h-32 items-center justify-center rounded-2xl bg-[var(--bg-secondary)]" style={{ boxShadow: "0 0 20px rgba(52,211,153,0.15)" }}>
+            <div className="flex h-32 items-center justify-center rounded-2xl bg-[var(--bg-secondary)]" style={{ boxShadow: "0 0 20px rgba(28,124,84,0.15)" }}>
               <span className="text-sm font-semibold text-[var(--color-signal-green)]">Green Glow</span>
             </div>
             <CodeBlock lang="CSS" code={`box-shadow: var(--glow-green);
-/* 0 0 20px rgba(52,211,153,0.15) */`} />
+/* 0 0 20px rgba(28,124,84,0.15) */`} />
           </div>
           <div className="flex flex-col gap-4">
-            <div className="flex h-32 items-center justify-center rounded-2xl bg-[var(--bg-secondary)]" style={{ boxShadow: "0 0 40px rgba(52,211,153,0.25)" }}>
+            <div className="flex h-32 items-center justify-center rounded-2xl bg-[var(--bg-secondary)]" style={{ boxShadow: "0 0 40px rgba(28,124,84,0.25)" }}>
               <span className="text-sm font-semibold text-[var(--color-signal-green)]">Strong Glow</span>
             </div>
             <CodeBlock lang="CSS" code={`box-shadow: var(--glow-green-strong);
-/* 0 0 40px rgba(52,211,153,0.25) */`} />
+/* 0 0 40px rgba(28,124,84,0.25) */`} />
           </div>
         </div>
       </Section>
@@ -629,13 +629,13 @@ export default function DesignSystemPage() {
             <p className="mt-2 text-sm text-[var(--text-secondary)]">Borda sutil e fundo secundário. Usado para agrupamento padrão de conteúdo.</p>
           </div>
           {/* Elevated */}
-          <div className="rounded-2xl border border-[var(--color-signal-green)]/20 bg-[var(--bg-secondary)] p-6" style={{ boxShadow: "0 0 20px rgba(52,211,153,0.15)" }}>
+          <div className="rounded-2xl border border-[var(--color-signal-green)]/20 bg-[var(--bg-secondary)] p-6" style={{ boxShadow: "0 0 20px rgba(28,124,84,0.15)" }}>
             <p className="mb-2 font-mono text-[10px] uppercase tracking-widest text-[var(--color-signal-green)]">Elevated</p>
             <h4 className="text-lg font-semibold">Título do Card</h4>
             <p className="mt-2 text-sm text-[var(--text-secondary)]">Borda com glow verde para conteúdo destacado e CTAs.</p>
           </div>
           {/* Surface */}
-          <div className="rounded-2xl border border-black/6 p-6" style={{ background: "linear-gradient(180deg, rgba(52,211,153,0.05) 0%, var(--bg-secondary) 100%)" }}>
+          <div className="rounded-2xl border border-black/6 p-6" style={{ background: "linear-gradient(180deg, rgba(28,124,84,0.05) 0%, var(--bg-secondary) 100%)" }}>
             <p className="mb-2 font-mono text-[10px] uppercase tracking-widest text-[var(--text-tertiary)]">Surface</p>
             <h4 className="text-lg font-semibold">Título do Card</h4>
             <p className="mt-2 text-sm text-[var(--text-secondary)]">Overlay de gradiente na superfície para seções premium.</p>
@@ -782,11 +782,11 @@ export default function DesignSystemPage() {
         <div className="grid gap-6 sm:grid-cols-2">
           {/* Dot Grid */}
           <div className="flex flex-col gap-3">
-            <div className="flex h-40 items-center justify-center rounded-2xl border border-black/6" style={{ backgroundImage: "radial-gradient(circle, rgba(52,211,153,0.06) 1px, transparent 1px)", backgroundSize: "24px 24px" }}>
+            <div className="flex h-40 items-center justify-center rounded-2xl border border-black/6" style={{ backgroundImage: "radial-gradient(circle, rgba(28,124,84,0.06) 1px, transparent 1px)", backgroundSize: "24px 24px" }}>
               <span className="rounded-full bg-[var(--bg-primary)]/80 px-3 py-1 font-mono text-xs text-[var(--text-tertiary)]">Dot Grid</span>
             </div>
             <CodeBlock lang="CSS" code={`background-image: radial-gradient(
-  circle, rgba(52,211,153,0.06) 1px,
+  circle, rgba(28,124,84,0.06) 1px,
   transparent 1px
 );
 background-size: 24px 24px;`} />
@@ -824,12 +824,12 @@ background-size: 24px 24px;`} />
 
           {/* Blueprint Grid */}
           <div className="flex flex-col gap-3">
-            <div className="flex h-40 items-center justify-center rounded-2xl border border-black/6 bg-[var(--bg-secondary)]" style={{ backgroundImage: "linear-gradient(rgba(52,211,153,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(52,211,153,0.04) 1px, transparent 1px)", backgroundSize: "32px 32px" }}>
+            <div className="flex h-40 items-center justify-center rounded-2xl border border-black/6 bg-[var(--bg-secondary)]" style={{ backgroundImage: "linear-gradient(rgba(28,124,84,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(28,124,84,0.04) 1px, transparent 1px)", backgroundSize: "32px 32px" }}>
               <span className="rounded-full bg-[var(--bg-primary)]/80 px-3 py-1 font-mono text-xs text-[var(--text-tertiary)]">Blueprint Grid</span>
             </div>
             <CodeBlock lang="CSS" code={`background-image:
-  linear-gradient(rgba(52,211,153,0.04) 1px, transparent 1px),
-  linear-gradient(90deg, rgba(52,211,153,0.04) 1px, transparent 1px);
+  linear-gradient(rgba(28,124,84,0.04) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(28,124,84,0.04) 1px, transparent 1px);
 background-size: 32px 32px;`} />
           </div>
         </div>
@@ -854,7 +854,7 @@ background-size: 32px 32px;`} />
           </div>
 
           {/* Status Display */}
-          <div className="relative flex h-40 items-center justify-center overflow-hidden rounded-lg bg-[var(--bg-secondary)]" style={{ backgroundImage: "radial-gradient(circle, rgba(52,211,153,0.06) 1px, transparent 1px)", backgroundSize: "16px 16px" }}>
+          <div className="relative flex h-40 items-center justify-center overflow-hidden rounded-lg bg-[var(--bg-secondary)]" style={{ backgroundImage: "radial-gradient(circle, rgba(28,124,84,0.06) 1px, transparent 1px)", backgroundSize: "16px 16px" }}>
             <div className="text-center">
               <div className="mb-1 flex items-center justify-center gap-2">
                 <div className="h-2 w-2 rounded-full bg-[var(--color-signal-green)]" style={{ animation: "pulse-green 2s ease-in-out infinite" }} />
@@ -1004,8 +1004,8 @@ background-size: 32px 32px;`} />
 }
 
 @keyframes pulse-green {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(52,211,153,0.3); }
-  50%      { box-shadow: 0 0 20px 4px rgba(52,211,153,0.1); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(28,124,84,0.3); }
+  50%      { box-shadow: 0 0 20px 4px rgba(28,124,84,0.1); }
 }
 
 @keyframes shine-sweep {

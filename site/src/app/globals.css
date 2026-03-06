@@ -3,12 +3,12 @@
 :root {
   /* === CORES PRIMARIAS === */
   --color-capital-black: #0A0A0A;
-  --color-signal-green: #34D399;
+  --color-signal-green: #1C7C54;
   --color-capital-white: #F5F5F0;
   --color-graphite: #1A1A1A;
   --color-slate: #2A2A2A;
-  --color-emerald-deep: #059669;
-  --color-mint-glow: #6EE7B7;
+  --color-emerald-deep: #145A3D;
+  --color-mint-glow: #2A9D6E;
 
   /* === NEUTROS === */
   --color-iron: #404040;
@@ -25,11 +25,11 @@
   --color-info: #3B82F6;
 
   /* === GRADIENTES === */
-  --gradient-capital: linear-gradient(135deg, #059669 0%, #34D399 50%, #6EE7B7 100%);
-  --gradient-signal: linear-gradient(135deg, #34D399 0%, #6EE7B7 100%);
+  --gradient-capital: linear-gradient(135deg, #145A3D 0%, #1C7C54 50%, #2A9D6E 100%);
+  --gradient-signal: linear-gradient(135deg, #1C7C54 0%, #2A9D6E 100%);
   --gradient-depth: linear-gradient(180deg, #0A0A0A 0%, #1A1A1A 100%);
-  --gradient-text: linear-gradient(90deg, #34D399 0%, #6EE7B7 100%);
-  --gradient-surface: linear-gradient(180deg, rgba(52,211,153,0.05) 0%, transparent 100%);
+  --gradient-text: linear-gradient(90deg, #1C7C54 0%, #2A9D6E 100%);
+  --gradient-surface: linear-gradient(180deg, rgba(28,124,84,0.05) 0%, transparent 100%);
 
   /* === SPACING === */
   --space-1: 4px;
@@ -55,8 +55,8 @@
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
   --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
-  --glow-green: 0 0 20px rgba(52, 211, 153, 0.12);
-  --glow-green-strong: 0 0 40px rgba(52, 211, 153, 0.2);
+  --glow-green: 0 0 20px rgba(28, 124, 84, 0.12);
+  --glow-green-strong: 0 0 40px rgba(28, 124, 84, 0.2);
 
   /* === TRANSITIONS === */
   --transition-fast: 150ms ease;
@@ -72,7 +72,7 @@
   --text-tertiary: #9ca3af;
   --border-default: rgba(0, 0, 0, 0.06);
   --border-hover: rgba(0, 0, 0, 0.12);
-  --border-active: rgba(52, 211, 153, 0.3);
+  --border-active: rgba(28, 124, 84, 0.3);
 }
 
 @theme inline {
@@ -114,7 +114,7 @@ body {
 }
 
 .texture-dots {
-  background-image: radial-gradient(circle, rgba(52,211,153,0.08) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(28,124,84,0.08) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
