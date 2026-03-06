@@ -1,5 +1,6 @@
-import { Layers, Globe, Brain, Activity } from "lucide-react";
+import { Layers, Globe, Brain } from "lucide-react";
 import { Section, Swatch, TypeSample, ContrastRow, CodeBlock } from "@/components/brandbook-shared";
+import { OCSymbol, OCLogo } from "@/components/oc-logo";
 
 /* ─── Logo Variation Card ─── */
 function LogoCard({ name, usage, children }: { name: string; usage: string; children: React.ReactNode }) {
@@ -15,13 +16,11 @@ function LogoCard({ name, usage, children }: { name: string; usage: string; chil
 }
 
 /* ─── Background Usage Card ─── */
-function BackgroundCard({ bg, label, rule }: { bg: string; label: string; rule: string }) {
+function BackgroundCard({ bg, label, rule, logoColor }: { bg: string; label: string; rule: string; logoColor: string }) {
   return (
     <div className="glow-card overflow-hidden rounded-2xl">
       <div className="flex h-32 items-center justify-center px-6" style={{ background: bg }}>
-        <span className="text-lg font-bold tracking-tight" style={{ color: label === "Capital Black" ? "#0A0A0A" : "#F5F5F0", textShadow: label === "Capital White + Shadow" ? "0 1px 8px rgba(0,0,0,0.6)" : undefined }}>
-          Open<span style={{ color: label === "Capital Black" ? "#059669" : "#34D399" }}>Capital</span>
-        </span>
+        <OCLogo size="md" color={logoColor} />
       </div>
       <div className="border-t border-white/6 bg-[var(--bg-secondary)] p-4">
         <p className="text-xs font-semibold">{label}</p>
@@ -65,42 +64,31 @@ export default function IdentidadeVisualPage() {
       {/* ─── 01 SISTEMA DE LOGO ─── */}
       <Section id="sistema-de-logo" num="01" title="Sistema de Logo" subtitle="Seis variantes para cobrir todos os contextos de uso, do site institucional ao favicon de 16 px.">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <LogoCard name="OpenCapital + Símbolo" usage="Site, materiais oficiais">
-            <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-[var(--color-signal-green)]">
-                <Activity size={18} className="text-[var(--color-signal-green)]" />
-              </div>
-              <span className="text-xl font-bold tracking-tight">Open<span className="gradient-text">Capital</span></span>
-            </div>
+          <LogoCard name="OpenCapital + Símbolo (Ecossistema)" usage="Site, materiais oficiais">
+            <OCLogo size="lg" color="var(--text-primary)" />
           </LogoCard>
 
           <LogoCard name="theCapital + Símbolo" usage="Comunidade, eventos">
-            <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-[var(--color-signal-green)]">
-                <Activity size={18} className="text-[var(--color-signal-green)]" />
-              </div>
-              <span className="text-xl font-bold tracking-tight">the<span className="gradient-text">Capital</span></span>
-            </div>
+            <span className="inline-flex items-center gap-1.5">
+              <span className="text-xl font-semibold tracking-tight text-[var(--text-primary)]">theCapital</span>
+              <OCSymbol size={28} color="var(--text-primary)" />
+            </span>
           </LogoCard>
 
-          <LogoCard name="Símbolo Standalone (Anel)" usage="Favicon, app icon, avatar">
-            <div className="flex h-16 w-16 items-center justify-center rounded-full border-[3px] border-[var(--color-signal-green)]">
-              <div className="h-2 w-2 rounded-full bg-[var(--color-signal-green)]" />
-            </div>
+          <LogoCard name="Símbolo Standalone (Sociedade)" usage="Favicon, app icon, avatar">
+            <OCSymbol size={56} color="var(--text-primary)" />
           </LogoCard>
 
-          <LogoCard name="Símbolo Parcial (Arco C)" usage="Espaços mínimos, watermark">
-            <div className="relative flex h-16 w-16 items-center justify-center">
-              <div className="h-16 w-16 rounded-full border-[3px] border-[var(--color-signal-green)]" style={{ clipPath: "inset(0 0 0 25%)" }} />
-            </div>
+          <LogoCard name="Símbolo Parcial (Inteligência)" usage="Espaços mínimos, watermark">
+            <OCSymbol size={56} color="var(--text-primary)" variant="half" />
           </LogoCard>
 
           <LogoCard name="theOpenCapital (texto)" usage="URLs, menções textuais">
-            <span className="text-xl font-bold tracking-tight">the<span className="gradient-text">Open</span>Capital</span>
+            <span className="text-xl font-semibold tracking-tight text-[var(--text-primary)]">theOpenCapital</span>
           </LogoCard>
 
-          <LogoCard name="OpenCapital.AI (sub-produto)" usage="APIs, infraestrutura técnica">
-            <span className="text-xl font-bold tracking-tight">Open<span className="gradient-text">Capital</span><span className="font-mono text-sm text-[var(--text-tertiary)]">.AI</span></span>
+          <LogoCard name="OpenCapital · AI (sub-produto)" usage="APIs, infraestrutura técnica">
+            <span className="text-xl tracking-tight text-[var(--text-primary)]"><span className="font-semibold">OpenCapital</span> · AI</span>
           </LogoCard>
         </div>
       </Section>
@@ -113,9 +101,7 @@ export default function IdentidadeVisualPage() {
             <h3 className="text-sm font-semibold text-[var(--color-signal-green)]">Anatomia</h3>
             <div className="flex items-center gap-4">
               <div className="relative flex h-20 w-20 shrink-0 items-center justify-center rounded-full border-2 border-dashed border-[var(--color-signal-green)]/40">
-                <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-[var(--color-signal-green)]">
-                  <div className="h-1.5 w-1.5 rounded-full bg-[var(--color-signal-green)]" />
-                </div>
+                <OCSymbol size={56} color="var(--color-signal-green)" />
                 <span className="absolute -right-12 font-mono text-[10px] text-[var(--text-tertiary)]">safe zone 1x</span>
               </div>
               <div className="flex flex-col gap-1">
@@ -152,10 +138,10 @@ export default function IdentidadeVisualPage() {
       {/* ─── 03 USO SOBRE FUNDOS ─── */}
       <Section id="uso-sobre-fundos" num="03" title="Uso sobre Fundos" subtitle="O logo deve manter legibilidade máxima em qualquer contexto de fundo.">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          <BackgroundCard bg="linear-gradient(180deg, #0A0A0A 0%, #2A2A2A 100%)" label="Capital White" rule="Fundos escuros (#0A0A0A a #2A2A2A), usar Capital White ou Signal Green" />
-          <BackgroundCard bg="linear-gradient(180deg, #F5F5F0 0%, #FFFFFF 100%)" label="Capital Black" rule="Fundos claros (#F5F5F0 a #FFFFFF), usar Capital Black" />
-          <BackgroundCard bg="url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22><rect fill=%22%23333%22 width=%22100%22 height=%22100%22/><circle fill=%22%23444%22 cx=%2250%22 cy=%2250%22 r=%2240%22/></svg>') center/cover" label="Capital White + Shadow" rule="Imagem/Foto, Capital White com sutil text-shadow" />
-          <BackgroundCard bg="#34D399" label="Capital Black" rule="Signal Green, usar Capital Black" />
+          <BackgroundCard bg="linear-gradient(180deg, #0A0A0A 0%, #2A2A2A 100%)" label="Capital White" rule="Fundos escuros (#0A0A0A a #2A2A2A), usar Capital White ou Signal Green" logoColor="#F5F5F0" />
+          <BackgroundCard bg="linear-gradient(180deg, #F5F5F0 0%, #FFFFFF 100%)" label="Capital Black" rule="Fundos claros (#F5F5F0 a #FFFFFF), usar Capital Black" logoColor="#0A0A0A" />
+          <BackgroundCard bg="url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22><rect fill=%22%23333%22 width=%22100%22 height=%22100%22/><circle fill=%22%23444%22 cx=%2250%22 cy=%2250%22 r=%2240%22/></svg>') center/cover" label="Capital White + Shadow" rule="Imagem/Foto, Capital White com sutil text-shadow" logoColor="#F5F5F0" />
+          <BackgroundCard bg="#34D399" label="Capital Black" rule="Signal Green, usar Capital Black" logoColor="#0A0A0A" />
         </div>
       </Section>
 
@@ -281,9 +267,27 @@ export default function IdentidadeVisualPage() {
       {/* ─── 08 ARQUITETURA DE MARCA ─── */}
       <Section id="arquitetura-de-marca" num="08" title="Arquitetura de Marca" subtitle="Três sub-marcas que compõem o ecossistema OpenCapital, cada uma com escopo e personalidade distintos.">
         <div className="grid gap-6 sm:grid-cols-3">
-          <SubBrandCard name="OpenCapital" label="Ecossistema" icon={Layers} />
-          <SubBrandCard name="theCapital" label="Sociedade" icon={Globe} />
-          <SubBrandCard name="OpenCapital.AI" label="Inteligência" icon={Brain} />
+          <div className="glow-card flex flex-col items-center gap-4 rounded-2xl bg-[var(--bg-secondary)] p-8 text-center">
+            <OCLogo size="md" color="var(--text-primary)" />
+            <div>
+              <p className="text-lg font-bold">OpenCapital</p>
+              <p className="mt-1 text-xs text-[var(--text-tertiary)]">Ecossistema</p>
+            </div>
+          </div>
+          <div className="glow-card flex flex-col items-center gap-4 rounded-2xl bg-[var(--bg-secondary)] p-8 text-center">
+            <OCSymbol size={48} color="var(--text-primary)" />
+            <div>
+              <p className="text-lg font-bold">theCapital</p>
+              <p className="mt-1 text-xs text-[var(--text-tertiary)]">Sociedade</p>
+            </div>
+          </div>
+          <div className="glow-card flex flex-col items-center gap-4 rounded-2xl bg-[var(--bg-secondary)] p-8 text-center">
+            <OCSymbol size={48} color="var(--text-primary)" variant="half" />
+            <div>
+              <p className="text-lg font-bold">OpenCapital · AI</p>
+              <p className="mt-1 text-xs text-[var(--text-tertiary)]">Inteligência</p>
+            </div>
+          </div>
         </div>
       </Section>
 

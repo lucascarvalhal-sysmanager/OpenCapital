@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Activity } from "lucide-react";
+import { OCSymbol } from "@/components/oc-logo";
 
 const tabs = [
   { label: "A Infraestrutura", href: "/brandbook/a-infraestrutura" },
@@ -21,13 +21,11 @@ export default function BrandbookLayout({ children }: { children: React.ReactNod
       <nav className="fixed top-0 z-50 w-full border-b border-white/6 bg-[var(--bg-primary)]/80 backdrop-blur-xl">
         <div className="mx-auto max-w-7xl px-6 md:px-12">
           <div className="flex h-16 items-center justify-between">
-            <Link href="/brandbook/a-infraestrutura" className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[var(--color-signal-green)]/10">
-                <Activity size={16} className="text-[var(--color-signal-green)]" />
-              </div>
-              <span className="text-lg font-bold tracking-tight">Open<span className="text-[var(--color-signal-green)]">Capital</span></span>
+            <Link href="/brandbook/a-infraestrutura" className="flex items-center gap-1.5">
+              <span className="text-lg font-semibold tracking-tight text-[var(--text-primary)]">OpenCapital</span>
+              <OCSymbol size={22} color="var(--text-primary)" />
             </Link>
-            <span className="rounded-full border border-white/10 px-3 py-1 font-mono text-xs text-[var(--text-tertiary)]">v1.0</span>
+            <span className="rounded-full border border-white/10 px-3 py-1 font-mono text-xs text-[var(--text-tertiary)]">Brandbook v1.0</span>
           </div>
           {/* Tabs */}
           <div className="-mb-px flex gap-1 overflow-x-auto scrollbar-none">
@@ -57,9 +55,10 @@ export default function BrandbookLayout({ children }: { children: React.ReactNod
       {/* ─── FOOTER ─── */}
       <footer className="border-t border-white/6 py-12">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 md:flex-row md:px-12">
-          <div className="flex items-center gap-2">
-            <span className="text-sm font-bold tracking-tight">Open<span className="text-[var(--color-signal-green)]">Capital</span></span>
-            <span className="font-mono text-xs text-[var(--text-tertiary)]">Brandbook v1.0</span>
+          <div className="flex items-center gap-1.5">
+            <span className="text-sm font-semibold tracking-tight text-[var(--text-primary)]">OpenCapital</span>
+            <OCSymbol size={16} color="var(--text-primary)" />
+            <span className="ml-2 font-mono text-xs text-[var(--text-tertiary)]">Brandbook v1.0</span>
           </div>
           <p className="text-sm text-[var(--text-tertiary)]">The infrastructure for the new financial intelligence.</p>
         </div>

@@ -4,6 +4,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { Section, AnimationDemo, TokenRow, CodeBlock } from "@/components/brandbook-shared";
+import { OCSymbol, OCLogo } from "@/components/oc-logo";
 
 /* ═══════════════════════════════════════════════════════════════════════
    DESIGN SYSTEM — OpenCapital Brandbook
@@ -1021,29 +1022,19 @@ background-size: 32px 32px;`} />
 
         {/* ── Logo Principal ── */}
         <SubHeading>Logo Principal</SubHeading>
-        <Label>A marca OpenCapital é composta por símbolo + logotipo. O símbolo representa a convergência de capital aberto através de formas geométricas precisas.</Label>
+        <Label>A marca OpenCapital é composta por logotipo + símbolo de anel pixelado. O símbolo representa o ecossistema de capital aberto, formado por dots em padrão circular.</Label>
         <div className="grid gap-6 sm:grid-cols-2">
           {/* Dark bg */}
           <div className="flex flex-col gap-3">
             <div className="flex h-40 items-center justify-center rounded-2xl border border-white/6 bg-[var(--bg-primary)]">
-              <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--color-signal-green)]">
-                  <span className="text-lg font-black text-[var(--color-capital-black)]">O</span>
-                </div>
-                <span className="text-2xl font-bold tracking-tight text-[var(--text-primary)]">OpenCapital</span>
-              </div>
+              <OCLogo size="lg" color="var(--text-primary)" />
             </div>
             <p className="font-mono text-[10px] text-[var(--text-tertiary)]">Versão principal, fundo escuro</p>
           </div>
           {/* Light bg */}
           <div className="flex flex-col gap-3">
             <div className="flex h-40 items-center justify-center rounded-2xl border border-white/6 bg-[var(--color-capital-white)]">
-              <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--color-signal-green)]">
-                  <span className="text-lg font-black text-[var(--color-capital-black)]">O</span>
-                </div>
-                <span className="text-2xl font-bold tracking-tight text-[var(--color-capital-black)]">OpenCapital</span>
-              </div>
+              <OCLogo size="lg" color="#0A0A0A" />
             </div>
             <p className="font-mono text-[10px] text-[var(--text-tertiary)]">Versão principal, fundo claro</p>
           </div>
@@ -1051,64 +1042,97 @@ background-size: 32px 32px;`} />
 
         {/* ── Variantes ── */}
         <SubHeading>Variantes do Logo</SubHeading>
-        <Label>Quatro variantes oficiais para diferentes contextos de aplicação.</Label>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {/* Horizontal */}
+        <Label>Seis variantes oficiais conforme a arquitetura de marca: Ecossistema, Sociedade, Inteligência e sub-marcas.</Label>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {/* Ecossistema — Logo + Símbolo completo */}
           <div className="flex flex-col gap-3">
             <div className="flex h-28 items-center justify-center rounded-xl border border-white/6 bg-[var(--bg-secondary)]">
-              <div className="flex items-center gap-2">
-                <div className="flex h-8 w-8 items-center justify-center rounded-md bg-[var(--color-signal-green)]">
-                  <span className="text-sm font-black text-[var(--color-capital-black)]">O</span>
-                </div>
-                <span className="text-lg font-bold tracking-tight">OpenCapital</span>
-              </div>
+              <OCLogo size="md" color="var(--text-primary)" />
             </div>
             <div>
-              <p className="text-xs font-semibold">Horizontal</p>
-              <p className="text-[10px] text-[var(--text-tertiary)]">Uso padrão, headers, navegação</p>
+              <p className="text-xs font-semibold">Ecossistema</p>
+              <p className="text-[10px] text-[var(--text-tertiary)]">Logo completo, uso padrão, headers, navegação</p>
             </div>
           </div>
-          {/* Símbolo */}
+          {/* Sociedade — Apenas símbolo */}
           <div className="flex flex-col gap-3">
             <div className="flex h-28 items-center justify-center rounded-xl border border-white/6 bg-[var(--bg-secondary)]">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--color-signal-green)]">
-                <span className="text-xl font-black text-[var(--color-capital-black)]">O</span>
-              </div>
+              <OCSymbol size={48} color="var(--text-primary)" />
             </div>
             <div>
-              <p className="text-xs font-semibold">Símbolo</p>
-              <p className="text-[10px] text-[var(--text-tertiary)]">Favicon, ícone de app, avatares</p>
+              <p className="text-xs font-semibold">Sociedade</p>
+              <p className="text-[10px] text-[var(--text-tertiary)]">Apenas símbolo, favicon, ícone de app, avatares</p>
             </div>
           </div>
-          {/* Monocromático Branco */}
+          {/* Inteligência — Meio símbolo */}
+          <div className="flex flex-col gap-3">
+            <div className="flex h-28 items-center justify-center rounded-xl border border-white/6 bg-[var(--bg-secondary)]">
+              <OCSymbol size={48} color="var(--text-primary)" variant="half" />
+            </div>
+            <div>
+              <p className="text-xs font-semibold">Inteligência</p>
+              <p className="text-[10px] text-[var(--text-tertiary)]">Símbolo reduzido, marca d&apos;água, elementos decorativos</p>
+            </div>
+          </div>
+          {/* theCapital */}
+          <div className="flex flex-col gap-3">
+            <div className="flex h-28 items-center justify-center rounded-xl border border-white/6 bg-[var(--bg-secondary)]">
+              <span className="inline-flex items-center gap-1.5">
+                <span className="text-lg font-semibold tracking-tight text-[var(--text-primary)]">theCapital</span>
+                <OCSymbol size={22} color="var(--text-primary)" />
+              </span>
+            </div>
+            <div>
+              <p className="text-xs font-semibold">theCapital</p>
+              <p className="text-[10px] text-[var(--text-tertiary)]">Sub-marca, plataforma de dados</p>
+            </div>
+          </div>
+          {/* theOpenCapital */}
+          <div className="flex flex-col gap-3">
+            <div className="flex h-28 items-center justify-center rounded-xl border border-white/6 bg-[var(--bg-secondary)]">
+              <span className="text-lg font-semibold tracking-tight text-[var(--text-primary)]">theOpenCapital</span>
+            </div>
+            <div>
+              <p className="text-xs font-semibold">theOpenCapital</p>
+              <p className="text-[10px] text-[var(--text-tertiary)]">Domínio e referência institucional</p>
+            </div>
+          </div>
+          {/* OpenCapital · AI */}
+          <div className="flex flex-col gap-3">
+            <div className="flex h-28 items-center justify-center rounded-xl border border-white/6 bg-[var(--bg-secondary)]">
+              <span className="text-lg tracking-tight text-[var(--text-primary)]"><span className="font-semibold">OpenCapital</span> · AI</span>
+            </div>
+            <div>
+              <p className="text-xs font-semibold">OpenCapital · AI</p>
+              <p className="text-[10px] text-[var(--text-tertiary)]">Vertical de inteligência artificial</p>
+            </div>
+          </div>
+        </div>
+
+        {/* ── Versões sobre fundo ── */}
+        <SubHeading>Versões sobre Fundo</SubHeading>
+        <Label>Versões monocromáticas para contextos sem cor ou impressão.</Label>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <div className="flex flex-col gap-3">
             <div className="flex h-28 items-center justify-center rounded-xl border border-white/6 bg-[var(--bg-primary)]">
-              <div className="flex items-center gap-2">
-                <div className="flex h-8 w-8 items-center justify-center rounded-md border border-white/20">
-                  <span className="text-sm font-black text-white">O</span>
-                </div>
-                <span className="text-lg font-bold tracking-tight text-white">OpenCapital</span>
-              </div>
+              <OCLogo size="md" color="white" />
             </div>
-            <div>
-              <p className="text-xs font-semibold">Monocromático Branco</p>
-              <p className="text-[10px] text-[var(--text-tertiary)]">Fundos escuros sem cor</p>
-            </div>
+            <p className="text-[10px] text-[var(--text-tertiary)]">Monocromático branco, fundos escuros</p>
           </div>
-          {/* Monocromático Preto */}
           <div className="flex flex-col gap-3">
             <div className="flex h-28 items-center justify-center rounded-xl border border-white/6 bg-[var(--color-capital-white)]">
-              <div className="flex items-center gap-2">
-                <div className="flex h-8 w-8 items-center justify-center rounded-md border border-black/20">
-                  <span className="text-sm font-black text-[var(--color-capital-black)]">O</span>
-                </div>
-                <span className="text-lg font-bold tracking-tight text-[var(--color-capital-black)]">OpenCapital</span>
-              </div>
+              <OCLogo size="md" color="#0A0A0A" />
             </div>
-            <div>
-              <p className="text-xs font-semibold">Monocromático Preto</p>
-              <p className="text-[10px] text-[var(--text-tertiary)]">Impressão P&B, fundos claros</p>
+            <p className="text-[10px] text-[var(--text-tertiary)]">Monocromático preto, fundos claros e impressão P&amp;B</p>
+          </div>
+          <div className="flex flex-col gap-3">
+            <div className="flex h-28 items-center justify-center rounded-xl border border-white/6 bg-[var(--color-capital-white)]">
+              <span className="inline-flex items-center gap-1.5 opacity-20">
+                <span className="text-lg font-semibold tracking-tight text-[#0A0A0A]">OpenCapital</span>
+                <OCSymbol size={22} color="#0A0A0A" />
+              </span>
             </div>
+            <p className="text-[10px] text-[var(--text-tertiary)]">Marca d&apos;água, opacidade 20%</p>
           </div>
         </div>
 
@@ -1117,23 +1141,15 @@ background-size: 32px 32px;`} />
         <Label>Área mínima de respiro ao redor do logo. A unidade &quot;x&quot; é definida pela altura do símbolo.</Label>
         <div className="flex justify-center">
           <div className="relative inline-flex items-center justify-center rounded-2xl border-2 border-dashed border-[var(--color-signal-green)]/30 bg-[var(--bg-secondary)] px-20 py-16">
-            {/* Safe zone markers */}
             <div className="absolute left-4 top-1/2 -translate-y-1/2 font-mono text-[10px] text-[var(--color-signal-green)]">1x</div>
             <div className="absolute right-4 top-1/2 -translate-y-1/2 font-mono text-[10px] text-[var(--color-signal-green)]">1x</div>
             <div className="absolute left-1/2 top-3 -translate-x-1/2 font-mono text-[10px] text-[var(--color-signal-green)]">1x</div>
             <div className="absolute bottom-3 left-1/2 -translate-x-1/2 font-mono text-[10px] text-[var(--color-signal-green)]">1x</div>
-            {/* Corner marks */}
             <div className="absolute left-2 top-2 h-3 w-3 border-l border-t border-[var(--color-signal-green)]/50" />
             <div className="absolute right-2 top-2 h-3 w-3 border-r border-t border-[var(--color-signal-green)]/50" />
             <div className="absolute bottom-2 left-2 h-3 w-3 border-b border-l border-[var(--color-signal-green)]/50" />
             <div className="absolute bottom-2 right-2 h-3 w-3 border-b border-r border-[var(--color-signal-green)]/50" />
-            {/* Logo */}
-            <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--color-signal-green)]">
-                <span className="text-lg font-black text-[var(--color-capital-black)]">O</span>
-              </div>
-              <span className="text-2xl font-bold tracking-tight">OpenCapital</span>
-            </div>
+            <OCLogo size="lg" color="var(--text-primary)" />
           </div>
         </div>
 
@@ -1141,37 +1157,22 @@ background-size: 32px 32px;`} />
         <SubHeading>Tamanhos Mínimos</SubHeading>
         <Label>Respeitar os tamanhos mínimos garante legibilidade em todos os contextos.</Label>
         <div className="grid gap-6 sm:grid-cols-3">
-          {/* Digital Logo */}
           <div className="flex flex-col items-center gap-3 rounded-xl border border-white/6 bg-[var(--bg-secondary)] p-6">
-            <div className="flex items-center gap-1.5">
-              <div className="flex h-6 w-6 items-center justify-center rounded bg-[var(--color-signal-green)]">
-                <span className="text-[10px] font-black text-[var(--color-capital-black)]">O</span>
-              </div>
-              <span className="text-sm font-bold tracking-tight">OpenCapital</span>
-            </div>
+            <OCLogo size="sm" color="var(--text-primary)" />
             <div className="text-center">
               <p className="font-mono text-xs text-[var(--color-signal-green)]">24px</p>
               <p className="text-[10px] text-[var(--text-tertiary)]">MÍN. DIGITAL (logo completo)</p>
             </div>
           </div>
-          {/* Digital Símbolo */}
           <div className="flex flex-col items-center gap-3 rounded-xl border border-white/6 bg-[var(--bg-secondary)] p-6">
-            <div className="flex h-4 w-4 items-center justify-center rounded-sm bg-[var(--color-signal-green)]">
-              <span className="text-[8px] font-black text-[var(--color-capital-black)]">O</span>
-            </div>
+            <OCSymbol size={16} color="var(--text-primary)" />
             <div className="text-center">
               <p className="font-mono text-xs text-[var(--color-signal-green)]">16px</p>
               <p className="text-[10px] text-[var(--text-tertiary)]">MÍN. DIGITAL (apenas símbolo)</p>
             </div>
           </div>
-          {/* Impresso */}
           <div className="flex flex-col items-center gap-3 rounded-xl border border-white/6 bg-[var(--bg-secondary)] p-6">
-            <div className="flex items-center gap-1">
-              <div className="flex h-5 w-5 items-center justify-center rounded bg-[var(--color-signal-green)]">
-                <span className="text-[9px] font-black text-[var(--color-capital-black)]">O</span>
-              </div>
-              <span className="text-xs font-bold tracking-tight">OpenCapital</span>
-            </div>
+            <OCLogo size="sm" color="var(--text-primary)" />
             <div className="text-center">
               <p className="font-mono text-xs text-[var(--color-signal-green)]">8mm</p>
               <p className="text-[10px] text-[var(--text-tertiary)]">MÍN. IMPRESSO</p>
@@ -1184,29 +1185,15 @@ background-size: 32px 32px;`} />
         <Label>Exemplos do que nunca deve ser feito com o logo da marca.</Label>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {[
-            { label: "Não distorcer", render: "scale-x-150" },
-            { label: "Não rotacionar", render: "rotate-45" },
-            { label: "Não adicionar sombra", render: "drop-shadow-[0_0_10px_rgba(52,211,153,0.8)]" },
-            { label: "Não alterar cores", render: "" },
+            { label: "Não distorcer", cls: "scale-x-150" },
+            { label: "Não rotacionar", cls: "rotate-45" },
+            { label: "Não adicionar sombra", cls: "drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]" },
+            { label: "Não alterar cores", cls: "", color: "#EF4444" },
           ].map((rule) => (
             <div key={rule.label} className="flex flex-col gap-3">
               <div className="flex h-24 items-center justify-center rounded-xl border border-[var(--color-loss)]/20 bg-[var(--bg-secondary)]">
-                <div className={`flex items-center gap-1.5 ${rule.render}`}>
-                  {rule.label === "Não alterar cores" ? (
-                    <>
-                      <div className="flex h-7 w-7 items-center justify-center rounded-md bg-blue-500">
-                        <span className="text-xs font-black text-white">O</span>
-                      </div>
-                      <span className="text-base font-bold tracking-tight text-orange-400">OpenCapital</span>
-                    </>
-                  ) : (
-                    <>
-                      <div className="flex h-7 w-7 items-center justify-center rounded-md bg-[var(--color-signal-green)]">
-                        <span className="text-xs font-black text-[var(--color-capital-black)]">O</span>
-                      </div>
-                      <span className="text-base font-bold tracking-tight">OpenCapital</span>
-                    </>
-                  )}
+                <div className={rule.cls}>
+                  <OCLogo size="sm" color={rule.color ?? "var(--text-primary)"} />
                 </div>
               </div>
               <div className="flex items-center gap-1.5">
@@ -1221,30 +1208,26 @@ background-size: 32px 32px;`} />
         <SubHeading>Tokens de Logo</SubHeading>
         <Label>Referências de design tokens relacionados ao sistema de logo.</Label>
         <div className="space-y-0.5">
-          <TokenRow name="--logo-symbol-size-sm" value="24px" />
-          <TokenRow name="--logo-symbol-size-md" value="32px" />
-          <TokenRow name="--logo-symbol-size-lg" value="48px" />
-          <TokenRow name="--logo-symbol-radius" value="var(--radius-lg)" />
-          <TokenRow name="--logo-symbol-bg" value="var(--color-signal-green)" />
-          <TokenRow name="--logo-symbol-color" value="var(--color-capital-black)" />
+          <TokenRow name="--logo-symbol-size-sm" value="20px" />
+          <TokenRow name="--logo-symbol-size-md" value="28px" />
+          <TokenRow name="--logo-symbol-size-lg" value="40px" />
+          <TokenRow name="--logo-symbol-type" value="dot-ring (anel pixelado)" />
           <TokenRow name="--logo-safe-zone" value="1x (altura do símbolo)" />
           <TokenRow name="--logo-min-digital" value="24px (completo) / 16px (símbolo)" />
           <TokenRow name="--logo-min-print" value="8mm" />
         </div>
 
         <div className="mt-8">
-          <CodeBlock lang="JSX" code={`{/* Logo Horizontal */}
-<div className="flex items-center gap-3">
-  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--color-signal-green)]">
-    <span className="text-lg font-black text-[var(--color-capital-black)]">O</span>
-  </div>
-  <span className="text-2xl font-bold tracking-tight">OpenCapital</span>
-</div>
+          <CodeBlock lang="JSX" code={`import { OCLogo, OCSymbol } from "@/components/oc-logo";
 
-{/* Apenas Símbolo */}
-<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--color-signal-green)]">
-  <span className="text-lg font-black text-[var(--color-capital-black)]">O</span>
-</div>`} />
+{/* Logo completo (Ecossistema) */}
+<OCLogo size="lg" color="#0A0A0A" />
+
+{/* Apenas símbolo (Sociedade) */}
+<OCSymbol size={32} color="#0A0A0A" />
+
+{/* Meio símbolo (Inteligência) */}
+<OCSymbol size={32} color="#0A0A0A" variant="half" />`} />
         </div>
       </Section>
     </>
