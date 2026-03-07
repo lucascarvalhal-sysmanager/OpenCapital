@@ -11,7 +11,7 @@ export default function AInfraestruturaPage() {
 
       {/* ── 01 · MANIFESTO ── */}
       <Section id="manifesto" num="01" title="Manifesto" subtitle="O fundamento da OpenCapital em palavras.">
-        <div className="relative overflow-hidden rounded-2xl border border-black/6 bg-[var(--bg-secondary)] p-8 md:p-12">
+        <div className="relative overflow-hidden rounded-2xl border border-[var(--border-default)] bg-[var(--bg-secondary)] p-8 md:p-12">
           {/* decorative gradient */}
           <div className="pointer-events-none absolute inset-0 bg-[var(--gradient-surface)]" />
 
@@ -41,7 +41,7 @@ export default function AInfraestruturaPage() {
             </div>
 
             {/* closing line */}
-            <div className="border-t border-black/6 pt-6">
+            <div className="border-t border-[var(--border-default)] pt-6">
               <p className="text-lg font-semibold text-[var(--text-primary)] md:text-xl">
                 Os dados são o combustível. A IA é o motor. <span className="gradient-text">A decisão é sua.</span>
               </p>
@@ -185,7 +185,7 @@ export default function AInfraestruturaPage() {
         </div>
 
         {/* Declaração de Posicionamento */}
-        <div className="mb-12 rounded-2xl border border-black/6 bg-[var(--bg-secondary)] p-8">
+        <div className="mb-12 rounded-2xl border border-[var(--border-default)] bg-[var(--bg-secondary)] p-8">
           <span className="mb-4 block font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-green)]">Declaração de Posicionamento</span>
           <blockquote className="border-l-2 border-[var(--color-signal-green)] pl-6 text-base leading-relaxed text-[var(--text-secondary)] md:text-lg">
             Para <strong className="text-[var(--text-primary)]">traders e investidores</strong> que buscam <strong className="text-[var(--text-primary)]">vantagem competitiva baseada em dados</strong>, a <strong className="gradient-text">OpenCapital</strong> é a <strong className="text-[var(--text-primary)]">infraestrutura de inteligência financeira</strong> que <strong className="text-[var(--text-primary)]">transforma dados em tempo real em decisões operacionais</strong>, diferente de <strong className="text-[var(--text-primary)]">ferramentas tradicionais</strong> porque <strong className="text-[var(--text-primary)]">opera com arquitetura proprietária de IA especializada em ciência de dados financeiros</strong>.
@@ -337,11 +337,11 @@ export default function AInfraestruturaPage() {
 
         {/* summary */}
         <div className="grid gap-6 md:grid-cols-2">
-          <div className="rounded-2xl border border-black/6 bg-[var(--bg-secondary)] p-6 text-center">
+          <div className="rounded-2xl border border-[var(--border-default)] bg-[var(--bg-secondary)] p-6 text-center">
             <span className="gradient-text text-3xl font-bold">Open</span>
             <p className="mt-2 text-sm text-[var(--text-secondary)]">O acesso que antes era fechado</p>
           </div>
-          <div className="rounded-2xl border border-black/6 bg-[var(--bg-secondary)] p-6 text-center">
+          <div className="rounded-2xl border border-[var(--border-default)] bg-[var(--bg-secondary)] p-6 text-center">
             <span className="gradient-text text-3xl font-bold">Capital</span>
             <p className="mt-2 text-sm text-[var(--text-secondary)]">O poder financeiro que antes era exclusivo</p>
           </div>

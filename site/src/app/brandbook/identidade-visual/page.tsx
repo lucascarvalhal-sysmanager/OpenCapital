@@ -22,7 +22,7 @@ function BackgroundCard({ bg, label, rule, logoColor }: { bg: string; label: str
       <div className="flex h-32 items-center justify-center px-6" style={{ background: bg }}>
         <OCLogo size="md" color={logoColor} />
       </div>
-      <div className="border-t border-black/6 bg-[var(--bg-secondary)] p-4">
+      <div className="border-t border-[var(--border-default)] bg-[var(--bg-secondary)] p-4">
         <p className="text-xs font-semibold">{label}</p>
         <p className="mt-1 text-[10px] text-[var(--text-tertiary)]">{rule}</p>
       </div>
@@ -34,7 +34,7 @@ function BackgroundCard({ bg, label, rule, logoColor }: { bg: string; label: str
 function GradientSwatch({ name, css }: { name: string; css: string }) {
   return (
     <div className="flex flex-col gap-2">
-      <div className="h-24 w-full rounded-2xl border border-black/6" style={{ background: css }} />
+      <div className="h-24 w-full rounded-2xl border border-[var(--border-default)]" style={{ background: css }} />
       <span className="text-sm font-medium">{name}</span>
       <span className="font-mono text-[10px] leading-relaxed text-[var(--text-tertiary)]">{css}</span>
     </div>
@@ -118,11 +118,11 @@ export default function IdentidadeVisualPage() {
           <div className="glow-card flex flex-col gap-6 rounded-2xl bg-[var(--bg-secondary)] p-8">
             <h3 className="text-sm font-semibold text-[var(--color-signal-green)]">Regras de Uso</h3>
             <div className="space-y-4">
-              <div className="flex items-start gap-3 border-b border-black/6 pb-4">
+              <div className="flex items-start gap-3 border-b border-[var(--border-default)] pb-4">
                 <span className="font-mono text-xs text-[var(--color-signal-green)]">SAFE ZONE</span>
                 <span className="text-sm text-[var(--text-secondary)]">Mínimo de 1x a altura do símbolo em todas as direções. Nenhum elemento pode invadir essa área.</span>
               </div>
-              <div className="flex items-start gap-3 border-b border-black/6 pb-4">
+              <div className="flex items-start gap-3 border-b border-[var(--border-default)] pb-4">
                 <span className="font-mono text-xs text-[var(--color-signal-green)]">MÍN. DIGITAL</span>
                 <span className="text-sm text-[var(--text-secondary)]">24 px de altura do símbolo para telas digitais.</span>
               </div>
@@ -214,52 +214,238 @@ export default function IdentidadeVisualPage() {
 
       {/* ─── 07 ESCALA TIPOGRÁFICA ─── */}
       <Section id="escala-tipografica" num="07" title="Escala Tipográfica" subtitle="Duas famílias complementares: Inter para comunicação e JetBrains Mono para dados financeiros.">
-        <div className="grid gap-8 md:grid-cols-2">
-          {/* Inter */}
-          <div className="space-y-4">
-            <h3 className="mb-6 font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-green)]">Inter — Display + Body</h3>
-            <TypeSample label="Hero" size="64px" weight="Bold" />
-            <TypeSample label="Display" size="48px" weight="Bold" />
-            <TypeSample label="H1" size="36px" weight="SemiBold" />
-            <TypeSample label="H2" size="28px" weight="SemiBold" />
-            <TypeSample label="H3" size="24px" weight="SemiBold" />
-            <TypeSample label="Body Large" size="18px" weight="Regular" />
-            <TypeSample label="Body" size="16px" weight="Regular" />
-            <TypeSample label="Body Small" size="14px" weight="Regular" />
-            <TypeSample label="Caption" size="12px" weight="Medium" />
-            <div className="flex flex-col gap-1 border-b border-black/6 pb-4">
-              <div className="flex items-center gap-3">
-                <span className="font-mono text-xs text-[var(--text-tertiary)]">Overline</span>
-                <span className="font-mono text-xs text-[var(--color-iron)]">11px / Bold</span>
-              </div>
-              <p className="text-[11px] font-bold uppercase tracking-[0.15em]">A infraestrutura mudou. Quem opera com dados vence.</p>
+
+        {/* === HERO SPECIMEN === */}
+        <div className="mb-16 overflow-hidden rounded-2xl border border-[var(--border-default)] bg-[var(--bg-secondary)]">
+          {/* Large specimen */}
+          <div className="relative px-8 py-12 md:px-12 md:py-20">
+            <div className="pointer-events-none absolute inset-0 bg-[var(--gradient-surface)]" />
+            <div className="relative space-y-2">
+              <p className="font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-green)]">Inter &middot; Type Specimen</p>
+              <p className="text-5xl font-bold leading-[1.05] tracking-tight md:text-7xl lg:text-8xl">
+                A infraestrutura
+                <br />
+                <span className="gradient-text">mudou.</span>
+              </p>
+              <p className="mt-4 max-w-lg text-lg text-[var(--text-secondary)] md:text-xl">
+                Quem opera com dados vence. Prosperidade
+                <br className="hidden md:block" />
+                como consequência de disciplina + dados.
+              </p>
             </div>
           </div>
 
-          {/* JetBrains Mono */}
-          <div className="space-y-4">
-            <h3 className="mb-6 font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-green)]">JetBrains Mono — Dados & Código</h3>
-            <TypeSample label="Price Large" size="32px" weight="Bold" mono text="R$ 127.459,32" />
-            <TypeSample label="Price" size="20px" weight="Medium" mono text="BTC 98,472.50 | ETH 3,847.12" />
-            <TypeSample label="Data" size="14px" weight="Regular" mono text="2026-03-06T14:32:00Z | vol: 2.4M" />
-            <TypeSample label="Code" size="14px" weight="Regular" mono text='const signal = await ai.analyze(data)' />
-            <TypeSample label="Mono Small" size="12px" weight="Regular" mono text="TX-0x7f3a...b2c1 | 14:32:00" />
+          {/* Alphabet strip */}
+          <div className="border-t border-[var(--border-default)] bg-[var(--bg-tertiary)] px-8 py-6 md:px-12">
+            <div className="flex flex-wrap gap-x-3 gap-y-1 text-2xl font-light tracking-wide text-[var(--text-secondary)] md:text-3xl">
+              {"ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map((c) => (
+                <span key={c}>{c}</span>
+              ))}
+            </div>
+            <div className="mt-3 flex flex-wrap gap-x-3 gap-y-1 text-2xl font-light tracking-wide text-[var(--text-tertiary)] md:text-3xl">
+              {"abcdefghijklmnopqrstuvwxyz".split("").map((c) => (
+                <span key={c}>{c}</span>
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* Typography rationale */}
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
+        {/* === SCALE SIDE BY SIDE === */}
+        <div className="mb-16 grid gap-12 lg:grid-cols-2">
+          {/* Inter scale */}
+          <div>
+            <div className="mb-8 flex items-center gap-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--color-signal-green)]/10">
+                <span className="text-lg font-bold text-[var(--color-signal-green)]">Aa</span>
+              </div>
+              <div>
+                <h3 className="text-lg font-bold">Inter</h3>
+                <p className="text-xs text-[var(--text-tertiary)]">Display + Body &middot; Geom&eacute;trica, limpa, premium</p>
+              </div>
+            </div>
+            <div className="space-y-0">
+              {[
+                { label: "Hero", size: "48px", weight: 700, ls: "-0.03em", meta: "64px / Bold / -0.03em" },
+                { label: "Display", size: "36px", weight: 700, ls: "-0.02em", meta: "48px / Bold / -0.02em" },
+                { label: "H1", size: "28px", weight: 600, ls: "-0.02em", meta: "36px / SemiBold" },
+                { label: "H2", size: "22px", weight: 600, ls: "-0.01em", meta: "28px / SemiBold" },
+                { label: "H3", size: "20px", weight: 600, ls: "-0.01em", meta: "24px / SemiBold" },
+              ].map((item) => (
+                <div key={item.label} className="group flex items-baseline gap-4 border-b border-[var(--border-default)] py-4 transition hover:bg-[var(--bg-secondary)]/50">
+                  <span className="w-16 shrink-0 font-mono text-[10px] font-bold uppercase tracking-widest text-[var(--color-signal-green)]">{item.label}</span>
+                  <span style={{ fontSize: item.size, fontWeight: item.weight, letterSpacing: item.ls, lineHeight: 1.2 }}>
+                    Prosperidade
+                  </span>
+                  <span className="ml-auto hidden font-mono text-[10px] text-[var(--text-tertiary)] lg:block">{item.meta}</span>
+                </div>
+              ))}
+              {[
+                { label: "Body L", size: "18px", weight: 400, meta: "18px / Regular / 1.6" },
+                { label: "Body", size: "16px", weight: 400, meta: "16px / Regular / 1.6" },
+                { label: "Small", size: "14px", weight: 400, meta: "14px / Regular / 1.5" },
+                { label: "Caption", size: "12px", weight: 500, meta: "12px / Medium / 1.4" },
+              ].map((item) => (
+                <div key={item.label} className="group flex items-baseline gap-4 border-b border-[var(--border-default)] py-3 transition hover:bg-[var(--bg-secondary)]/50">
+                  <span className="w-16 shrink-0 font-mono text-[10px] font-bold uppercase tracking-widest text-[var(--text-tertiary)]">{item.label}</span>
+                  <span className="text-[var(--text-secondary)]" style={{ fontSize: item.size, fontWeight: item.weight, lineHeight: 1.5 }}>
+                    Dados agora podem operar por voc&ecirc;.
+                  </span>
+                  <span className="ml-auto hidden font-mono text-[10px] text-[var(--text-tertiary)] lg:block">{item.meta}</span>
+                </div>
+              ))}
+              <div className="group flex items-baseline gap-4 py-3 transition hover:bg-[var(--bg-secondary)]/50">
+                <span className="w-16 shrink-0 font-mono text-[10px] font-bold uppercase tracking-widest text-[var(--text-tertiary)]">Overline</span>
+                <span className="text-[11px] font-bold uppercase tracking-[0.15em] text-[var(--text-secondary)]">
+                  A INFRAESTRUTURA MUDOU
+                </span>
+                <span className="ml-auto hidden font-mono text-[10px] text-[var(--text-tertiary)] lg:block">11px / Bold / UPPER</span>
+              </div>
+            </div>
+          </div>
+
+          {/* JetBrains Mono scale */}
+          <div>
+            <div className="mb-8 flex items-center gap-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--color-signal-green)]/10">
+                <span className="font-mono text-base font-bold text-[var(--color-signal-green)]">01</span>
+              </div>
+              <div>
+                <h3 className="text-lg font-bold">JetBrains Mono</h3>
+                <p className="text-xs text-[var(--text-tertiary)]">Dados & C&oacute;digo &middot; Largura fixa, tabular numbers</p>
+              </div>
+            </div>
+            <div className="space-y-0">
+              {[
+                { label: "Price XL", size: "36px", weight: 700, text: "R$ 127.459,32" },
+                { label: "Price L", size: "24px", weight: 600, text: "+2.847,50" },
+                { label: "Price", size: "20px", weight: 500, text: "BTC 98,472.50" },
+              ].map((item) => (
+                <div key={item.label} className="group flex items-baseline gap-4 border-b border-[var(--border-default)] py-4 transition hover:bg-[var(--bg-secondary)]/50">
+                  <span className="w-16 shrink-0 font-mono text-[10px] font-bold uppercase tracking-widest text-[var(--color-signal-green)]">{item.label}</span>
+                  <span className="font-mono" style={{ fontSize: item.size, fontWeight: item.weight, lineHeight: 1.2 }}>
+                    {item.text}
+                  </span>
+                </div>
+              ))}
+              {[
+                { label: "Data", size: "14px", weight: 400, text: "2026-03-07T14:32:00Z | vol: 2.4M" },
+                { label: "Code", size: "14px", weight: 400, text: "const signal = await ai.analyze(data)" },
+                { label: "Mono S", size: "12px", weight: 400, text: "TX-0x7f3a...b2c1 | 14:32:00" },
+              ].map((item) => (
+                <div key={item.label} className="group flex items-baseline gap-4 border-b border-[var(--border-default)] py-3 transition hover:bg-[var(--bg-secondary)]/50">
+                  <span className="w-16 shrink-0 font-mono text-[10px] font-bold uppercase tracking-widest text-[var(--text-tertiary)]">{item.label}</span>
+                  <span className="font-mono text-[var(--text-secondary)]" style={{ fontSize: item.size, fontWeight: item.weight }}>
+                    {item.text}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            {/* Tabular numbers showcase */}
+            <div className="mt-8 rounded-xl border border-[var(--border-default)] bg-[var(--bg-secondary)] p-5">
+              <p className="mb-4 font-mono text-[10px] font-bold uppercase tracking-widest text-[var(--color-signal-green)]">Tabular Numbers</p>
+              <div className="space-y-1 font-mono text-sm">
+                {[
+                  { pair: "AAPL", price: "187.44", change: "+1.23%", up: true },
+                  { pair: "MSFT", price: "421.08", change: "-0.57%", up: false },
+                  { pair: "NVDA", price: "893.12", change: "+3.41%", up: true },
+                  { pair: "GOOGL", price: "178.95", change: "+0.82%", up: true },
+                  { pair: "AMZN", price: "225.67", change: "-1.15%", up: false },
+                ].map((row) => (
+                  <div key={row.pair} className="flex items-center justify-between border-b border-[var(--border-default)] py-2 last:border-0">
+                    <span className="w-16 font-semibold text-[var(--text-primary)]">{row.pair}</span>
+                    <span className="text-[var(--text-secondary)]">{row.price}</span>
+                    <span className={row.up ? "text-[var(--color-profit)]" : "text-[var(--color-loss)]"}>{row.change}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* === CONTEXTUAL DEMO === */}
+        <div className="mb-12">
+          <p className="mb-6 font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-green)]">Tipografia em Contexto</p>
+          <div className="grid gap-6 md:grid-cols-3">
+            {/* Card UI */}
+            <div className="glow-card overflow-hidden rounded-2xl bg-[var(--bg-secondary)]">
+              <div className="p-6">
+                <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-[var(--color-signal-green)]">Overline</p>
+                <p className="mt-2 text-xl font-bold tracking-tight">Inter SemiBold 24</p>
+                <p className="mt-2 text-sm leading-relaxed text-[var(--text-secondary)]">
+                  Body Regular 16 &mdash; texto corrido com line-height confort&aacute;vel de 1.6 para leitura fluida em cards e descri&ccedil;&otilde;es.
+                </p>
+              </div>
+              <div className="border-t border-[var(--border-default)] bg-[var(--bg-tertiary)] px-6 py-3">
+                <span className="font-mono text-xs text-[var(--text-tertiary)]">Caption Mono 12</span>
+              </div>
+            </div>
+
+            {/* Dashboard metric */}
+            <div className="glow-card overflow-hidden rounded-2xl bg-[var(--bg-secondary)]">
+              <div className="p-6">
+                <p className="text-xs font-medium text-[var(--text-tertiary)]">Rendimento Acumulado</p>
+                <p className="mt-1 font-mono text-3xl font-bold text-[var(--color-profit)]">+24.7%</p>
+                <p className="mt-1 font-mono text-xs text-[var(--text-tertiary)]">vs. benchmark +18.2%</p>
+              </div>
+              <div className="border-t border-[var(--border-default)] bg-[var(--bg-tertiary)] px-6 py-3">
+                <div className="flex items-center justify-between font-mono text-xs">
+                  <span className="text-[var(--text-tertiary)]">Atualizado</span>
+                  <span className="text-[var(--color-signal-green)]">14:32:00</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Code/Terminal */}
+            <div className="glow-card overflow-hidden rounded-2xl bg-[var(--bg-secondary)]">
+              <div className="border-b border-[var(--border-default)] px-6 py-3">
+                <div className="flex items-center gap-1.5">
+                  <div className="h-2.5 w-2.5 rounded-full bg-[var(--color-loss)]" />
+                  <div className="h-2.5 w-2.5 rounded-full bg-[var(--color-caution)]" />
+                  <div className="h-2.5 w-2.5 rounded-full bg-[var(--color-profit)]" />
+                  <span className="ml-2 font-mono text-[10px] text-[var(--text-tertiary)]">terminal</span>
+                </div>
+              </div>
+              <div className="p-6 font-mono text-xs leading-relaxed">
+                <p className="text-[var(--text-tertiary)]">$ oc analyze --pair BTCUSD</p>
+                <p className="mt-2 text-[var(--text-secondary)]">
+                  <span className="text-[var(--color-signal-green)]">&#10003;</span> Loading 2.4M data points...
+                </p>
+                <p className="text-[var(--text-secondary)]">
+                  <span className="text-[var(--color-signal-green)]">&#10003;</span> Running ML pipeline...
+                </p>
+                <p className="mt-2 text-[var(--color-signal-green)]">Signal: LONG | Confidence: 87.4%</p>
+                <p className="text-[var(--text-tertiary)]">Latency: 47ms | Model: v3.2.1</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* === RATIONALE === */}
+        <div className="grid gap-6 md:grid-cols-2">
           <div className="glow-card rounded-2xl bg-[var(--bg-secondary)] p-6">
-            <h4 className="mb-2 text-sm font-semibold text-[var(--color-signal-green)]">Por que Inter?</h4>
-            <p className="text-sm leading-relaxed text-[var(--text-secondary)]">
-              Inter foi projetada especificamente para telas digitais, com excelente legibilidade em tamanhos pequenos, suporte a tabular numbers e uma vasta gama de pesos. Sua geometria neutra e profissional se alinha com o posicionamento de infraestrutura financeira da OpenCapital.
-            </p>
+            <h4 className="mb-3 flex items-center gap-2 text-sm font-semibold text-[var(--color-signal-green)]">
+              <span className="flex h-6 w-6 items-center justify-center rounded-md bg-[var(--color-signal-green)]/10 text-xs font-bold">Aa</span>
+              Por que Inter?
+            </h4>
+            <ul className="space-y-2 text-sm leading-relaxed text-[var(--text-secondary)]">
+              <li className="flex gap-2"><span className="mt-1 text-[var(--color-signal-green)]">&bull;</span> Otimizada para telas digitais com excelente hinting</li>
+              <li className="flex gap-2"><span className="mt-1 text-[var(--color-signal-green)]">&bull;</span> Suporte completo a tabular numbers (cr&iacute;tico para finan&ccedil;as)</li>
+              <li className="flex gap-2"><span className="mt-1 text-[var(--color-signal-green)]">&bull;</span> Open-source, performance via next/font</li>
+              <li className="flex gap-2"><span className="mt-1 text-[var(--color-signal-green)]">&bull;</span> Refer&ecirc;ncia: Stripe, Linear, Vercel</li>
+            </ul>
           </div>
           <div className="glow-card rounded-2xl bg-[var(--bg-secondary)] p-6">
-            <h4 className="mb-2 text-sm font-semibold text-[var(--color-signal-green)]">Por que JetBrains Mono?</h4>
-            <p className="text-sm leading-relaxed text-[var(--text-secondary)]">
-              JetBrains Mono oferece ligatures de programação e caracteres otimizados para leitura de dados numéricos. Sua largura fixa garante alinhamento perfeito em tabelas de preços, timestamps e blocos de código, essencial para uma plataforma financeira.
-            </p>
+            <h4 className="mb-3 flex items-center gap-2 text-sm font-semibold text-[var(--color-signal-green)]">
+              <span className="flex h-6 w-6 items-center justify-center rounded-md bg-[var(--color-signal-green)]/10 font-mono text-xs font-bold">01</span>
+              Por que JetBrains Mono?
+            </h4>
+            <ul className="space-y-2 text-sm leading-relaxed text-[var(--text-secondary)]">
+              <li className="flex gap-2"><span className="mt-1 text-[var(--color-signal-green)]">&bull;</span> Ligatures de programa&ccedil;&atilde;o e caracteres otimizados</li>
+              <li className="flex gap-2"><span className="mt-1 text-[var(--color-signal-green)]">&bull;</span> Largura fixa para alinhamento perfeito em tabelas</li>
+              <li className="flex gap-2"><span className="mt-1 text-[var(--color-signal-green)]">&bull;</span> N&uacute;meros tabulares para dados financeiros</li>
+              <li className="flex gap-2"><span className="mt-1 text-[var(--color-signal-green)]">&bull;</span> Open-source, excelente hinting em todas as plataformas</li>
+            </ul>
           </div>
         </div>
       </Section>
@@ -299,15 +485,15 @@ export default function IdentidadeVisualPage() {
             <div className="glow-card rounded-2xl bg-[var(--bg-secondary)] p-6">
               <h3 className="mb-4 font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-green)]">Diretrizes de Estilo</h3>
               <div className="space-y-4">
-                <div className="border-b border-black/6 pb-3">
+                <div className="border-b border-[var(--border-default)] pb-3">
                   <span className="text-xs font-semibold text-[var(--text-primary)]">Tom</span>
                   <p className="mt-1 text-sm text-[var(--text-secondary)]">Dark, atmosférico, tecnológico</p>
                 </div>
-                <div className="border-b border-black/6 pb-3">
+                <div className="border-b border-[var(--border-default)] pb-3">
                   <span className="text-xs font-semibold text-[var(--text-primary)]">Tratamento</span>
                   <p className="mt-1 text-sm text-[var(--text-secondary)]">Alto contraste, desaturado com acentos verdes</p>
                 </div>
-                <div className="border-b border-black/6 pb-3">
+                <div className="border-b border-[var(--border-default)] pb-3">
                   <span className="text-xs font-semibold text-[var(--text-primary)]">Temas</span>
                   <p className="mt-1 text-sm text-[var(--text-secondary)]">Dados, tecnologia, cidades à noite, terminais, gráficos</p>
                 </div>
@@ -331,7 +517,7 @@ export default function IdentidadeVisualPage() {
                   ))}
                 </div>
               </div>
-              <div className="border-t border-black/6 bg-[var(--bg-secondary)] p-4">
+              <div className="border-t border-[var(--border-default)] bg-[var(--bg-secondary)] p-4">
                 <p className="text-xs font-semibold">Tratamento aplicado</p>
                 <p className="mt-1 text-[10px] text-[var(--text-tertiary)]">saturate(0.3) + contrast(1.2) + green overlay</p>
               </div>

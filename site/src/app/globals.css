@@ -63,7 +63,7 @@
   --transition-base: 250ms ease;
   --transition-slow: 400ms ease;
 
-  /* === LIGHT MODE TOKENS === */
+  /* === LIGHT MODE TOKENS (default) === */
   --bg-primary: #f1f1f1;
   --bg-secondary: #ffffff;
   --bg-tertiary: #e8e8e8;
@@ -73,6 +73,23 @@
   --border-default: rgba(0, 0, 0, 0.06);
   --border-hover: rgba(0, 0, 0, 0.12);
   --border-active: rgba(28, 124, 84, 0.3);
+}
+
+[data-theme="dark"] {
+  --bg-primary: #0A0A0A;
+  --bg-secondary: #1A1A1A;
+  --bg-tertiary: #2A2A2A;
+  --text-primary: #F5F5F0;
+  --text-secondary: #9CA3AF;
+  --text-tertiary: #6B7280;
+  --border-default: rgba(255, 255, 255, 0.06);
+  --border-hover: rgba(255, 255, 255, 0.12);
+  --border-active: rgba(28, 124, 84, 0.3);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
+  --glow-green: 0 0 20px rgba(28, 124, 84, 0.15);
+  --glow-green-strong: 0 0 40px rgba(28, 124, 84, 0.25);
 }
 
 @theme inline {
@@ -105,12 +122,22 @@ body {
 
 .glow-card {
   border: 1px solid var(--border-default);
-  transition: all var(--transition-base);
+  transition: all var(--transition-base), background-color 300ms ease, border-color 300ms ease;
 }
 
 .glow-card:hover {
   border-color: var(--border-active);
   box-shadow: var(--glow-green);
+}
+
+/* Smooth theme transitions on key elements */
+body,
+section,
+nav,
+footer,
+.glow-card,
+[class*="bg-[var(--bg"] {
+  transition: background-color 300ms ease, color 300ms ease, border-color 300ms ease;
 }
 
 .texture-dots {
