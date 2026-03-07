@@ -478,55 +478,130 @@ export default function IdentidadeVisualPage() {
       </Section>
 
       {/* ─── 09 FOTOGRAFIA & IMAGENS ─── */}
-      <Section id="fotografia" num="09" title="Fotografia & Imagens" subtitle="Diretrizes de estilo para fotografia e tratamento de imagens no ecossistema visual.">
-        <div className="grid gap-8 md:grid-cols-2">
-          {/* Guidelines */}
-          <div className="space-y-6">
-            <div className="glow-card rounded-2xl bg-[var(--bg-secondary)] p-6">
-              <h3 className="mb-4 font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-green)]">Diretrizes de Estilo</h3>
-              <div className="space-y-4">
-                <div className="border-b border-[var(--border-default)] pb-3">
-                  <span className="text-xs font-semibold text-[var(--text-primary)]">Tom</span>
-                  <p className="mt-1 text-sm text-[var(--text-secondary)]">Dark, atmosférico, tecnológico</p>
-                </div>
-                <div className="border-b border-[var(--border-default)] pb-3">
-                  <span className="text-xs font-semibold text-[var(--text-primary)]">Tratamento</span>
-                  <p className="mt-1 text-sm text-[var(--text-secondary)]">Alto contraste, desaturado com acentos verdes</p>
-                </div>
-                <div className="border-b border-[var(--border-default)] pb-3">
-                  <span className="text-xs font-semibold text-[var(--text-primary)]">Temas</span>
-                  <p className="mt-1 text-sm text-[var(--text-secondary)]">Dados, tecnologia, cidades à noite, terminais, gráficos</p>
-                </div>
-                <div>
-                  <span className="text-xs font-semibold text-[var(--color-loss)]">Evitar</span>
-                  <p className="mt-1 text-sm text-[var(--text-secondary)]">Fotos genéricas de stock, pessoas sorrindo, moedas físicas</p>
-                </div>
+      <Section id="fotografia" num="09" title="Fotografia & Imagens" subtitle="Diretrizes de estilo para fotografia e tratamento de imagens, adaptadas para ambos os temas.">
+
+        {/* Guidelines side by side: Dark + Light */}
+        <div className="mb-12 grid gap-6 md:grid-cols-2">
+          {/* Dark Mode Guidelines */}
+          <div className="glow-card rounded-2xl bg-[var(--bg-secondary)] p-6">
+            <div className="mb-4 flex items-center gap-2">
+              <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[#0A0A0A] border border-[var(--border-default)]">
+                <div className="h-2 w-2 rounded-full bg-[var(--color-signal-green)]" />
+              </div>
+              <h3 className="font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-green)]">Dark Mode</h3>
+            </div>
+            <div className="space-y-4">
+              <div className="border-b border-[var(--border-default)] pb-3">
+                <span className="text-xs font-semibold text-[var(--text-primary)]">Tom</span>
+                <p className="mt-1 text-sm text-[var(--text-secondary)]">Atmosférico, tecnológico, imersivo</p>
+              </div>
+              <div className="border-b border-[var(--border-default)] pb-3">
+                <span className="text-xs font-semibold text-[var(--text-primary)]">Tratamento</span>
+                <p className="mt-1 text-sm text-[var(--text-secondary)]">Alto contraste, desaturado com acentos verdes. Brightness reduzido para integrar com fundos escuros.</p>
+              </div>
+              <div className="border-b border-[var(--border-default)] pb-3">
+                <span className="text-xs font-semibold text-[var(--text-primary)]">Temas</span>
+                <p className="mt-1 text-sm text-[var(--text-secondary)]">Cidades à noite, terminais, gráficos em tela escura, dados luminosos sobre fundo negro</p>
+              </div>
+              <div>
+                <span className="text-xs font-semibold text-[var(--text-primary)]">Overlay</span>
+                <p className="mt-1 text-sm text-[var(--text-secondary)]">Gradiente verde sutil (Signal Green 20% → transparent)</p>
               </div>
             </div>
           </div>
 
-          {/* Treatment preview + code */}
-          <div className="space-y-6">
-            {/* Visual treatment preview */}
-            <div className="glow-card overflow-hidden rounded-2xl">
-              <div className="relative flex h-48 items-center justify-center overflow-hidden bg-[var(--bg-secondary)]" style={{ filter: "saturate(0.3) contrast(1.2) brightness(0.8)" }}>
-                <div className="absolute inset-0 bg-gradient-to-br from-[#145A3D]/20 to-transparent" />
-                <div className="grid grid-cols-6 gap-1 opacity-60">
-                  {Array.from({ length: 24 }).map((_, i) => (
-                    <div key={i} className="h-4 w-8 rounded-sm" style={{ backgroundColor: i % 3 === 0 ? "#1C7C54" : i % 5 === 0 ? "#145A3D" : "#2A2A2A", opacity: 0.3 + Math.random() * 0.7 }} />
-                  ))}
-                </div>
+          {/* Light Mode Guidelines */}
+          <div className="glow-card rounded-2xl bg-[var(--bg-secondary)] p-6">
+            <div className="mb-4 flex items-center gap-2">
+              <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[#F1F1F1] border border-[var(--border-default)]">
+                <div className="h-2 w-2 rounded-full bg-[var(--color-signal-green)]" />
               </div>
-              <div className="border-t border-[var(--border-default)] bg-[var(--bg-secondary)] p-4">
-                <p className="text-xs font-semibold">Tratamento aplicado</p>
-                <p className="mt-1 text-[10px] text-[var(--text-tertiary)]">saturate(0.3) + contrast(1.2) + green overlay</p>
+              <h3 className="font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-green)]">Light Mode</h3>
+            </div>
+            <div className="space-y-4">
+              <div className="border-b border-[var(--border-default)] pb-3">
+                <span className="text-xs font-semibold text-[var(--text-primary)]">Tom</span>
+                <p className="mt-1 text-sm text-[var(--text-secondary)]">Limpo, profissional, arejado</p>
+              </div>
+              <div className="border-b border-[var(--border-default)] pb-3">
+                <span className="text-xs font-semibold text-[var(--text-primary)]">Tratamento</span>
+                <p className="mt-1 text-sm text-[var(--text-secondary)]">Contraste moderado, levemente desaturado. Brightness elevado para manter leveza sobre fundos claros.</p>
+              </div>
+              <div className="border-b border-[var(--border-default)] pb-3">
+                <span className="text-xs font-semibold text-[var(--text-primary)]">Temas</span>
+                <p className="mt-1 text-sm text-[var(--text-secondary)]">Espaços de trabalho, dashboards claros, gráficos sobre branco, tecnologia minimalista</p>
+              </div>
+              <div>
+                <span className="text-xs font-semibold text-[var(--text-primary)]">Overlay</span>
+                <p className="mt-1 text-sm text-[var(--text-secondary)]">Gradiente verde sutil (Emerald Deep 8% → transparent)</p>
               </div>
             </div>
-
-            {/* CSS Filter code */}
-            <CodeBlock lang="CSS" code={`/* Tratamento padrão para imagens */\n.oc-image-treatment {\n  filter:\n    saturate(0.3)\n    contrast(1.2)\n    brightness(0.8);\n}\n\n/* Overlay verde */\n.oc-image-treatment::after {\n  content: '';\n  position: absolute;\n  inset: 0;\n  background: linear-gradient(\n    135deg,\n    rgba(5, 150, 105, 0.2) 0%,\n    transparent 60%\n  );\n  mix-blend-mode: screen;\n}`} />
           </div>
         </div>
+
+        {/* Shared rules */}
+        <div className="mb-12 glow-card rounded-2xl bg-[var(--bg-secondary)] p-6">
+          <h3 className="mb-4 font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-green)]">Regras Compartilhadas (ambos os temas)</h3>
+          <div className="grid gap-4 sm:grid-cols-2">
+            <div className="space-y-3 text-sm text-[var(--text-secondary)]">
+              <p><span className="font-semibold text-[var(--text-primary)]">Desaturação:</span> Sempre aplicar saturate(0.3) — a cor vem do verde da marca, não da foto</p>
+              <p><span className="font-semibold text-[var(--text-primary)]">Acento:</span> Signal Green como única cor vibrante sobre imagens tratadas</p>
+              <p><span className="font-semibold text-[var(--text-primary)]">Consistência:</span> Mesmo tratamento base em ambos os temas, variando apenas brightness</p>
+            </div>
+            <div className="space-y-3">
+              <div className="flex items-start gap-2 text-sm">
+                <span className="mt-0.5 text-[var(--color-loss)]">&#10007;</span>
+                <span className="text-[var(--text-secondary)]">Fotos genéricas de stock, pessoas sorrindo com laptops</span>
+              </div>
+              <div className="flex items-start gap-2 text-sm">
+                <span className="mt-0.5 text-[var(--color-loss)]">&#10007;</span>
+                <span className="text-[var(--text-secondary)]">Moedas/cédulas físicas, símbolos de dólar literais</span>
+              </div>
+              <div className="flex items-start gap-2 text-sm">
+                <span className="mt-0.5 text-[var(--color-loss)]">&#10007;</span>
+                <span className="text-[var(--text-secondary)]">Imagens sem tratamento (saturadas, coloridas) em qualquer tema</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Treatment preview: Dark vs Light side by side */}
+        <div className="mb-8 grid gap-6 md:grid-cols-2">
+          {/* Dark treatment */}
+          <div className="glow-card overflow-hidden rounded-2xl">
+            <div className="relative flex h-48 items-center justify-center overflow-hidden" style={{ background: "#0A0A0A", filter: "saturate(0.3) contrast(1.2) brightness(0.8)" }}>
+              <div className="absolute inset-0 bg-gradient-to-br from-[#145A3D]/20 to-transparent" />
+              <div className="grid grid-cols-6 gap-1 opacity-60">
+                {Array.from({ length: 24 }).map((_, i) => (
+                  <div key={`dark-${i}`} className="h-4 w-8 rounded-sm" style={{ backgroundColor: i % 3 === 0 ? "#1C7C54" : i % 5 === 0 ? "#145A3D" : "#2A2A2A", opacity: 0.4 + (i % 7) * 0.08 }} />
+                ))}
+              </div>
+            </div>
+            <div className="border-t border-[var(--border-default)] bg-[var(--bg-secondary)] p-4">
+              <p className="text-xs font-semibold">Tratamento Dark</p>
+              <p className="mt-1 font-mono text-[10px] text-[var(--text-tertiary)]">brightness(0.8) + saturate(0.3) + green overlay 20%</p>
+            </div>
+          </div>
+
+          {/* Light treatment */}
+          <div className="glow-card overflow-hidden rounded-2xl">
+            <div className="relative flex h-48 items-center justify-center overflow-hidden" style={{ background: "#F1F1F1", filter: "saturate(0.3) contrast(1.1) brightness(1.05)" }}>
+              <div className="absolute inset-0 bg-gradient-to-br from-[#145A3D]/8 to-transparent" />
+              <div className="grid grid-cols-6 gap-1 opacity-50">
+                {Array.from({ length: 24 }).map((_, i) => (
+                  <div key={`light-${i}`} className="h-4 w-8 rounded-sm" style={{ backgroundColor: i % 3 === 0 ? "#1C7C54" : i % 5 === 0 ? "#2A9D6E" : "#D1D5DB", opacity: 0.3 + (i % 7) * 0.08 }} />
+                ))}
+              </div>
+            </div>
+            <div className="border-t border-[var(--border-default)] bg-[var(--bg-secondary)] p-4">
+              <p className="text-xs font-semibold">Tratamento Light</p>
+              <p className="mt-1 font-mono text-[10px] text-[var(--text-tertiary)]">brightness(1.05) + saturate(0.3) + green overlay 8%</p>
+            </div>
+          </div>
+        </div>
+
+        {/* CSS code for both */}
+        <CodeBlock lang="CSS" code={`/* === Dark Mode Treatment === */\n.oc-image-treatment--dark {\n  filter: saturate(0.3) contrast(1.2) brightness(0.8);\n}\n.oc-image-treatment--dark::after {\n  background: linear-gradient(135deg, rgba(28,124,84,0.2) 0%, transparent 60%);\n  mix-blend-mode: screen;\n}\n\n/* === Light Mode Treatment === */\n.oc-image-treatment--light {\n  filter: saturate(0.3) contrast(1.1) brightness(1.05);\n}\n.oc-image-treatment--light::after {\n  background: linear-gradient(135deg, rgba(28,124,84,0.08) 0%, transparent 60%);\n  mix-blend-mode: multiply;\n}`} />
       </Section>
     </>
   );

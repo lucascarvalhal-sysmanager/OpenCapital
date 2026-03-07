@@ -70,17 +70,34 @@ export default function DesignSystemPage() {
 
         {/* ── Colors: Surfaces ── */}
         <SubHeading>Tokens de Superfície &amp; Texto</SubHeading>
-        <Label>Aliases semânticos mapeados à paleta base para temas em dark mode.</Label>
-        <div className="space-y-0.5">
-          <TokenRow name="--bg-primary" value="#0A0A0A" preview={<ColorDot color="#0A0A0A" />} />
-          <TokenRow name="--bg-secondary" value="#1A1A1A" preview={<ColorDot color="#1A1A1A" />} />
-          <TokenRow name="--bg-tertiary" value="#2A2A2A" preview={<ColorDot color="#2A2A2A" />} />
-          <TokenRow name="--text-primary" value="#F5F5F0" preview={<ColorDot color="#F5F5F0" />} />
-          <TokenRow name="--text-secondary" value="#9CA3AF" preview={<ColorDot color="#9CA3AF" />} />
-          <TokenRow name="--text-tertiary" value="#6B7280" preview={<ColorDot color="#6B7280" />} />
-          <TokenRow name="--border-default" value="rgba(255,255,255,0.06)" preview={<ColorDot color="rgba(255,255,255,0.06)" />} />
-          <TokenRow name="--border-hover" value="rgba(255,255,255,0.12)" preview={<ColorDot color="rgba(255,255,255,0.12)" />} />
-          <TokenRow name="--border-active" value="rgba(28,124,84,0.3)" preview={<ColorDot color="rgba(28,124,84,0.3)" />} />
+        <Label>Aliases semânticos mapeados à paleta base. Os tokens se adaptam automaticamente ao tema ativo (dark ou light).</Label>
+        <div className="grid gap-6 md:grid-cols-2">
+          {/* Dark tokens */}
+          <div>
+            <p className="mb-3 font-mono text-[10px] font-bold uppercase tracking-widest text-[var(--text-tertiary)]">Dark Mode</p>
+            <div className="space-y-0.5 rounded-xl border border-[var(--border-default)] p-4">
+              <TokenRow name="--bg-primary" value="#0A0A0A" preview={<ColorDot color="#0A0A0A" />} />
+              <TokenRow name="--bg-secondary" value="#1A1A1A" preview={<ColorDot color="#1A1A1A" />} />
+              <TokenRow name="--bg-tertiary" value="#2A2A2A" preview={<ColorDot color="#2A2A2A" />} />
+              <TokenRow name="--text-primary" value="#F5F5F0" preview={<ColorDot color="#F5F5F0" />} />
+              <TokenRow name="--text-secondary" value="#9CA3AF" preview={<ColorDot color="#9CA3AF" />} />
+              <TokenRow name="--text-tertiary" value="#6B7280" preview={<ColorDot color="#6B7280" />} />
+              <TokenRow name="--border-default" value="rgba(255,255,255,0.06)" preview={<ColorDot color="rgba(255,255,255,0.06)" />} />
+            </div>
+          </div>
+          {/* Light tokens */}
+          <div>
+            <p className="mb-3 font-mono text-[10px] font-bold uppercase tracking-widest text-[var(--text-tertiary)]">Light Mode</p>
+            <div className="space-y-0.5 rounded-xl border border-[var(--border-default)] p-4">
+              <TokenRow name="--bg-primary" value="#F1F1F1" preview={<ColorDot color="#F1F1F1" />} />
+              <TokenRow name="--bg-secondary" value="#FFFFFF" preview={<ColorDot color="#FFFFFF" />} />
+              <TokenRow name="--bg-tertiary" value="#E8E8E8" preview={<ColorDot color="#E8E8E8" />} />
+              <TokenRow name="--text-primary" value="#1A1A1A" preview={<ColorDot color="#1A1A1A" />} />
+              <TokenRow name="--text-secondary" value="#4B5563" preview={<ColorDot color="#4B5563" />} />
+              <TokenRow name="--text-tertiary" value="#9CA3AF" preview={<ColorDot color="#9CA3AF" />} />
+              <TokenRow name="--border-default" value="rgba(0,0,0,0.06)" preview={<ColorDot color="rgba(0,0,0,0.06)" />} />
+            </div>
+          </div>
         </div>
 
         {/* ── Gradients ── */}
@@ -1029,7 +1046,7 @@ background-size: 32px 32px;`} />
             <div className="flex h-40 items-center justify-center rounded-2xl border border-[var(--border-default)] bg-[var(--bg-primary)]">
               <OCLogo size="lg" color="var(--text-primary)" />
             </div>
-            <p className="font-mono text-[10px] text-[var(--text-tertiary)]">Versão principal, fundo escuro</p>
+            <p className="font-mono text-[10px] text-[var(--text-tertiary)]">Versão principal, tema ativo</p>
           </div>
           {/* Light bg */}
           <div className="flex flex-col gap-3">
@@ -1117,7 +1134,7 @@ background-size: 32px 32px;`} />
             <div className="flex h-28 items-center justify-center rounded-xl border border-[var(--border-default)] bg-[var(--bg-primary)]">
               <OCLogo size="md" color="white" />
             </div>
-            <p className="text-[10px] text-[var(--text-tertiary)]">Monocromático branco, fundos escuros</p>
+            <p className="text-[10px] text-[var(--text-tertiary)]">Monocromático branco, para fundos escuros ou imagens</p>
           </div>
           <div className="flex flex-col gap-3">
             <div className="flex h-28 items-center justify-center rounded-xl border border-[var(--border-default)] bg-[var(--color-capital-white)]">

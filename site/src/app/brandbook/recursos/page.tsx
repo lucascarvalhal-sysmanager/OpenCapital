@@ -15,7 +15,7 @@ const downloads = [
 const dos = [
   "Usar Signal Green como acento, não como cor dominante (30% máx)",
   "Manter espaçamento generoso, ar é premium",
-  "Priorizar dark mode em contextos digitais",
+  "Oferecer ambos os temas (dark e light) e respeitar as diretrizes de cada um",
   "Usar JetBrains Mono para todo dado numérico financeiro",
   "Manter contraste WCAG AA mínimo em todas as combinações",
   "Usar gradiente de texto para headlines de impacto",

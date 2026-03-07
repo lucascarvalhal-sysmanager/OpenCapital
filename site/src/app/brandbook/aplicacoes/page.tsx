@@ -322,7 +322,7 @@ export default function AplicacoesPage() {
               <div className="flex h-32 w-28 flex-col items-center justify-center rounded-lg bg-[var(--bg-tertiary)]">
                 <OCLogo size="sm" color="var(--text-primary)" />
               </div>
-              <p className="mt-4 text-xs text-[var(--text-tertiary)]">Algodão escuro, logo branco</p>
+              <p className="mt-4 text-xs text-[var(--text-tertiary)]">Algodão no tom do tema, logo contrastante</p>
             </div>
           </div>
 
@@ -335,7 +335,7 @@ export default function AplicacoesPage() {
               <div className="flex h-24 w-24 items-center justify-center rounded-full bg-[var(--bg-tertiary)]">
                 <OCSymbol size={32} color="var(--color-signal-green)" />
               </div>
-              <p className="mt-4 text-xs text-[var(--text-tertiary)]">Símbolo Signal Green, fundo escuro</p>
+              <p className="mt-4 text-xs text-[var(--text-tertiary)]">Símbolo Signal Green, fundo neutro</p>
             </div>
           </div>
 
@@ -352,7 +352,7 @@ export default function AplicacoesPage() {
                   Infrastructure
                 </span>
               </div>
-              <p className="mt-4 text-xs text-[var(--text-tertiary)]">Capa escura, tipografia mono</p>
+              <p className="mt-4 text-xs text-[var(--text-tertiary)]">Capa no tom do tema, tipografia mono</p>
             </div>
           </div>
 
