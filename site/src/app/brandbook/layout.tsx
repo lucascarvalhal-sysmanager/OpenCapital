@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect } from "react";
 import { OCSymbol } from "@/components/oc-logo";
 import { Sun, Moon, List, X } from "lucide-react";
 
@@ -20,119 +20,66 @@ interface SectionEntry {
   title: string;
 }
 
-/* ─── Sidebar ─── */
-function Sidebar({
-  sections,
-  activeId,
-  open,
-  onClose,
-}: {
-  sections: SectionEntry[];
-  activeId: string;
-  open: boolean;
-  onClose: () => void;
-}) {
-  function scrollTo(id: string) {
-    const el = document.getElementById(id);
-    if (el) {
-      const offset = 120;
-      const y = el.getBoundingClientRect().top + window.scrollY - offset;
-      window.scrollTo({ top: y, behavior: "smooth" });
-    }
-    onClose();
-  }
-
-  if (sections.length === 0) return null;
-
-  return (
-    <>
-      {/* Mobile overlay */}
-      {open && (
-        <div
-          className="fixed inset-0 z-40 bg-black/40 backdrop-blur-sm xl:hidden"
-          onClick={onClose}
-        />
-      )}
-
-      {/* Sidebar panel */}
-      <aside
-        className={`fixed top-28 z-40 flex h-[calc(100vh-7rem)] w-64 flex-col border-r border-[var(--border-default)] bg-[var(--bg-primary)]/95 backdrop-blur-xl transition-transform duration-300 xl:translate-x-0 ${
-          open ? "translate-x-0" : "-translate-x-full"
-        }`}
-      >
-        {/* Header */}
-        <div className="flex items-center justify-between border-b border-[var(--border-default)] px-5 py-4">
-          <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-[var(--text-tertiary)]">
-            Nesta página
-          </span>
-          <button
-            onClick={onClose}
-            className="flex h-6 w-6 items-center justify-center rounded-md text-[var(--text-tertiary)] transition hover:text-[var(--text-primary)] xl:hidden"
-          >
-            <X size={14} />
-          </button>
-        </div>
-
-        {/* Links */}
-        <nav className="flex-1 overflow-y-auto px-3 py-3 scrollbar-none">
-          <ul className="space-y-0.5">
-            {sections.map((s) => {
-              const isActive = activeId === s.id;
-              return (
-                <li key={s.id}>
-                  <button
-                    onClick={() => scrollTo(s.id)}
-                    className={`group flex w-full items-center gap-3 rounded-lg px-3 py-2 text-left text-sm transition-all ${
-                      isActive
-                        ? "bg-[var(--color-signal-green)]/10 text-[var(--color-signal-green)]"
-                        : "text-[var(--text-tertiary)] hover:bg-[var(--bg-secondary)] hover:text-[var(--text-primary)]"
-                    }`}
-                  >
-                    <span
-                      className={`shrink-0 font-mono text-[10px] font-bold ${
-                        isActive ? "text-[var(--color-signal-green)]" : "text-[var(--text-tertiary)] group-hover:text-[var(--text-secondary)]"
-                      }`}
-                    >
-                      {s.num}
-                    </span>
-                    <span className="truncate">{s.title}</span>
-                  </button>
-                </li>
-              );
-            })}
-          </ul>
-        </nav>
-
-        {/* Progress indicator */}
-        <div className="border-t border-[var(--border-default)] px-5 py-3">
-          <div className="flex items-center justify-between">
-            <span className="font-mono text-[10px] text-[var(--text-tertiary)]">
-              {sections.findIndex((s) => s.id === activeId) + 1} / {sections.length}
-            </span>
-            <div className="flex h-1 w-24 overflow-hidden rounded-full bg-[var(--bg-tertiary)]">
-              <div
-                className="h-full rounded-full transition-all duration-300"
-                style={{
-                  width: `${((sections.findIndex((s) => s.id === activeId) + 1) / sections.length) * 100}%`,
-                  background: "var(--gradient-signal)",
-                }}
-              />
-            </div>
-          </div>
-        </div>
-      </aside>
-    </>
-  );
-}
+const sectionsByPage: Record<string, SectionEntry[]> = {
+  "/brandbook/a-infraestrutura": [
+    { id: "manifesto", num: "01", title: "Manifesto" },
+    { id: "proposito-valores", num: "02", title: "Propósito & Valores" },
+    { id: "arquetipos", num: "03", title: "Arquétipos de Marca" },
+    { id: "posicionamento", num: "04", title: "Posicionamento" },
+    { id: "brandscript", num: "05", title: "BrandScript" },
+    { id: "truelines", num: "06", title: "Truelines & Taglines" },
+    { id: "naming", num: "07", title: "Naming Semântico" },
+    { id: "tom-de-voz", num: "08", title: "Tom de Voz" },
+    { id: "vocabulario", num: "09", title: "Vocabulário" },
+    { id: "jornada", num: "10", title: "Jornada do Herói" },
+    { id: "contrato", num: "11", title: "Contrato da Marca" },
+  ],
+  "/brandbook/identidade-visual": [
+    { id: "sistema-de-logo", num: "01", title: "Sistema de Logo" },
+    { id: "construcao-do-logo", num: "02", title: "Construção do Logo" },
+    { id: "uso-sobre-fundos", num: "03", title: "Uso sobre Fundos" },
+    { id: "paleta-de-cores", num: "04", title: "Paleta de Cores" },
+    { id: "gradientes", num: "05", title: "Gradientes" },
+    { id: "acessibilidade", num: "06", title: "Acessibilidade" },
+    { id: "escala-tipografica", num: "07", title: "Escala Tipográfica" },
+    { id: "arquitetura-de-marca", num: "08", title: "Arquitetura de Marca" },
+    { id: "fotografia", num: "09", title: "Fotografia & Imagens" },
+  ],
+  "/brandbook/design-system": [
+    { id: "design-tokens", num: "01", title: "Design Tokens" },
+    { id: "spacing-grid", num: "02", title: "Spacing & Grid" },
+    { id: "sombras-glow", num: "03", title: "Sombras & Glow" },
+    { id: "iconografia", num: "04", title: "Iconografia" },
+    { id: "componentes-ui", num: "05", title: "Componentes UI" },
+    { id: "texturas-padroes", num: "06", title: "Texturas & Padrões" },
+    { id: "animacoes", num: "07", title: "Animações" },
+    { id: "logos", num: "08", title: "Logos" },
+  ],
+  "/brandbook/aplicacoes": [
+    { id: "papelaria", num: "01", title: "Papelaria Corporativa" },
+    { id: "social-media", num: "02", title: "Redes Sociais" },
+    { id: "apresentacoes", num: "03", title: "Apresentações" },
+    { id: "merchandise", num: "04", title: "Merchandise" },
+    { id: "website", num: "05", title: "Website" },
+    { id: "email-newsletter", num: "06", title: "Email / Newsletter" },
+  ],
+  "/brandbook/recursos": [
+    { id: "downloads", num: "01", title: "Downloads" },
+    { id: "dos-donts", num: "02", title: "Do's & Don'ts" },
+    { id: "changelog", num: "03", title: "Changelog" },
+    { id: "links-uteis", num: "04", title: "Links Úteis" },
+  ],
+};
 
 /* ─── Layout ─── */
 export default function BrandbookLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const [theme, setTheme] = useState<"light" | "dark">("light");
-  const [sections, setSections] = useState<SectionEntry[]>([]);
   const [activeId, setActiveId] = useState("");
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const observerRef = useRef<IntersectionObserver | null>(null);
+
+  // Resolve sections for the current page (works with basePath)
+  const sections = Object.entries(sectionsByPage).find(([key]) => pathname?.endsWith(key.replace("/brandbook", "")) || pathname === key)?.[1] || [];
 
   // Theme
   useEffect(() => {
@@ -158,109 +105,77 @@ export default function BrandbookLayout({ children }: { children: React.ReactNod
     localStorage.setItem("oc-brandbook-theme", next);
   }
 
-  // Detect sections on page change
-  const scanSections = useCallback(() => {
-    const els = document.querySelectorAll("section[data-section-title]");
-    const found: SectionEntry[] = [];
-    els.forEach((el) => {
-      const id = el.getAttribute("id") || "";
-      const num = el.getAttribute("data-section-num") || "";
-      const title = el.getAttribute("data-section-title") || "";
-      if (id && title) {
-        found.push({ id, num, title });
-      }
-    });
-    setSections(found);
-    if (found.length > 0) {
-      setActiveId((prev) => (prev && found.some((s) => s.id === prev) ? prev : found[0].id));
-    }
-  }, []);
-
+  // Set initial active section
   useEffect(() => {
-    // Small delay to let the page render
-    const timer = setTimeout(scanSections, 100);
-    return () => clearTimeout(timer);
-  }, [pathname, scanSections]);
+    if (sections.length > 0 && !activeId) {
+      setActiveId(sections[0].id);
+    }
+  }, [sections, activeId]);
 
-  // IntersectionObserver for scroll spy
+  // Scroll spy
   useEffect(() => {
     if (sections.length === 0) return;
 
-    if (observerRef.current) {
-      observerRef.current.disconnect();
+    function onScroll() {
+      let current = sections[0]?.id || "";
+      for (const s of sections) {
+        const el = document.getElementById(s.id);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= 160) {
+            current = s.id;
+          }
+        }
+      }
+      setActiveId(current);
     }
 
-    const visibleSections = new Map<string, number>();
-
-    observerRef.current = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            visibleSections.set(entry.target.id, entry.intersectionRatio);
-          } else {
-            visibleSections.delete(entry.target.id);
-          }
-        });
-
-        // Pick the section closest to top of viewport
-        if (visibleSections.size > 0) {
-          let topSection = "";
-          let topOffset = Infinity;
-          visibleSections.forEach((_, id) => {
-            const el = document.getElementById(id);
-            if (el) {
-              const rect = el.getBoundingClientRect();
-              const dist = Math.abs(rect.top - 120);
-              if (dist < topOffset) {
-                topOffset = dist;
-                topSection = id;
-              }
-            }
-          });
-          if (topSection) setActiveId(topSection);
-        }
-      },
-      {
-        rootMargin: "-100px 0px -40% 0px",
-        threshold: [0, 0.1, 0.5],
-      }
-    );
-
-    sections.forEach((s) => {
-      const el = document.getElementById(s.id);
-      if (el) observerRef.current!.observe(el);
-    });
-
-    return () => observerRef.current?.disconnect();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll(); // run immediately
+    return () => window.removeEventListener("scroll", onScroll);
   }, [sections]);
 
   // Close sidebar on route change
   useEffect(() => {
     setSidebarOpen(false);
+    setActiveId("");
   }, [pathname]);
+
+  function scrollTo(id: string) {
+    const el = document.getElementById(id);
+    if (el) {
+      const y = el.getBoundingClientRect().top + window.scrollY - 120;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+    setSidebarOpen(false);
+  }
+
+  const hasSections = sections.length > 0;
+  const activeIndex = Math.max(0, sections.findIndex((s) => s.id === activeId));
+  const progress = hasSections ? ((activeIndex + 1) / sections.length) * 100 : 0;
 
   return (
     <div className="min-h-screen bg-[var(--bg-primary)] transition-colors duration-300">
-      {/* NAV */}
+      {/* ─── NAV ─── */}
       <nav className="fixed top-0 z-50 w-full border-b border-[var(--border-default)] bg-[var(--bg-primary)]/80 backdrop-blur-xl transition-colors duration-300">
         <div className="mx-auto max-w-7xl px-6 md:px-12">
           <div className="flex h-16 items-center justify-between">
             <div className="flex items-center gap-3">
-              {/* Sidebar toggle (mobile) */}
-              <button
-                onClick={() => setSidebarOpen(!sidebarOpen)}
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-[var(--border-default)] bg-[var(--bg-secondary)] text-[var(--text-secondary)] transition hover:border-[var(--border-active)] hover:text-[var(--color-signal-green)] xl:hidden"
-                aria-label="Abrir menu de navegação"
-              >
-                <List size={16} />
-              </button>
+              {hasSections && (
+                <button
+                  onClick={() => setSidebarOpen(!sidebarOpen)}
+                  className="flex h-9 w-9 items-center justify-center rounded-full border border-[var(--border-default)] bg-[var(--bg-secondary)] text-[var(--text-secondary)] transition hover:border-[var(--border-active)] hover:text-[var(--color-signal-green)] lg:hidden"
+                  aria-label="Abrir navegação"
+                >
+                  <List size={16} />
+                </button>
+              )}
               <Link href="/brandbook/a-infraestrutura" className="flex items-center gap-1.5">
                 <span className="text-lg font-semibold tracking-tight text-[var(--text-primary)]">OpenCapital</span>
                 <OCSymbol size={22} color="var(--text-primary)" />
               </Link>
             </div>
             <div className="flex items-center gap-3">
-              {/* Theme Toggle */}
               <button
                 onClick={toggleTheme}
                 className="relative flex h-9 w-9 items-center justify-center rounded-full border border-[var(--border-default)] bg-[var(--bg-secondary)] text-[var(--text-secondary)] transition-all duration-300 hover:border-[var(--border-active)] hover:text-[var(--color-signal-green)]"
@@ -276,7 +191,7 @@ export default function BrandbookLayout({ children }: { children: React.ReactNod
           {/* Tabs */}
           <div className="-mb-px flex gap-1 overflow-x-auto scrollbar-none">
             {tabs.map((tab) => {
-              const active = pathname === tab.href;
+              const active = pathname === tab.href || pathname?.endsWith(tab.href.replace("/brandbook", ""));
               return (
                 <Link
                   key={tab.href}
@@ -295,19 +210,84 @@ export default function BrandbookLayout({ children }: { children: React.ReactNod
         </div>
       </nav>
 
-      {/* SIDEBAR */}
-      <Sidebar
-        sections={sections}
-        activeId={activeId}
-        open={sidebarOpen}
-        onClose={() => setSidebarOpen(false)}
-      />
+      {/* ─── SIDEBAR ─── */}
+      {hasSections && (
+        <>
+          {sidebarOpen && (
+            <div
+              className="fixed inset-0 z-40 bg-black/40 backdrop-blur-sm lg:hidden"
+              onClick={() => setSidebarOpen(false)}
+            />
+          )}
 
-      {/* CONTENT — offset by sidebar width on xl */}
-      <main className="pt-28 xl:pl-64">{children}</main>
+          <aside
+            className={`fixed left-0 top-28 z-40 flex h-[calc(100vh-7rem)] w-60 flex-col border-r border-[var(--border-default)] bg-[var(--bg-primary)] transition-transform duration-300 ease-in-out lg:translate-x-0 ${
+              sidebarOpen ? "translate-x-0" : "-translate-x-full"
+            }`}
+          >
+            <div className="flex items-center justify-between border-b border-[var(--border-default)] px-4 py-3">
+              <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-[var(--text-tertiary)]">
+                Nesta página
+              </span>
+              <button
+                onClick={() => setSidebarOpen(false)}
+                className="flex h-6 w-6 items-center justify-center rounded-md text-[var(--text-tertiary)] hover:text-[var(--text-primary)] lg:hidden"
+              >
+                <X size={14} />
+              </button>
+            </div>
 
-      {/* FOOTER */}
-      <footer className="border-t border-[var(--border-default)] py-12 transition-colors duration-300 xl:pl-64">
+            <nav className="flex-1 overflow-y-auto px-2 py-2 scrollbar-none">
+              <ul className="space-y-0.5">
+                {sections.map((s) => {
+                  const isActive = activeId === s.id;
+                  return (
+                    <li key={s.id}>
+                      <button
+                        onClick={() => scrollTo(s.id)}
+                        className={`group flex w-full items-center gap-2.5 rounded-lg px-3 py-2 text-left text-[13px] leading-tight transition-all ${
+                          isActive
+                            ? "bg-[var(--color-signal-green)]/10 font-medium text-[var(--color-signal-green)]"
+                            : "text-[var(--text-tertiary)] hover:bg-[var(--bg-secondary)] hover:text-[var(--text-primary)]"
+                        }`}
+                      >
+                        <span
+                          className={`shrink-0 font-mono text-[10px] font-bold tabular-nums ${
+                            isActive ? "text-[var(--color-signal-green)]" : "text-[var(--text-tertiary)]"
+                          }`}
+                        >
+                          {s.num}
+                        </span>
+                        <span className="truncate">{s.title}</span>
+                      </button>
+                    </li>
+                  );
+                })}
+              </ul>
+            </nav>
+
+            <div className="border-t border-[var(--border-default)] px-4 py-3">
+              <div className="flex items-center justify-between">
+                <span className="font-mono text-[10px] text-[var(--text-tertiary)]">
+                  {activeIndex + 1} / {sections.length}
+                </span>
+                <div className="flex h-1 w-20 overflow-hidden rounded-full bg-[var(--bg-tertiary)]">
+                  <div
+                    className="h-full rounded-full transition-all duration-300"
+                    style={{ width: `${progress}%`, background: "var(--gradient-signal)" }}
+                  />
+                </div>
+              </div>
+            </div>
+          </aside>
+        </>
+      )}
+
+      {/* ─── CONTENT ─── */}
+      <main className={`pt-28 ${hasSections ? "lg:pl-60" : ""}`}>{children}</main>
+
+      {/* ─── FOOTER ─── */}
+      <footer className={`border-t border-[var(--border-default)] py-12 transition-colors duration-300 ${hasSections ? "lg:pl-60" : ""}`}>
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 md:flex-row md:px-12">
           <div className="flex items-center gap-1.5">
             <span className="text-sm font-semibold tracking-tight text-[var(--text-primary)]">OpenCapital</span>
