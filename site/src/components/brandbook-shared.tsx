@@ -3,7 +3,7 @@ import { Check, X, type LucideIcon } from "lucide-react";
 /* ─── Section Wrapper ─── */
 export function Section({ id, num, title, subtitle, children, className }: { id: string; num?: string; title: string; subtitle?: string; children: React.ReactNode; className?: string }) {
   return (
-    <section id={id} className={`py-20 md:py-28 ${className ?? ""}`}>
+    <section id={id} data-section-num={num || ""} data-section-title={title} className={`py-20 md:py-28 ${className ?? ""}`}>
       <div className="mx-auto max-w-7xl px-6 md:px-12">
         <div className="mb-12 md:mb-16">
           <div className="mb-3 flex items-center gap-3">
