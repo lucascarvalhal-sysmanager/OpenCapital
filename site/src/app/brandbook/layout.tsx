@@ -62,6 +62,7 @@ const sectionsByPage: Record<string, SectionEntry[]> = {
     { id: "merchandise", num: "04", title: "Merchandise" },
     { id: "website", num: "05", title: "Website" },
     { id: "email-newsletter", num: "06", title: "Email / Newsletter" },
+    { id: "plataforma-app", num: "07", title: "Plataforma (App)" },
   ],
   "/brandbook/recursos": [
     { id: "downloads", num: "01", title: "Downloads" },
