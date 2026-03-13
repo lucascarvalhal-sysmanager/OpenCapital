@@ -7,8 +7,8 @@ export function Section({ id, num, title, subtitle, children, className }: { id:
       <div className="mx-auto max-w-7xl px-6 md:px-12">
         <div className="mb-12 md:mb-16">
           <div className="mb-3 flex items-center gap-3">
-            {num && <span className="font-mono text-xs font-bold text-[var(--color-signal-green)]">{num}</span>}
-            <span className="font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-green)]">{id.replace(/-/g, " ")}</span>
+            {num && <span className="font-mono text-xs font-bold text-[var(--color-signal-blue)]">{num}</span>}
+            <span className="font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-blue)]">{id.replace(/-/g, " ")}</span>
           </div>
           <h2 className="text-3xl font-bold tracking-tight md:text-4xl">{title}</h2>
           {subtitle && <p className="mt-4 max-w-2xl text-lg text-[var(--text-secondary)]">{subtitle}</p>}
@@ -34,8 +34,8 @@ export function Swatch({ name, hex, textDark }: { name: string; hex: string; tex
 export function ValueCard({ title, description, icon: Icon }: { title: string; description: string; icon: LucideIcon }) {
   return (
     <div className="glow-card group rounded-2xl bg-[var(--bg-secondary)] p-6">
-      <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--color-signal-green)]/10">
-        <Icon className="text-[var(--color-signal-green)]" size={20} />
+      <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--color-signal-blue)]/10">
+        <Icon className="text-[var(--color-signal-blue)]" size={20} />
       </div>
       <h3 className="mb-2 text-lg font-semibold">{title}</h3>
       <p className="text-sm leading-relaxed text-[var(--text-secondary)]">{description}</p>
@@ -49,7 +49,7 @@ export function ArchetypeBar({ name, percentage, description }: { name: string; 
     <div className="space-y-2">
       <div className="flex items-center justify-between">
         <span className="font-semibold">{name}</span>
-        <span className="font-mono text-sm text-[var(--color-signal-green)]">{percentage}%</span>
+        <span className="font-mono text-sm text-[var(--color-signal-blue)]">{percentage}%</span>
       </div>
       <div className="h-2 overflow-hidden rounded-full bg-[var(--bg-tertiary)]">
         <div className="h-full rounded-full" style={{ width: `${percentage}%`, background: "var(--gradient-signal)" }} />
@@ -91,8 +91,8 @@ export function AnimationDemo({ name, description, className, children }: { name
 export function DoItem({ text }: { text: string }) {
   return (
     <div className="flex items-start gap-3">
-      <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[var(--color-signal-green)]/10">
-        <Check size={12} className="text-[var(--color-signal-green)]" />
+      <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[var(--color-signal-blue)]/10">
+        <Check size={12} className="text-[var(--color-signal-blue)]" />
       </div>
       <span className="text-sm text-[var(--text-secondary)]">{text}</span>
     </div>
@@ -135,7 +135,7 @@ export function CodeBlock({ code, lang }: { code: string; lang?: string }) {
 
 /* ─── Contrast Row ─── */
 export function ContrastRow({ combo, ratio, level }: { combo: string; ratio: string; level: string }) {
-  const color = level === "AAA" ? "text-[var(--color-signal-green)]" : level === "AA" ? "text-[var(--color-caution)]" : "text-[var(--text-tertiary)]";
+  const color = level === "AAA" ? "text-[var(--color-signal-blue)]" : level === "AA" ? "text-[var(--color-caution)]" : "text-[var(--text-tertiary)]";
   return (
     <div className="flex items-center justify-between border-b border-[var(--border-default)] py-3">
       <span className="text-sm text-[var(--text-secondary)]">{combo}</span>
@@ -151,7 +151,7 @@ export function ContrastRow({ combo, ratio, level }: { combo: string; ratio: str
 export function TokenRow({ name, value, preview }: { name: string; value: string; preview?: React.ReactNode }) {
   return (
     <div className="flex items-center gap-4 border-b border-[var(--border-default)] py-2.5">
-      <span className="w-36 shrink-0 font-mono text-xs text-[var(--color-signal-green)]">{name}</span>
+      <span className="w-36 shrink-0 font-mono text-xs text-[var(--color-signal-blue)]">{name}</span>
       <span className="font-mono text-xs text-[var(--text-tertiary)]">{value}</span>
       {preview && <div className="ml-auto">{preview}</div>}
     </div>

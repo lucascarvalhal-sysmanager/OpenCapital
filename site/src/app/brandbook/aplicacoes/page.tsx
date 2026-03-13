@@ -46,7 +46,7 @@ export default function AplicacoesPage() {
             <div className="glow-card flex aspect-[1.75/1] flex-col justify-between rounded-2xl border border-[var(--border-default)] bg-[var(--bg-secondary)] p-8">
               <div>
                 <p className="text-lg font-bold">Maria Silva</p>
-                <p className="mt-0.5 text-sm text-[var(--color-signal-green)]">Head of Product</p>
+                <p className="mt-0.5 text-sm text-[var(--color-signal-blue)]">Head of Product</p>
               </div>
               <div className="space-y-1.5 text-sm text-[var(--text-secondary)]">
                 <div className="flex items-center gap-2">
@@ -72,10 +72,10 @@ export default function AplicacoesPage() {
             </span>
             <div className="glow-card rounded-2xl border border-[var(--border-default)] bg-[var(--bg-secondary)] p-6">
               <div className="flex items-start gap-4">
-                <div className="h-full w-0.5 shrink-0 rounded-full bg-[var(--color-signal-green)]" />
+                <div className="h-full w-0.5 shrink-0 rounded-full bg-[var(--color-signal-blue)]" />
                 <div className="space-y-1">
                   <p className="text-sm font-bold">Maria Silva</p>
-                  <p className="text-xs text-[var(--color-signal-green)]">Head of Product</p>
+                  <p className="text-xs text-[var(--color-signal-blue)]">Head of Product</p>
                   <div className="flex flex-wrap items-center gap-x-3 gap-y-1 pt-1 text-xs text-[var(--text-tertiary)]">
                     <span className="flex items-center gap-1">
                       <Mail size={10} /> contato@theopencapital.org
@@ -99,7 +99,7 @@ export default function AplicacoesPage() {
             </span>
             <div className="glow-card flex items-center justify-between rounded-2xl border border-[var(--border-default)] bg-[var(--bg-secondary)] px-8 py-5">
               <div className="flex items-center gap-2">
-                <OCSymbol size={16} color="var(--color-signal-green)" />
+                <OCSymbol size={16} color="var(--color-signal-blue)" />
                 <span className="font-mono text-xs font-bold uppercase tracking-[0.2em]">
                   OpenCapital{" "}
                   <span className="text-[var(--text-tertiary)]">&mdash;</span>{" "}
@@ -121,7 +121,7 @@ export default function AplicacoesPage() {
             </span>
             <div className="glow-card rounded-2xl border border-[var(--border-default)] bg-[var(--bg-secondary)] p-10">
               <OCLogo size="sm" color="var(--text-primary)" />
-              <div className="my-5 h-px w-16 bg-[var(--color-signal-green)]" />
+              <div className="my-5 h-px w-16 bg-[var(--color-signal-blue)]" />
               <p className="text-sm text-[var(--text-tertiary)]">
                 São Paulo, 6 de março de 2026
               </p>
@@ -199,8 +199,8 @@ export default function AplicacoesPage() {
             </span>
             <div className="glow-card flex aspect-[3/1] items-center justify-center rounded-2xl border border-[var(--border-default)] bg-[var(--bg-secondary)] px-10">
               <div className="flex items-center gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--color-signal-green)]/10">
-                  <OCSymbol size={24} color="var(--color-signal-green)" />
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--color-signal-blue)]/10">
+                  <OCSymbol size={24} color="var(--color-signal-blue)" />
                 </div>
                 <div>
                   <span className="text-2xl font-bold tracking-tight">OpenCapital</span>
@@ -263,8 +263,8 @@ export default function AplicacoesPage() {
                   },
                 ].map((item) => (
                   <div key={item.title} className="space-y-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--color-signal-green)]/10">
-                      <item.icon size={20} className="text-[var(--color-signal-green)]" />
+                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--color-signal-blue)]/10">
+                      <item.icon size={20} className="text-[var(--color-signal-blue)]" />
                     </div>
                     <p className="text-sm font-semibold">{item.title}</p>
                     <p className="text-xs leading-relaxed text-[var(--text-secondary)]">{item.desc}</p>
@@ -273,7 +273,7 @@ export default function AplicacoesPage() {
               </div>
               <div className="flex items-center justify-center gap-6 border-t border-[var(--border-default)] pt-6">
                 {["2.4M+ Data Points", "99.9% Uptime", "<50ms Latência"].map((stat) => (
-                  <span key={stat} className="font-mono text-xs text-[var(--color-signal-green)]">
+                  <span key={stat} className="font-mono text-xs text-[var(--color-signal-blue)]">
                     {stat}
                   </span>
                 ))}
@@ -333,9 +333,9 @@ export default function AplicacoesPage() {
             </span>
             <div className="glow-card flex aspect-square flex-col items-center justify-center rounded-2xl border border-[var(--border-default)] bg-[var(--bg-secondary)] p-8">
               <div className="flex h-24 w-24 items-center justify-center rounded-full bg-[var(--bg-tertiary)]">
-                <OCSymbol size={32} color="var(--color-signal-green)" />
+                <OCSymbol size={32} color="var(--color-signal-blue)" />
               </div>
-              <p className="mt-4 text-xs text-[var(--text-tertiary)]">Símbolo Signal Green, fundo neutro</p>
+              <p className="mt-4 text-xs text-[var(--text-tertiary)]">Símbolo Signal Blue, fundo neutro</p>
             </div>
           </div>
 
@@ -394,7 +394,7 @@ export default function AplicacoesPage() {
                 <p className="mt-4 max-w-lg text-sm text-[var(--text-secondary)]">
                   A infraestrutura mudou. Quem opera com dados vence.
                 </p>
-                <button className="mt-8 flex items-center gap-2 rounded-full bg-[var(--color-signal-green)] px-6 py-3 text-sm font-semibold text-[var(--bg-primary)] transition hover:opacity-90">
+                <button className="mt-8 flex items-center gap-2 rounded-full bg-[var(--color-signal-blue)] px-6 py-3 text-sm font-semibold text-[var(--bg-primary)] transition hover:opacity-90">
                   Comece Agora
                   <ArrowUpRight size={16} />
                 </button>
@@ -415,13 +415,13 @@ export default function AplicacoesPage() {
                   { num: "03", icon: Zap, title: "Analytics em Tempo Real" },
                   { num: "04", icon: Shield, title: "Gestão de Risco" },
                 ].map((svc) => (
-                  <div key={svc.num} className="group space-y-3 rounded-xl border border-[var(--border-default)] bg-[var(--bg-tertiary)] p-5 transition hover:border-[var(--color-signal-green)]/30">
-                    <span className="font-mono text-xs text-[var(--color-signal-green)]">{svc.num}</span>
-                    <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[var(--color-signal-green)]/10">
-                      <svc.icon size={18} className="text-[var(--color-signal-green)]" />
+                  <div key={svc.num} className="group space-y-3 rounded-xl border border-[var(--border-default)] bg-[var(--bg-tertiary)] p-5 transition hover:border-[var(--color-signal-blue)]/30">
+                    <span className="font-mono text-xs text-[var(--color-signal-blue)]">{svc.num}</span>
+                    <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[var(--color-signal-blue)]/10">
+                      <svc.icon size={18} className="text-[var(--color-signal-blue)]" />
                     </div>
                     <p className="text-sm font-semibold">{svc.title}</p>
-                    <ChevronRight size={14} className="text-[var(--text-tertiary)] transition group-hover:text-[var(--color-signal-green)]" />
+                    <ChevronRight size={14} className="text-[var(--text-tertiary)] transition group-hover:text-[var(--color-signal-blue)]" />
                   </div>
                 ))}
               </div>
@@ -443,7 +443,7 @@ export default function AplicacoesPage() {
                     { value: "99.9%", label: "Uptime" },
                   ].map((metric) => (
                     <div key={metric.label} className="space-y-1">
-                      <p className="font-mono text-2xl font-bold text-[var(--color-signal-green)]">
+                      <p className="font-mono text-2xl font-bold text-[var(--color-signal-blue)]">
                         {metric.value}
                       </p>
                       <p className="text-xs text-[var(--text-tertiary)]">{metric.label}</p>
@@ -489,7 +489,7 @@ export default function AplicacoesPage() {
                 <div className="h-2 w-3/4 rounded bg-[var(--text-primary)]/5" />
               </div>
               <div className="mt-8 flex justify-center">
-                <span className="inline-flex items-center gap-2 rounded-full bg-[var(--color-signal-green)] px-6 py-2.5 text-sm font-semibold text-[var(--bg-primary)]">
+                <span className="inline-flex items-center gap-2 rounded-full bg-[var(--color-signal-blue)] px-6 py-2.5 text-sm font-semibold text-[var(--bg-primary)]">
                   Ver Relatório Completo
                   <ArrowUpRight size={14} />
                 </span>

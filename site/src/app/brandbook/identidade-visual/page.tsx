@@ -45,8 +45,8 @@ function GradientSwatch({ name, css }: { name: string; css: string }) {
 function SubBrandCard({ name, label, icon: Icon }: { name: string; label: string; icon: React.ComponentType<{ size?: number; className?: string }> }) {
   return (
     <div className="glow-card flex flex-col items-center gap-4 rounded-2xl bg-[var(--bg-secondary)] p-8 text-center">
-      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[var(--color-signal-green)]/10">
-        <Icon size={28} className="text-[var(--color-signal-green)]" />
+      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[var(--color-signal-blue)]/10">
+        <Icon size={28} className="text-[var(--color-signal-blue)]" />
       </div>
       <div>
         <p className="text-lg font-bold">{name}</p>
@@ -98,10 +98,10 @@ export default function IdentidadeVisualPage() {
         <div className="grid gap-8 md:grid-cols-2">
           {/* Construction diagram */}
           <div className="glow-card flex flex-col gap-6 rounded-2xl bg-[var(--bg-secondary)] p-8">
-            <h3 className="text-sm font-semibold text-[var(--color-signal-green)]">Anatomia</h3>
+            <h3 className="text-sm font-semibold text-[var(--color-signal-blue)]">Anatomia</h3>
             <div className="flex items-center gap-4">
-              <div className="relative flex h-20 w-20 shrink-0 items-center justify-center rounded-full border-2 border-dashed border-[var(--color-signal-green)]/40">
-                <OCSymbol size={56} color="var(--color-signal-green)" />
+              <div className="relative flex h-20 w-20 shrink-0 items-center justify-center rounded-full border-2 border-dashed border-[var(--color-signal-blue)]/40">
+                <OCSymbol size={56} color="var(--color-signal-blue)" />
                 <span className="absolute -right-12 font-mono text-[10px] text-[var(--text-tertiary)]">safe zone 1x</span>
               </div>
               <div className="flex flex-col gap-1">
@@ -116,18 +116,18 @@ export default function IdentidadeVisualPage() {
 
           {/* Rules */}
           <div className="glow-card flex flex-col gap-6 rounded-2xl bg-[var(--bg-secondary)] p-8">
-            <h3 className="text-sm font-semibold text-[var(--color-signal-green)]">Regras de Uso</h3>
+            <h3 className="text-sm font-semibold text-[var(--color-signal-blue)]">Regras de Uso</h3>
             <div className="space-y-4">
               <div className="flex items-start gap-3 border-b border-[var(--border-default)] pb-4">
-                <span className="font-mono text-xs text-[var(--color-signal-green)]">SAFE ZONE</span>
+                <span className="font-mono text-xs text-[var(--color-signal-blue)]">SAFE ZONE</span>
                 <span className="text-sm text-[var(--text-secondary)]">Mínimo de 1x a altura do símbolo em todas as direções. Nenhum elemento pode invadir essa área.</span>
               </div>
               <div className="flex items-start gap-3 border-b border-[var(--border-default)] pb-4">
-                <span className="font-mono text-xs text-[var(--color-signal-green)]">MÍN. DIGITAL</span>
+                <span className="font-mono text-xs text-[var(--color-signal-blue)]">MÍN. DIGITAL</span>
                 <span className="text-sm text-[var(--text-secondary)]">24 px de altura do símbolo para telas digitais.</span>
               </div>
               <div className="flex items-start gap-3">
-                <span className="font-mono text-xs text-[var(--color-signal-green)]">MÍN. IMPRESSO</span>
+                <span className="font-mono text-xs text-[var(--color-signal-blue)]">MÍN. IMPRESSO</span>
                 <span className="text-sm text-[var(--text-secondary)]">8 mm de altura do símbolo para impressão.</span>
               </div>
             </div>
@@ -138,10 +138,10 @@ export default function IdentidadeVisualPage() {
       {/* ─── 03 USO SOBRE FUNDOS ─── */}
       <Section id="uso-sobre-fundos" num="03" title="Uso sobre Fundos" subtitle="O logo deve manter legibilidade máxima em qualquer contexto de fundo.">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          <BackgroundCard bg="linear-gradient(180deg, #0A0A0A 0%, #2A2A2A 100%)" label="Capital White" rule="Fundos escuros (#0A0A0A a #2A2A2A), usar Capital White ou Signal Green" logoColor="#F5F5F0" />
+          <BackgroundCard bg="linear-gradient(180deg, #0A0A0A 0%, #2A2A2A 100%)" label="Capital White" rule="Fundos escuros (#0A0A0A a #2A2A2A), usar Capital White ou Signal Blue" logoColor="#F5F5F0" />
           <BackgroundCard bg="linear-gradient(180deg, #F5F5F0 0%, #FFFFFF 100%)" label="Capital Black" rule="Fundos claros (#F5F5F0 a #FFFFFF), usar Capital Black" logoColor="#0A0A0A" />
           <BackgroundCard bg="url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22><rect fill=%22%23333%22 width=%22100%22 height=%22100%22/><circle fill=%22%23444%22 cx=%2250%22 cy=%2250%22 r=%2240%22/></svg>') center/cover" label="Capital White + Shadow" rule="Imagem/Foto, Capital White com sutil text-shadow" logoColor="#F5F5F0" />
-          <BackgroundCard bg="#1C7C54" label="Capital Black" rule="Signal Green, usar Capital Black" logoColor="#0A0A0A" />
+          <BackgroundCard bg="#2563EB" label="Capital White" rule="Signal Blue, usar Capital White" logoColor="#F5F5F0" />
         </div>
       </Section>
 
@@ -149,19 +149,20 @@ export default function IdentidadeVisualPage() {
       <Section id="paleta-de-cores" num="04" title="Paleta de Cores" subtitle="Cores primárias, neutras e semânticas que compõem o sistema visual.">
         {/* Primary */}
         <div className="mb-10">
-          <h3 className="mb-6 font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-green)]">Primárias</h3>
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5">
+          <h3 className="mb-6 font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-blue)]">Primárias</h3>
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-6">
             <Swatch name="Capital Black" hex="#0A0A0A" />
-            <Swatch name="Signal Green" hex="#1C7C54" />
+            <Swatch name="Signal Blue" hex="#2563EB" />
             <Swatch name="Capital White" hex="#F5F5F0" textDark />
-            <Swatch name="Emerald Deep" hex="#145A3D" />
-            <Swatch name="Mint Glow" hex="#2A9D6E" textDark />
+            <Swatch name="Deep Blue" hex="#1E40AF" />
+            <Swatch name="Sky Glow" hex="#3B82F6" textDark />
+            <Swatch name="Signal Purple" hex="#7C3AED" />
           </div>
         </div>
 
         {/* Neutrals */}
         <div className="mb-10">
-          <h3 className="mb-6 font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-green)]">Secundárias & Neutras</h3>
+          <h3 className="mb-6 font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-blue)]">Secundárias & Neutras</h3>
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7">
             <Swatch name="Graphite" hex="#1A1A1A" />
             <Swatch name="Slate" hex="#2A2A2A" />
@@ -175,7 +176,7 @@ export default function IdentidadeVisualPage() {
 
         {/* Semantic */}
         <div>
-          <h3 className="mb-6 font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-green)]">Semânticas</h3>
+          <h3 className="mb-6 font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-blue)]">Semânticas</h3>
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
             <Swatch name="Profit Green" hex="#22C55E" />
             <Swatch name="Loss Red" hex="#EF4444" />
@@ -188,15 +189,16 @@ export default function IdentidadeVisualPage() {
       {/* ─── 05 GRADIENTES ─── */}
       <Section id="gradientes" num="05" title="Gradientes" subtitle="Gradientes compostos a partir da paleta primária, usados em destaques, CTAs e superfícies.">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <GradientSwatch name="Capital" css="linear-gradient(135deg, #145A3D 0%, #1C7C54 50%, #2A9D6E 100%)" />
-          <GradientSwatch name="Signal" css="linear-gradient(135deg, #1C7C54 0%, #2A9D6E 100%)" />
+          <GradientSwatch name="Capital" css="linear-gradient(135deg, #1E40AF 0%, #2563EB 50%, #3B82F6 100%)" />
+          <GradientSwatch name="Signal" css="linear-gradient(135deg, #2563EB 0%, #3B82F6 100%)" />
           <GradientSwatch name="Depth" css="linear-gradient(180deg, #0A0A0A 0%, #1A1A1A 100%)" />
-          <GradientSwatch name="Text" css="linear-gradient(90deg, #1C7C54 0%, #2A9D6E 100%)" />
-          <GradientSwatch name="Surface" css="linear-gradient(180deg, rgba(28,124,84,0.12) 0%, transparent 100%)" />
+          <GradientSwatch name="Text" css="linear-gradient(90deg, #2563EB 0%, #3B82F6 100%)" />
+          <GradientSwatch name="Accent" css="linear-gradient(135deg, #2563EB 0%, #7C3AED 100%)" />
+          <GradientSwatch name="Surface" css="linear-gradient(180deg, rgba(37,99,235,0.12) 0%, transparent 100%)" />
         </div>
 
         <div className="mt-8">
-          <CodeBlock lang="CSS" code={`/* Capital */\nlinear-gradient(135deg, #145A3D 0%, #1C7C54 50%, #2A9D6E 100%)\n\n/* Signal */\nlinear-gradient(135deg, #1C7C54 0%, #2A9D6E 100%)\n\n/* Depth */\nlinear-gradient(180deg, #0A0A0A 0%, #1A1A1A 100%)\n\n/* Text */\nlinear-gradient(90deg, #1C7C54 0%, #2A9D6E 100%)\n\n/* Surface */\nlinear-gradient(180deg, rgba(28,124,84,0.12) 0%, transparent 100%)`} />
+          <CodeBlock lang="CSS" code={`/* Capital */\nlinear-gradient(135deg, #1E40AF 0%, #2563EB 50%, #3B82F6 100%)\n\n/* Signal */\nlinear-gradient(135deg, #2563EB 0%, #3B82F6 100%)\n\n/* Depth */\nlinear-gradient(180deg, #0A0A0A 0%, #1A1A1A 100%)\n\n/* Text */\nlinear-gradient(90deg, #2563EB 0%, #3B82F6 100%)\n\n/* Accent */\nlinear-gradient(135deg, #2563EB 0%, #7C3AED 100%)\n\n/* Surface */\nlinear-gradient(180deg, rgba(37,99,235,0.12) 0%, transparent 100%)`} />
         </div>
       </Section>
 
@@ -204,11 +206,11 @@ export default function IdentidadeVisualPage() {
       <Section id="acessibilidade" num="06" title="Acessibilidade de Contraste" subtitle="Todas as combinações de cor foram testadas contra WCAG 2.1 para garantir legibilidade.">
         <div className="glow-card rounded-2xl bg-[var(--bg-secondary)] p-6 md:p-8">
           <ContrastRow combo="Capital White sobre Capital Black" ratio="18.4:1" level="AAA" />
-          <ContrastRow combo="Signal Green sobre Capital Black" ratio="9.2:1" level="AAA" />
-          <ContrastRow combo="Capital Black sobre Signal Green" ratio="9.2:1" level="AAA" />
+          <ContrastRow combo="Signal Blue sobre Capital Black" ratio="5.2:1" level="AA" />
+          <ContrastRow combo="Capital White sobre Signal Blue" ratio="3.5:1" level="AA" />
           <ContrastRow combo="Iron sobre Capital Black" ratio="3.1:1" level="Apenas ícones" />
           <ContrastRow combo="Steel sobre Capital Black" ratio="4.6:1" level="AA" />
-          <ContrastRow combo="Signal Green sobre Graphite" ratio="8.1:1" level="AAA" />
+          <ContrastRow combo="Signal Blue sobre Graphite" ratio="4.6:1" level="AA" />
         </div>
       </Section>
 
@@ -221,7 +223,7 @@ export default function IdentidadeVisualPage() {
           <div className="relative px-8 py-12 md:px-12 md:py-20">
             <div className="pointer-events-none absolute inset-0 bg-[var(--gradient-surface)]" />
             <div className="relative space-y-2">
-              <p className="font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-green)]">Inter &middot; Type Specimen</p>
+              <p className="font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-blue)]">Inter &middot; Type Specimen</p>
               <p className="text-5xl font-bold leading-[1.05] tracking-tight md:text-7xl lg:text-8xl">
                 A infraestrutura
                 <br />
@@ -255,8 +257,8 @@ export default function IdentidadeVisualPage() {
           {/* Inter scale */}
           <div>
             <div className="mb-8 flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--color-signal-green)]/10">
-                <span className="text-lg font-bold text-[var(--color-signal-green)]">Aa</span>
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--color-signal-blue)]/10">
+                <span className="text-lg font-bold text-[var(--color-signal-blue)]">Aa</span>
               </div>
               <div>
                 <h3 className="text-lg font-bold">Inter</h3>
@@ -272,7 +274,7 @@ export default function IdentidadeVisualPage() {
                 { label: "H3", size: "20px", weight: 600, ls: "-0.01em", meta: "24px / SemiBold" },
               ].map((item) => (
                 <div key={item.label} className="group flex items-baseline gap-4 border-b border-[var(--border-default)] py-4 transition hover:bg-[var(--bg-secondary)]/50">
-                  <span className="w-16 shrink-0 font-mono text-[10px] font-bold uppercase tracking-widest text-[var(--color-signal-green)]">{item.label}</span>
+                  <span className="w-16 shrink-0 font-mono text-[10px] font-bold uppercase tracking-widest text-[var(--color-signal-blue)]">{item.label}</span>
                   <span style={{ fontSize: item.size, fontWeight: item.weight, letterSpacing: item.ls, lineHeight: 1.2 }}>
                     Prosperidade
                   </span>
@@ -306,8 +308,8 @@ export default function IdentidadeVisualPage() {
           {/* JetBrains Mono scale */}
           <div>
             <div className="mb-8 flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--color-signal-green)]/10">
-                <span className="font-mono text-base font-bold text-[var(--color-signal-green)]">01</span>
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--color-signal-blue)]/10">
+                <span className="font-mono text-base font-bold text-[var(--color-signal-blue)]">01</span>
               </div>
               <div>
                 <h3 className="text-lg font-bold">JetBrains Mono</h3>
@@ -321,7 +323,7 @@ export default function IdentidadeVisualPage() {
                 { label: "Price", size: "20px", weight: 500, text: "BTC 98,472.50" },
               ].map((item) => (
                 <div key={item.label} className="group flex items-baseline gap-4 border-b border-[var(--border-default)] py-4 transition hover:bg-[var(--bg-secondary)]/50">
-                  <span className="w-16 shrink-0 font-mono text-[10px] font-bold uppercase tracking-widest text-[var(--color-signal-green)]">{item.label}</span>
+                  <span className="w-16 shrink-0 font-mono text-[10px] font-bold uppercase tracking-widest text-[var(--color-signal-blue)]">{item.label}</span>
                   <span className="font-mono" style={{ fontSize: item.size, fontWeight: item.weight, lineHeight: 1.2 }}>
                     {item.text}
                   </span>
@@ -343,7 +345,7 @@ export default function IdentidadeVisualPage() {
 
             {/* Tabular numbers showcase */}
             <div className="mt-8 rounded-xl border border-[var(--border-default)] bg-[var(--bg-secondary)] p-5">
-              <p className="mb-4 font-mono text-[10px] font-bold uppercase tracking-widest text-[var(--color-signal-green)]">Tabular Numbers</p>
+              <p className="mb-4 font-mono text-[10px] font-bold uppercase tracking-widest text-[var(--color-signal-blue)]">Tabular Numbers</p>
               <div className="space-y-1 font-mono text-sm">
                 {[
                   { pair: "AAPL", price: "187.44", change: "+1.23%", up: true },
@@ -365,12 +367,12 @@ export default function IdentidadeVisualPage() {
 
         {/* === CONTEXTUAL DEMO === */}
         <div className="mb-12">
-          <p className="mb-6 font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-green)]">Tipografia em Contexto</p>
+          <p className="mb-6 font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-blue)]">Tipografia em Contexto</p>
           <div className="grid gap-6 md:grid-cols-3">
             {/* Card UI */}
             <div className="glow-card overflow-hidden rounded-2xl bg-[var(--bg-secondary)]">
               <div className="p-6">
-                <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-[var(--color-signal-green)]">Overline</p>
+                <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-[var(--color-signal-blue)]">Overline</p>
                 <p className="mt-2 text-xl font-bold tracking-tight">Inter SemiBold 24</p>
                 <p className="mt-2 text-sm leading-relaxed text-[var(--text-secondary)]">
                   Body Regular 16 &mdash; texto corrido com line-height confort&aacute;vel de 1.6 para leitura fluida em cards e descri&ccedil;&otilde;es.
@@ -391,7 +393,7 @@ export default function IdentidadeVisualPage() {
               <div className="border-t border-[var(--border-default)] bg-[var(--bg-tertiary)] px-6 py-3">
                 <div className="flex items-center justify-between font-mono text-xs">
                   <span className="text-[var(--text-tertiary)]">Atualizado</span>
-                  <span className="text-[var(--color-signal-green)]">14:32:00</span>
+                  <span className="text-[var(--color-signal-blue)]">14:32:00</span>
                 </div>
               </div>
             </div>
@@ -409,12 +411,12 @@ export default function IdentidadeVisualPage() {
               <div className="p-6 font-mono text-xs leading-relaxed">
                 <p className="text-[var(--text-tertiary)]">$ oc analyze --pair BTCUSD</p>
                 <p className="mt-2 text-[var(--text-secondary)]">
-                  <span className="text-[var(--color-signal-green)]">&#10003;</span> Loading 2.4M data points...
+                  <span className="text-[var(--color-signal-blue)]">&#10003;</span> Loading 2.4M data points...
                 </p>
                 <p className="text-[var(--text-secondary)]">
-                  <span className="text-[var(--color-signal-green)]">&#10003;</span> Running ML pipeline...
+                  <span className="text-[var(--color-signal-blue)]">&#10003;</span> Running ML pipeline...
                 </p>
-                <p className="mt-2 text-[var(--color-signal-green)]">Signal: LONG | Confidence: 87.4%</p>
+                <p className="mt-2 text-[var(--color-signal-blue)]">Signal: LONG | Confidence: 87.4%</p>
                 <p className="text-[var(--text-tertiary)]">Latency: 47ms | Model: v3.2.1</p>
               </div>
             </div>
@@ -424,27 +426,27 @@ export default function IdentidadeVisualPage() {
         {/* === RATIONALE === */}
         <div className="grid gap-6 md:grid-cols-2">
           <div className="glow-card rounded-2xl bg-[var(--bg-secondary)] p-6">
-            <h4 className="mb-3 flex items-center gap-2 text-sm font-semibold text-[var(--color-signal-green)]">
-              <span className="flex h-6 w-6 items-center justify-center rounded-md bg-[var(--color-signal-green)]/10 text-xs font-bold">Aa</span>
+            <h4 className="mb-3 flex items-center gap-2 text-sm font-semibold text-[var(--color-signal-blue)]">
+              <span className="flex h-6 w-6 items-center justify-center rounded-md bg-[var(--color-signal-blue)]/10 text-xs font-bold">Aa</span>
               Por que Inter?
             </h4>
             <ul className="space-y-2 text-sm leading-relaxed text-[var(--text-secondary)]">
-              <li className="flex gap-2"><span className="mt-1 text-[var(--color-signal-green)]">&bull;</span> Otimizada para telas digitais com excelente hinting</li>
-              <li className="flex gap-2"><span className="mt-1 text-[var(--color-signal-green)]">&bull;</span> Suporte completo a tabular numbers (cr&iacute;tico para finan&ccedil;as)</li>
-              <li className="flex gap-2"><span className="mt-1 text-[var(--color-signal-green)]">&bull;</span> Open-source, performance via next/font</li>
-              <li className="flex gap-2"><span className="mt-1 text-[var(--color-signal-green)]">&bull;</span> Refer&ecirc;ncia: Stripe, Linear, Vercel</li>
+              <li className="flex gap-2"><span className="mt-1 text-[var(--color-signal-blue)]">&bull;</span> Otimizada para telas digitais com excelente hinting</li>
+              <li className="flex gap-2"><span className="mt-1 text-[var(--color-signal-blue)]">&bull;</span> Suporte completo a tabular numbers (cr&iacute;tico para finan&ccedil;as)</li>
+              <li className="flex gap-2"><span className="mt-1 text-[var(--color-signal-blue)]">&bull;</span> Open-source, performance via next/font</li>
+              <li className="flex gap-2"><span className="mt-1 text-[var(--color-signal-blue)]">&bull;</span> Refer&ecirc;ncia: Stripe, Linear, Vercel</li>
             </ul>
           </div>
           <div className="glow-card rounded-2xl bg-[var(--bg-secondary)] p-6">
-            <h4 className="mb-3 flex items-center gap-2 text-sm font-semibold text-[var(--color-signal-green)]">
-              <span className="flex h-6 w-6 items-center justify-center rounded-md bg-[var(--color-signal-green)]/10 font-mono text-xs font-bold">01</span>
+            <h4 className="mb-3 flex items-center gap-2 text-sm font-semibold text-[var(--color-signal-blue)]">
+              <span className="flex h-6 w-6 items-center justify-center rounded-md bg-[var(--color-signal-blue)]/10 font-mono text-xs font-bold">01</span>
               Por que JetBrains Mono?
             </h4>
             <ul className="space-y-2 text-sm leading-relaxed text-[var(--text-secondary)]">
-              <li className="flex gap-2"><span className="mt-1 text-[var(--color-signal-green)]">&bull;</span> Ligatures de programa&ccedil;&atilde;o e caracteres otimizados</li>
-              <li className="flex gap-2"><span className="mt-1 text-[var(--color-signal-green)]">&bull;</span> Largura fixa para alinhamento perfeito em tabelas</li>
-              <li className="flex gap-2"><span className="mt-1 text-[var(--color-signal-green)]">&bull;</span> N&uacute;meros tabulares para dados financeiros</li>
-              <li className="flex gap-2"><span className="mt-1 text-[var(--color-signal-green)]">&bull;</span> Open-source, excelente hinting em todas as plataformas</li>
+              <li className="flex gap-2"><span className="mt-1 text-[var(--color-signal-blue)]">&bull;</span> Ligatures de programa&ccedil;&atilde;o e caracteres otimizados</li>
+              <li className="flex gap-2"><span className="mt-1 text-[var(--color-signal-blue)]">&bull;</span> Largura fixa para alinhamento perfeito em tabelas</li>
+              <li className="flex gap-2"><span className="mt-1 text-[var(--color-signal-blue)]">&bull;</span> N&uacute;meros tabulares para dados financeiros</li>
+              <li className="flex gap-2"><span className="mt-1 text-[var(--color-signal-blue)]">&bull;</span> Open-source, excelente hinting em todas as plataformas</li>
             </ul>
           </div>
         </div>
@@ -486,9 +488,9 @@ export default function IdentidadeVisualPage() {
           <div className="glow-card rounded-2xl bg-[var(--bg-secondary)] p-6">
             <div className="mb-4 flex items-center gap-2">
               <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[#0A0A0A] border border-[var(--border-default)]">
-                <div className="h-2 w-2 rounded-full bg-[var(--color-signal-green)]" />
+                <div className="h-2 w-2 rounded-full bg-[var(--color-signal-blue)]" />
               </div>
-              <h3 className="font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-green)]">Dark Mode</h3>
+              <h3 className="font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-blue)]">Dark Mode</h3>
             </div>
             <div className="space-y-4">
               <div className="border-b border-[var(--border-default)] pb-3">
@@ -497,7 +499,7 @@ export default function IdentidadeVisualPage() {
               </div>
               <div className="border-b border-[var(--border-default)] pb-3">
                 <span className="text-xs font-semibold text-[var(--text-primary)]">Tratamento</span>
-                <p className="mt-1 text-sm text-[var(--text-secondary)]">Alto contraste, desaturado com acentos verdes. Brightness reduzido para integrar com fundos escuros.</p>
+                <p className="mt-1 text-sm text-[var(--text-secondary)]">Alto contraste, desaturado com acentos azuis. Brightness reduzido para integrar com fundos escuros.</p>
               </div>
               <div className="border-b border-[var(--border-default)] pb-3">
                 <span className="text-xs font-semibold text-[var(--text-primary)]">Temas</span>
@@ -505,7 +507,7 @@ export default function IdentidadeVisualPage() {
               </div>
               <div>
                 <span className="text-xs font-semibold text-[var(--text-primary)]">Overlay</span>
-                <p className="mt-1 text-sm text-[var(--text-secondary)]">Gradiente verde sutil (Signal Green 20% → transparent)</p>
+                <p className="mt-1 text-sm text-[var(--text-secondary)]">Gradiente azul sutil (Signal Blue 20% → transparent)</p>
               </div>
             </div>
           </div>
@@ -514,9 +516,9 @@ export default function IdentidadeVisualPage() {
           <div className="glow-card rounded-2xl bg-[var(--bg-secondary)] p-6">
             <div className="mb-4 flex items-center gap-2">
               <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[#F1F1F1] border border-[var(--border-default)]">
-                <div className="h-2 w-2 rounded-full bg-[var(--color-signal-green)]" />
+                <div className="h-2 w-2 rounded-full bg-[var(--color-signal-blue)]" />
               </div>
-              <h3 className="font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-green)]">Light Mode</h3>
+              <h3 className="font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-blue)]">Light Mode</h3>
             </div>
             <div className="space-y-4">
               <div className="border-b border-[var(--border-default)] pb-3">
@@ -533,7 +535,7 @@ export default function IdentidadeVisualPage() {
               </div>
               <div>
                 <span className="text-xs font-semibold text-[var(--text-primary)]">Overlay</span>
-                <p className="mt-1 text-sm text-[var(--text-secondary)]">Gradiente verde sutil (Emerald Deep 8% → transparent)</p>
+                <p className="mt-1 text-sm text-[var(--text-secondary)]">Gradiente azul sutil (Deep Blue 8% → transparent)</p>
               </div>
             </div>
           </div>
@@ -541,11 +543,11 @@ export default function IdentidadeVisualPage() {
 
         {/* Shared rules */}
         <div className="mb-12 glow-card rounded-2xl bg-[var(--bg-secondary)] p-6">
-          <h3 className="mb-4 font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-green)]">Regras Compartilhadas (ambos os temas)</h3>
+          <h3 className="mb-4 font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-blue)]">Regras Compartilhadas (ambos os temas)</h3>
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="space-y-3 text-sm text-[var(--text-secondary)]">
-              <p><span className="font-semibold text-[var(--text-primary)]">Desaturação:</span> Sempre aplicar saturate(0.3) — a cor vem do verde da marca, não da foto</p>
-              <p><span className="font-semibold text-[var(--text-primary)]">Acento:</span> Signal Green como única cor vibrante sobre imagens tratadas</p>
+              <p><span className="font-semibold text-[var(--text-primary)]">Desaturação:</span> Sempre aplicar saturate(0.3) — a cor vem do azul da marca, não da foto</p>
+              <p><span className="font-semibold text-[var(--text-primary)]">Acento:</span> Signal Blue como única cor vibrante sobre imagens tratadas</p>
               <p><span className="font-semibold text-[var(--text-primary)]">Consistência:</span> Mesmo tratamento base em ambos os temas, variando apenas brightness</p>
             </div>
             <div className="space-y-3">
@@ -570,38 +572,38 @@ export default function IdentidadeVisualPage() {
           {/* Dark treatment */}
           <div className="glow-card overflow-hidden rounded-2xl">
             <div className="relative flex h-48 items-center justify-center overflow-hidden" style={{ background: "#0A0A0A", filter: "saturate(0.3) contrast(1.2) brightness(0.8)" }}>
-              <div className="absolute inset-0 bg-gradient-to-br from-[#145A3D]/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#1E40AF]/20 to-transparent" />
               <div className="grid grid-cols-6 gap-1 opacity-60">
                 {Array.from({ length: 24 }).map((_, i) => (
-                  <div key={`dark-${i}`} className="h-4 w-8 rounded-sm" style={{ backgroundColor: i % 3 === 0 ? "#1C7C54" : i % 5 === 0 ? "#145A3D" : "#2A2A2A", opacity: 0.4 + (i % 7) * 0.08 }} />
+                  <div key={`dark-${i}`} className="h-4 w-8 rounded-sm" style={{ backgroundColor: i % 3 === 0 ? "#2563EB" : i % 5 === 0 ? "#1E40AF" : "#2A2A2A", opacity: 0.4 + (i % 7) * 0.08 }} />
                 ))}
               </div>
             </div>
             <div className="border-t border-[var(--border-default)] bg-[var(--bg-secondary)] p-4">
               <p className="text-xs font-semibold">Tratamento Dark</p>
-              <p className="mt-1 font-mono text-[10px] text-[var(--text-tertiary)]">brightness(0.8) + saturate(0.3) + green overlay 20%</p>
+              <p className="mt-1 font-mono text-[10px] text-[var(--text-tertiary)]">brightness(0.8) + saturate(0.3) + blue overlay 20%</p>
             </div>
           </div>
 
           {/* Light treatment */}
           <div className="glow-card overflow-hidden rounded-2xl">
             <div className="relative flex h-48 items-center justify-center overflow-hidden" style={{ background: "#F1F1F1", filter: "saturate(0.3) contrast(1.1) brightness(1.05)" }}>
-              <div className="absolute inset-0 bg-gradient-to-br from-[#145A3D]/8 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#1E40AF]/8 to-transparent" />
               <div className="grid grid-cols-6 gap-1 opacity-50">
                 {Array.from({ length: 24 }).map((_, i) => (
-                  <div key={`light-${i}`} className="h-4 w-8 rounded-sm" style={{ backgroundColor: i % 3 === 0 ? "#1C7C54" : i % 5 === 0 ? "#2A9D6E" : "#D1D5DB", opacity: 0.3 + (i % 7) * 0.08 }} />
+                  <div key={`light-${i}`} className="h-4 w-8 rounded-sm" style={{ backgroundColor: i % 3 === 0 ? "#2563EB" : i % 5 === 0 ? "#3B82F6" : "#D1D5DB", opacity: 0.3 + (i % 7) * 0.08 }} />
                 ))}
               </div>
             </div>
             <div className="border-t border-[var(--border-default)] bg-[var(--bg-secondary)] p-4">
               <p className="text-xs font-semibold">Tratamento Light</p>
-              <p className="mt-1 font-mono text-[10px] text-[var(--text-tertiary)]">brightness(1.05) + saturate(0.3) + green overlay 8%</p>
+              <p className="mt-1 font-mono text-[10px] text-[var(--text-tertiary)]">brightness(1.05) + saturate(0.3) + blue overlay 8%</p>
             </div>
           </div>
         </div>
 
         {/* CSS code for both */}
-        <CodeBlock lang="CSS" code={`/* === Dark Mode Treatment === */\n.oc-image-treatment--dark {\n  filter: saturate(0.3) contrast(1.2) brightness(0.8);\n}\n.oc-image-treatment--dark::after {\n  background: linear-gradient(135deg, rgba(28,124,84,0.2) 0%, transparent 60%);\n  mix-blend-mode: screen;\n}\n\n/* === Light Mode Treatment === */\n.oc-image-treatment--light {\n  filter: saturate(0.3) contrast(1.1) brightness(1.05);\n}\n.oc-image-treatment--light::after {\n  background: linear-gradient(135deg, rgba(28,124,84,0.08) 0%, transparent 60%);\n  mix-blend-mode: multiply;\n}`} />
+        <CodeBlock lang="CSS" code={`/* === Dark Mode Treatment === */\n.oc-image-treatment--dark {\n  filter: saturate(0.3) contrast(1.2) brightness(0.8);\n}\n.oc-image-treatment--dark::after {\n  background: linear-gradient(135deg, rgba(37,99,235,0.2) 0%, transparent 60%);\n  mix-blend-mode: screen;\n}\n\n/* === Light Mode Treatment === */\n.oc-image-treatment--light {\n  filter: saturate(0.3) contrast(1.1) brightness(1.05);\n}\n.oc-image-treatment--light::after {\n  background: linear-gradient(135deg, rgba(37,99,235,0.08) 0%, transparent 60%);\n  mix-blend-mode: multiply;\n}`} />
       </Section>
     </>
   );

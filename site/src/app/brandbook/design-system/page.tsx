@@ -38,12 +38,12 @@ export default function DesignSystemPage() {
         <Label>Paleta principal da marca, a fundação da identidade OpenCapital.</Label>
         <div className="space-y-0.5">
           <TokenRow name="--color-capital-black" value="#0A0A0A" preview={<ColorDot color="#0A0A0A" />} />
-          <TokenRow name="--color-signal-green" value="#1C7C54" preview={<ColorDot color="#1C7C54" />} />
+          <TokenRow name="--color-signal-blue" value="#2563EB" preview={<ColorDot color="#2563EB" />} />
           <TokenRow name="--color-capital-white" value="#F5F5F0" preview={<ColorDot color="#F5F5F0" />} />
           <TokenRow name="--color-graphite" value="#1A1A1A" preview={<ColorDot color="#1A1A1A" />} />
           <TokenRow name="--color-slate" value="#2A2A2A" preview={<ColorDot color="#2A2A2A" />} />
-          <TokenRow name="--color-emerald-deep" value="#145A3D" preview={<ColorDot color="#145A3D" />} />
-          <TokenRow name="--color-mint-glow" value="#2A9D6E" preview={<ColorDot color="#2A9D6E" />} />
+          <TokenRow name="--color-deep-blue" value="#1E40AF" preview={<ColorDot color="#1E40AF" />} />
+          <TokenRow name="--color-sky-glow" value="#3B82F6" preview={<ColorDot color="#3B82F6" />} />
         </div>
 
         {/* ── Colors: Neutral ── */}
@@ -104,16 +104,16 @@ export default function DesignSystemPage() {
         <SubHeading>Gradientes</SubHeading>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {[
-            { name: "--gradient-capital", css: "linear-gradient(135deg, #145A3D 0%, #1C7C54 50%, #2A9D6E 100%)" },
-            { name: "--gradient-signal", css: "linear-gradient(135deg, #1C7C54 0%, #2A9D6E 100%)" },
+            { name: "--gradient-capital", css: "linear-gradient(135deg, #1E40AF 0%, #2563EB 50%, #3B82F6 100%)" },
+            { name: "--gradient-signal", css: "linear-gradient(135deg, #2563EB 0%, #3B82F6 100%)" },
             { name: "--gradient-depth", css: "linear-gradient(180deg, #0A0A0A 0%, #1A1A1A 100%)" },
-            { name: "--gradient-text", css: "linear-gradient(90deg, #1C7C54 0%, #2A9D6E 100%)" },
-            { name: "--gradient-surface", css: "linear-gradient(180deg, rgba(28,124,84,0.05) 0%, transparent 100%)" },
+            { name: "--gradient-text", css: "linear-gradient(90deg, #2563EB 0%, #3B82F6 100%)" },
+            { name: "--gradient-surface", css: "linear-gradient(180deg, rgba(37,99,235,0.05) 0%, transparent 100%)" },
           ].map((g) => (
             <div key={g.name} className="overflow-hidden rounded-xl border border-[var(--border-default)]">
               <div className="h-16" style={{ background: g.css }} />
               <div className="bg-[var(--bg-secondary)] p-3">
-                <p className="font-mono text-xs text-[var(--color-signal-green)]">{g.name}</p>
+                <p className="font-mono text-xs text-[var(--color-signal-blue)]">{g.name}</p>
                 <p className="mt-1 font-mono text-[10px] text-[var(--text-tertiary)]">{g.css}</p>
               </div>
             </div>
@@ -139,7 +139,7 @@ export default function DesignSystemPage() {
             { name: "--space-32", value: "128px", w: 128 },
           ].map((s) => (
             <div key={s.name} className="flex items-center gap-4">
-              <span className="w-28 shrink-0 font-mono text-xs text-[var(--color-signal-green)]">{s.name}</span>
+              <span className="w-28 shrink-0 font-mono text-xs text-[var(--color-signal-blue)]">{s.name}</span>
               <span className="w-12 shrink-0 font-mono text-xs text-[var(--text-tertiary)]">{s.value}</span>
               <div className="h-3 rounded-sm" style={{ width: s.w, background: "var(--gradient-signal)" }} />
             </div>
@@ -158,10 +158,10 @@ export default function DesignSystemPage() {
             { name: "--radius-full", value: "9999px", r: 9999 },
           ].map((r) => (
             <div key={r.name} className="flex flex-col items-center gap-2">
-              <div className="flex h-14 w-14 items-center justify-center border border-[var(--color-signal-green)]/30 bg-[var(--bg-secondary)]" style={{ borderRadius: r.r }}>
+              <div className="flex h-14 w-14 items-center justify-center border border-[var(--color-signal-blue)]/30 bg-[var(--bg-secondary)]" style={{ borderRadius: r.r }}>
                 <span className="font-mono text-[10px] text-[var(--text-tertiary)]">{r.value}</span>
               </div>
-              <span className="font-mono text-[10px] text-[var(--color-signal-green)]">{r.name}</span>
+              <span className="font-mono text-[10px] text-[var(--color-signal-blue)]">{r.name}</span>
             </div>
           ))}
         </div>
@@ -178,22 +178,22 @@ export default function DesignSystemPage() {
           ].map((s) => (
             <div key={s.name} className="flex flex-col items-center gap-3">
               <div className="h-20 w-full rounded-xl bg-[var(--bg-secondary)]" style={{ boxShadow: s.value }} />
-              <span className="font-mono text-xs text-[var(--color-signal-green)]">{s.name}</span>
+              <span className="font-mono text-xs text-[var(--color-signal-blue)]">{s.name}</span>
             </div>
           ))}
         </div>
         <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {[
-            { name: "--glow-green", value: "0 0 20px rgba(28,124,84,0.15)" },
-            { name: "--glow-green-strong", value: "0 0 40px rgba(28,124,84,0.25)" },
-            { name: "--glow-green-pulse", value: "pulse-green 2s infinite" },
+            { name: "--glow-blue", value: "0 0 20px rgba(37,99,235,0.15)" },
+            { name: "--glow-blue-strong", value: "0 0 40px rgba(37,99,235,0.25)" },
+            { name: "--glow-blue-pulse", value: "pulse-blue 2s infinite" },
           ].map((g) => (
             <div key={g.name} className="flex flex-col items-center gap-3">
               <div
                 className="h-20 w-full rounded-xl bg-[var(--bg-secondary)]"
-                style={g.name === "--glow-green-pulse" ? { animation: "pulse-green 2s ease-in-out infinite" } : { boxShadow: g.value }}
+                style={g.name === "--glow-blue-pulse" ? { animation: "pulse-blue 2s ease-in-out infinite" } : { boxShadow: g.value }}
               />
-              <span className="font-mono text-xs text-[var(--color-signal-green)]">{g.name}</span>
+              <span className="font-mono text-xs text-[var(--color-signal-blue)]">{g.name}</span>
               <span className="font-mono text-[10px] text-[var(--text-tertiary)]">{g.value}</span>
             </div>
           ))}
@@ -228,7 +228,7 @@ export default function DesignSystemPage() {
           <CodeBlock lang="CSS" code={`:root {
   /* Primary */
   --color-capital-black: #0A0A0A;
-  --color-signal-green: #1C7C54;
+  --color-signal-blue: #2563EB;
   --color-capital-white: #F5F5F0;
 
   /* Spacing (base 4px) */
@@ -241,7 +241,7 @@ export default function DesignSystemPage() {
 
   /* Shadows */
   --shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
-  --glow-green: 0 0 20px rgba(28,124,84,0.15);
+  --glow-blue: 0 0 20px rgba(37,99,235,0.15);
 
   /* Transitions */
   --transition-fast: 150ms ease;
@@ -261,12 +261,12 @@ export default function DesignSystemPage() {
           <table className="w-full text-left text-sm">
             <thead>
               <tr className="border-b border-[var(--border-default)] bg-[var(--bg-secondary)]">
-                <th className="px-4 py-3 font-mono text-xs font-bold text-[var(--color-signal-green)]">Breakpoint</th>
-                <th className="px-4 py-3 font-mono text-xs font-bold text-[var(--color-signal-green)]">Range</th>
-                <th className="px-4 py-3 font-mono text-xs font-bold text-[var(--color-signal-green)]">Columns</th>
-                <th className="px-4 py-3 font-mono text-xs font-bold text-[var(--color-signal-green)]">Gutter</th>
-                <th className="px-4 py-3 font-mono text-xs font-bold text-[var(--color-signal-green)]">Margin</th>
-                <th className="px-4 py-3 font-mono text-xs font-bold text-[var(--color-signal-green)]">Max Width</th>
+                <th className="px-4 py-3 font-mono text-xs font-bold text-[var(--color-signal-blue)]">Breakpoint</th>
+                <th className="px-4 py-3 font-mono text-xs font-bold text-[var(--color-signal-blue)]">Range</th>
+                <th className="px-4 py-3 font-mono text-xs font-bold text-[var(--color-signal-blue)]">Columns</th>
+                <th className="px-4 py-3 font-mono text-xs font-bold text-[var(--color-signal-blue)]">Gutter</th>
+                <th className="px-4 py-3 font-mono text-xs font-bold text-[var(--color-signal-blue)]">Margin</th>
+                <th className="px-4 py-3 font-mono text-xs font-bold text-[var(--color-signal-blue)]">Max Width</th>
               </tr>
             </thead>
             <tbody className="font-mono text-xs text-[var(--text-secondary)]">
@@ -294,7 +294,7 @@ export default function DesignSystemPage() {
         <Label>Representação visual do layout de 12 colunas no breakpoint desktop.</Label>
         <div className="grid grid-cols-12 gap-2">
           {Array.from({ length: 12 }).map((_, i) => (
-            <div key={i} className="flex h-12 items-center justify-center rounded-lg bg-[var(--color-signal-green)]/10 font-mono text-[10px] text-[var(--color-signal-green)]">
+            <div key={i} className="flex h-12 items-center justify-center rounded-lg bg-[var(--color-signal-blue)]/10 font-mono text-[10px] text-[var(--color-signal-blue)]">
               {i + 1}
             </div>
           ))}
@@ -349,7 +349,7 @@ export default function DesignSystemPage() {
                 <span className="text-lg font-bold text-[var(--text-primary)]">{s.label}</span>
               </div>
               <div>
-                <p className="font-mono text-xs text-[var(--color-signal-green)]">{s.token}</p>
+                <p className="font-mono text-xs text-[var(--color-signal-blue)]">{s.token}</p>
                 <p className="mt-1 font-mono text-[10px] text-[var(--text-tertiary)]">{s.shadow}</p>
               </div>
             </div>
@@ -360,18 +360,18 @@ export default function DesignSystemPage() {
         <SubHeading>Efeitos de Glow</SubHeading>
         <div className="grid gap-8 sm:grid-cols-2">
           <div className="flex flex-col gap-4">
-            <div className="flex h-32 items-center justify-center rounded-2xl bg-[var(--bg-secondary)]" style={{ boxShadow: "0 0 20px rgba(28,124,84,0.15)" }}>
-              <span className="text-sm font-semibold text-[var(--color-signal-green)]">Green Glow</span>
+            <div className="flex h-32 items-center justify-center rounded-2xl bg-[var(--bg-secondary)]" style={{ boxShadow: "0 0 20px rgba(37,99,235,0.15)" }}>
+              <span className="text-sm font-semibold text-[var(--color-signal-blue)]">Blue Glow</span>
             </div>
-            <CodeBlock lang="CSS" code={`box-shadow: var(--glow-green);
-/* 0 0 20px rgba(28,124,84,0.15) */`} />
+            <CodeBlock lang="CSS" code={`box-shadow: var(--glow-blue);
+/* 0 0 20px rgba(37,99,235,0.15) */`} />
           </div>
           <div className="flex flex-col gap-4">
-            <div className="flex h-32 items-center justify-center rounded-2xl bg-[var(--bg-secondary)]" style={{ boxShadow: "0 0 40px rgba(28,124,84,0.25)" }}>
-              <span className="text-sm font-semibold text-[var(--color-signal-green)]">Strong Glow</span>
+            <div className="flex h-32 items-center justify-center rounded-2xl bg-[var(--bg-secondary)]" style={{ boxShadow: "0 0 40px rgba(37,99,235,0.25)" }}>
+              <span className="text-sm font-semibold text-[var(--color-signal-blue)]">Strong Glow</span>
             </div>
-            <CodeBlock lang="CSS" code={`box-shadow: var(--glow-green-strong);
-/* 0 0 40px rgba(28,124,84,0.25) */`} />
+            <CodeBlock lang="CSS" code={`box-shadow: var(--glow-blue-strong);
+/* 0 0 40px rgba(37,99,235,0.25) */`} />
           </div>
         </div>
       </Section>
@@ -413,7 +413,7 @@ export default function DesignSystemPage() {
             { label: "32px (lg)", size: 32 },
           ].map((s) => (
             <div key={s.label} className="flex flex-col items-center gap-2">
-              <Activity size={s.size} strokeWidth={1.5} className="text-[var(--color-signal-green)]" />
+              <Activity size={s.size} strokeWidth={1.5} className="text-[var(--color-signal-blue)]" />
               <span className="font-mono text-[10px] text-[var(--text-tertiary)]">{s.label}</span>
             </div>
           ))}
@@ -435,7 +435,7 @@ export default function DesignSystemPage() {
 
         {/* ───────── BUTTONS ───────── */}
         <SubHeading>Botões</SubHeading>
-        <Label>4 variantes em 3 tamanhos. Primary usa Signal Green, danger para ações destrutivas.</Label>
+        <Label>4 variantes em 3 tamanhos. Primary usa Signal Blue, danger para ações destrutivas.</Label>
 
         {/* Button variants */}
         <div className="space-y-6">
@@ -443,13 +443,13 @@ export default function DesignSystemPage() {
           <div>
             <p className="mb-3 font-mono text-xs text-[var(--text-tertiary)]">Primary</p>
             <div className="flex flex-wrap items-center gap-3">
-              <button className="inline-flex h-8 items-center gap-1.5 rounded-lg bg-[var(--color-signal-green)] px-3 text-xs font-semibold text-[var(--color-capital-black)] transition hover:brightness-110">
+              <button className="inline-flex h-8 items-center gap-1.5 rounded-lg bg-[var(--color-signal-blue)] px-3 text-xs font-semibold text-[var(--color-capital-black)] transition hover:brightness-110">
                 Button SM
               </button>
-              <button className="inline-flex h-10 items-center gap-2 rounded-lg bg-[var(--color-signal-green)] px-5 text-sm font-semibold text-[var(--color-capital-black)] transition hover:brightness-110">
+              <button className="inline-flex h-10 items-center gap-2 rounded-lg bg-[var(--color-signal-blue)] px-5 text-sm font-semibold text-[var(--color-capital-black)] transition hover:brightness-110">
                 Button MD
               </button>
-              <button className="inline-flex h-12 items-center gap-2 rounded-lg bg-[var(--color-signal-green)] px-6 text-sm font-semibold text-[var(--color-capital-black)] transition hover:brightness-110">
+              <button className="inline-flex h-12 items-center gap-2 rounded-lg bg-[var(--color-signal-blue)] px-6 text-sm font-semibold text-[var(--color-capital-black)] transition hover:brightness-110">
                 Button LG
                 <ArrowUpRight size={16} />
               </button>
@@ -505,7 +505,7 @@ export default function DesignSystemPage() {
 
         <div className="mt-6">
           <CodeBlock lang="JSX" code={`{/* Primary */}
-<button className="h-10 rounded-lg bg-[var(--color-signal-green)] px-5 text-sm font-semibold text-[var(--color-capital-black)]">
+<button className="h-10 rounded-lg bg-[var(--color-signal-blue)] px-5 text-sm font-semibold text-[var(--color-capital-black)]">
   Action
 </button>
 
@@ -532,7 +532,7 @@ export default function DesignSystemPage() {
           {/* Text Input */}
           <div className="flex flex-col gap-2">
             <label className="text-xs font-medium text-[var(--text-secondary)]">Label</label>
-            <div className="flex h-10 items-center rounded-lg border border-black/10 bg-[var(--bg-secondary)] px-3 text-sm text-[var(--text-primary)] transition focus-within:border-[var(--color-signal-green)]/40">
+            <div className="flex h-10 items-center rounded-lg border border-black/10 bg-[var(--bg-secondary)] px-3 text-sm text-[var(--text-primary)] transition focus-within:border-[var(--color-signal-blue)]/40">
               <span className="text-[var(--text-tertiary)]">Placeholder text</span>
             </div>
           </div>
@@ -568,10 +568,10 @@ export default function DesignSystemPage() {
               </div>
               {/* On */}
               <div className="flex items-center gap-2">
-                <div className="relative h-6 w-11 rounded-full bg-[var(--color-signal-green)] transition">
+                <div className="relative h-6 w-11 rounded-full bg-[var(--color-signal-blue)] transition">
                   <div className="absolute right-1 top-1 h-4 w-4 rounded-full bg-white transition" />
                 </div>
-                <span className="text-xs text-[var(--color-signal-green)]">On</span>
+                <span className="text-xs text-[var(--color-signal-blue)]">On</span>
               </div>
             </div>
           </div>
@@ -580,7 +580,7 @@ export default function DesignSystemPage() {
           <div className="flex flex-col gap-2 sm:col-span-2">
             <div className="flex items-center justify-between">
               <label className="text-xs font-medium text-[var(--text-secondary)]">Slider</label>
-              <span className="font-mono text-xs text-[var(--color-signal-green)]">72%</span>
+              <span className="font-mono text-xs text-[var(--color-signal-blue)]">72%</span>
             </div>
             <div className="h-2 w-full overflow-hidden rounded-full bg-[var(--bg-tertiary)]">
               <div className="h-full rounded-full" style={{ width: "72%", background: "var(--gradient-signal)" }} />
@@ -646,13 +646,13 @@ export default function DesignSystemPage() {
             <p className="mt-2 text-sm text-[var(--text-secondary)]">Borda sutil e fundo secundário. Usado para agrupamento padrão de conteúdo.</p>
           </div>
           {/* Elevated */}
-          <div className="rounded-2xl border border-[var(--color-signal-green)]/20 bg-[var(--bg-secondary)] p-6" style={{ boxShadow: "0 0 20px rgba(28,124,84,0.15)" }}>
-            <p className="mb-2 font-mono text-[10px] uppercase tracking-widest text-[var(--color-signal-green)]">Elevated</p>
+          <div className="rounded-2xl border border-[var(--color-signal-blue)]/20 bg-[var(--bg-secondary)] p-6" style={{ boxShadow: "0 0 20px rgba(37,99,235,0.15)" }}>
+            <p className="mb-2 font-mono text-[10px] uppercase tracking-widest text-[var(--color-signal-blue)]">Elevated</p>
             <h4 className="text-lg font-semibold">Título do Card</h4>
             <p className="mt-2 text-sm text-[var(--text-secondary)]">Borda com glow verde para conteúdo destacado e CTAs.</p>
           </div>
           {/* Surface */}
-          <div className="rounded-2xl border border-[var(--border-default)] p-6" style={{ background: "linear-gradient(180deg, rgba(28,124,84,0.05) 0%, var(--bg-secondary) 100%)" }}>
+          <div className="rounded-2xl border border-[var(--border-default)] p-6" style={{ background: "linear-gradient(180deg, rgba(37,99,235,0.05) 0%, var(--bg-secondary) 100%)" }}>
             <p className="mb-2 font-mono text-[10px] uppercase tracking-widest text-[var(--text-tertiary)]">Surface</p>
             <h4 className="text-lg font-semibold">Título do Card</h4>
             <p className="mt-2 text-sm text-[var(--text-secondary)]">Overlay de gradiente na superfície para seções premium.</p>
@@ -674,7 +674,7 @@ export default function DesignSystemPage() {
             {/* Mini bar chart */}
             <div className="mt-4 flex items-end gap-1">
               {[40, 55, 35, 65, 50, 75, 60, 85, 70, 90, 80, 95].map((h, i) => (
-                <div key={i} className="flex-1 rounded-sm" style={{ height: h * 0.4, background: i >= 10 ? "var(--color-signal-green)" : "var(--color-signal-green)", opacity: 0.3 + (i / 12) * 0.7 }} />
+                <div key={i} className="flex-1 rounded-sm" style={{ height: h * 0.4, background: i >= 10 ? "var(--color-signal-blue)" : "var(--color-signal-blue)", opacity: 0.3 + (i / 12) * 0.7 }} />
               ))}
             </div>
           </div>
@@ -713,7 +713,7 @@ export default function DesignSystemPage() {
           <div className="glow-card rounded-2xl bg-[var(--bg-secondary)] p-6">
             <div className="flex items-center justify-between">
               <p className="text-xs text-[var(--text-tertiary)]">Alocação do Portfólio</p>
-              <span className="font-mono text-xs text-[var(--color-signal-green)]">65%</span>
+              <span className="font-mono text-xs text-[var(--color-signal-blue)]">65%</span>
             </div>
             <div className="mt-3 h-2 overflow-hidden rounded-full bg-[var(--bg-tertiary)]">
               <div className="h-full rounded-full" style={{ width: "65%", background: "var(--gradient-signal)" }} />
@@ -748,7 +748,7 @@ export default function DesignSystemPage() {
                 <p className="text-xs text-[var(--text-secondary)]">Deseja confirmar a compra de 100 unidades de PETR4?</p>
                 <div className="mt-4 flex gap-2">
                   <button className="h-7 flex-1 rounded-lg border border-black/10 text-xs font-medium text-[var(--text-secondary)]">Cancelar</button>
-                  <button className="h-7 flex-1 rounded-lg bg-[var(--color-signal-green)] text-xs font-semibold text-[var(--color-capital-black)]">Confirmar</button>
+                  <button className="h-7 flex-1 rounded-lg bg-[var(--color-signal-blue)] text-xs font-semibold text-[var(--color-capital-black)]">Confirmar</button>
                 </div>
               </div>
             </div>
@@ -799,11 +799,11 @@ export default function DesignSystemPage() {
         <div className="grid gap-6 sm:grid-cols-2">
           {/* Dot Grid */}
           <div className="flex flex-col gap-3">
-            <div className="flex h-40 items-center justify-center rounded-2xl border border-[var(--border-default)]" style={{ backgroundImage: "radial-gradient(circle, rgba(28,124,84,0.06) 1px, transparent 1px)", backgroundSize: "24px 24px" }}>
+            <div className="flex h-40 items-center justify-center rounded-2xl border border-[var(--border-default)]" style={{ backgroundImage: "radial-gradient(circle, rgba(37,99,235,0.06) 1px, transparent 1px)", backgroundSize: "24px 24px" }}>
               <span className="rounded-full bg-[var(--bg-primary)]/80 px-3 py-1 font-mono text-xs text-[var(--text-tertiary)]">Dot Grid</span>
             </div>
             <CodeBlock lang="CSS" code={`background-image: radial-gradient(
-  circle, rgba(28,124,84,0.06) 1px,
+  circle, rgba(37,99,235,0.06) 1px,
   transparent 1px
 );
 background-size: 24px 24px;`} />
@@ -841,12 +841,12 @@ background-size: 24px 24px;`} />
 
           {/* Blueprint Grid */}
           <div className="flex flex-col gap-3">
-            <div className="flex h-40 items-center justify-center rounded-2xl border border-[var(--border-default)] bg-[var(--bg-secondary)]" style={{ backgroundImage: "linear-gradient(rgba(28,124,84,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(28,124,84,0.04) 1px, transparent 1px)", backgroundSize: "32px 32px" }}>
+            <div className="flex h-40 items-center justify-center rounded-2xl border border-[var(--border-default)] bg-[var(--bg-secondary)]" style={{ backgroundImage: "linear-gradient(rgba(37,99,235,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(37,99,235,0.04) 1px, transparent 1px)", backgroundSize: "32px 32px" }}>
               <span className="rounded-full bg-[var(--bg-primary)]/80 px-3 py-1 font-mono text-xs text-[var(--text-tertiary)]">Blueprint Grid</span>
             </div>
             <CodeBlock lang="CSS" code={`background-image:
-  linear-gradient(rgba(28,124,84,0.04) 1px, transparent 1px),
-  linear-gradient(90deg, rgba(28,124,84,0.04) 1px, transparent 1px);
+  linear-gradient(rgba(37,99,235,0.04) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(37,99,235,0.04) 1px, transparent 1px);
 background-size: 32px 32px;`} />
           </div>
         </div>
@@ -857,25 +857,25 @@ background-size: 32px 32px;`} />
           {/* Bracket Corners */}
           <div className="relative flex h-40 items-center justify-center rounded-lg bg-[var(--bg-secondary)]">
             {/* Top-left */}
-            <div className="absolute left-3 top-3 h-5 w-5 border-l-2 border-t-2 border-[var(--color-signal-green)]/40" />
+            <div className="absolute left-3 top-3 h-5 w-5 border-l-2 border-t-2 border-[var(--color-signal-blue)]/40" />
             {/* Top-right */}
-            <div className="absolute right-3 top-3 h-5 w-5 border-r-2 border-t-2 border-[var(--color-signal-green)]/40" />
+            <div className="absolute right-3 top-3 h-5 w-5 border-r-2 border-t-2 border-[var(--color-signal-blue)]/40" />
             {/* Bottom-left */}
-            <div className="absolute bottom-3 left-3 h-5 w-5 border-b-2 border-l-2 border-[var(--color-signal-green)]/40" />
+            <div className="absolute bottom-3 left-3 h-5 w-5 border-b-2 border-l-2 border-[var(--color-signal-blue)]/40" />
             {/* Bottom-right */}
-            <div className="absolute bottom-3 right-3 h-5 w-5 border-b-2 border-r-2 border-[var(--color-signal-green)]/40" />
+            <div className="absolute bottom-3 right-3 h-5 w-5 border-b-2 border-r-2 border-[var(--color-signal-blue)]/40" />
             <div className="text-center">
-              <p className="font-mono text-xs text-[var(--color-signal-green)]">BRACKET FRAME</p>
+              <p className="font-mono text-xs text-[var(--color-signal-blue)]">BRACKET FRAME</p>
               <p className="mt-1 font-mono text-[10px] text-[var(--text-tertiary)]">HUD-style corner markers</p>
             </div>
           </div>
 
           {/* Status Display */}
-          <div className="relative flex h-40 items-center justify-center overflow-hidden rounded-lg bg-[var(--bg-secondary)]" style={{ backgroundImage: "radial-gradient(circle, rgba(28,124,84,0.06) 1px, transparent 1px)", backgroundSize: "16px 16px" }}>
+          <div className="relative flex h-40 items-center justify-center overflow-hidden rounded-lg bg-[var(--bg-secondary)]" style={{ backgroundImage: "radial-gradient(circle, rgba(37,99,235,0.06) 1px, transparent 1px)", backgroundSize: "16px 16px" }}>
             <div className="text-center">
               <div className="mb-1 flex items-center justify-center gap-2">
-                <div className="h-2 w-2 rounded-full bg-[var(--color-signal-green)]" style={{ animation: "pulse-green 2s ease-in-out infinite" }} />
-                <span className="font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-green)]">Sistema Ativo</span>
+                <div className="h-2 w-2 rounded-full bg-[var(--color-signal-blue)]" style={{ animation: "pulse-blue 2s ease-in-out infinite" }} />
+                <span className="font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-blue)]">Sistema Ativo</span>
               </div>
               <p className="font-mono text-[10px] text-[var(--text-tertiary)]">LATENCY 12ms | UPTIME 99.97%</p>
             </div>
@@ -888,7 +888,7 @@ background-size: 32px 32px;`} />
           {/* Gradient */}
           <div className="flex flex-col gap-2">
             <p className="font-mono text-xs text-[var(--text-tertiary)]">Gradient Divider</p>
-            <div className="h-px" style={{ background: "linear-gradient(90deg, transparent, var(--color-signal-green), transparent)" }} />
+            <div className="h-px" style={{ background: "linear-gradient(90deg, transparent, var(--color-signal-blue), transparent)" }} />
           </div>
           {/* Dashed */}
           <div className="flex flex-col gap-2">
@@ -920,7 +920,7 @@ background-size: 32px 32px;`} />
 
           {/* Signal Pulse */}
           <AnimationDemo name="Signal Pulse" description="Ponto verde pulsando, 2s ease-in-out infinite" className="bg-[var(--bg-primary)]">
-            <div className="h-4 w-4 rounded-full bg-[var(--color-signal-green)]" style={{ animation: "pulse-green 2s ease-in-out infinite" }} />
+            <div className="h-4 w-4 rounded-full bg-[var(--color-signal-blue)]" style={{ animation: "pulse-blue 2s ease-in-out infinite" }} />
           </AnimationDemo>
 
           {/* Number Tick */}
@@ -930,13 +930,13 @@ background-size: 32px 32px;`} />
 
           {/* Glow Radial */}
           <AnimationDemo name="Glow Radial" description="Pulso de fundo, 3s ease-in-out infinite" className="bg-[var(--bg-primary)]">
-            <div className="h-16 w-16 rounded-full bg-[var(--color-signal-green)]/10" style={{ animation: "pulse-green 3s ease-in-out infinite" }} />
+            <div className="h-16 w-16 rounded-full bg-[var(--color-signal-blue)]/10" style={{ animation: "pulse-blue 3s ease-in-out infinite" }} />
           </AnimationDemo>
 
           {/* Fade In Up */}
           <AnimationDemo name="Fade In Up" description="Entrada de elemento, 250ms ease-out" className="bg-[var(--bg-primary)]">
             <div style={{ animation: "capital-reveal 2.5s ease-out infinite" }}>
-              <Layers size={24} className="text-[var(--color-signal-green)]" />
+              <Layers size={24} className="text-[var(--color-signal-blue)]" />
             </div>
           </AnimationDemo>
 
@@ -950,7 +950,7 @@ background-size: 32px 32px;`} />
 
           {/* Data Stream */}
           <AnimationDemo name="Data Stream" description="Fluxo de dados hex, alimentação contínua" className="overflow-hidden bg-[var(--bg-primary)]">
-            <div className="flex flex-col items-center gap-0.5 font-mono text-[9px] leading-tight text-[var(--color-signal-green)]/30" style={{ animation: "capital-reveal 3s ease-in-out infinite" }}>
+            <div className="flex flex-col items-center gap-0.5 font-mono text-[9px] leading-tight text-[var(--color-signal-blue)]/30" style={{ animation: "capital-reveal 3s ease-in-out infinite" }}>
               <span>0xA7F3...</span>
               <span>0x3B2E...</span>
               <span>0xD9C1...</span>
@@ -960,7 +960,7 @@ background-size: 32px 32px;`} />
 
           {/* Border Trace */}
           <AnimationDemo name="Border Trace" description="Desenho de borda no sentido horário, 1s ease" className="bg-[var(--bg-primary)]">
-            <div className="h-12 w-12 rounded-lg" style={{ border: "2px solid var(--color-signal-green)", animation: "pulse-green 2s ease-in-out infinite" }} />
+            <div className="h-12 w-12 rounded-lg" style={{ border: "2px solid var(--color-signal-blue)", animation: "pulse-blue 2s ease-in-out infinite" }} />
           </AnimationDemo>
         </div>
 
@@ -974,7 +974,7 @@ background-size: 32px 32px;`} />
             { icon: BarChart3, title: "Orientado a Dados", desc: "Movimento reforça mudanças de dados e transições de estado." },
           ].map((p) => (
             <div key={p.title} className="glow-card rounded-xl bg-[var(--bg-secondary)] p-5">
-              <p.icon size={20} className="mb-3 text-[var(--color-signal-green)]" />
+              <p.icon size={20} className="mb-3 text-[var(--color-signal-blue)]" />
               <p className="text-sm font-semibold">{p.title}</p>
               <p className="mt-1 text-xs text-[var(--text-secondary)]">{p.desc}</p>
             </div>
@@ -987,10 +987,10 @@ background-size: 32px 32px;`} />
           <table className="w-full text-left text-sm">
             <thead>
               <tr className="border-b border-[var(--border-default)] bg-[var(--bg-secondary)]">
-                <th className="px-4 py-3 font-mono text-xs font-bold text-[var(--color-signal-green)]">Animation</th>
-                <th className="px-4 py-3 font-mono text-xs font-bold text-[var(--color-signal-green)]">Duration</th>
-                <th className="px-4 py-3 font-mono text-xs font-bold text-[var(--color-signal-green)]">Easing</th>
-                <th className="px-4 py-3 font-mono text-xs font-bold text-[var(--color-signal-green)]">Use Case</th>
+                <th className="px-4 py-3 font-mono text-xs font-bold text-[var(--color-signal-blue)]">Animation</th>
+                <th className="px-4 py-3 font-mono text-xs font-bold text-[var(--color-signal-blue)]">Duration</th>
+                <th className="px-4 py-3 font-mono text-xs font-bold text-[var(--color-signal-blue)]">Easing</th>
+                <th className="px-4 py-3 font-mono text-xs font-bold text-[var(--color-signal-blue)]">Use Case</th>
               </tr>
             </thead>
             <tbody className="text-xs text-[var(--text-secondary)]">
@@ -1020,9 +1020,9 @@ background-size: 32px 32px;`} />
   to   { opacity: 1; transform: translateY(0);    filter: blur(0); }
 }
 
-@keyframes pulse-green {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(28,124,84,0.3); }
-  50%      { box-shadow: 0 0 20px 4px rgba(28,124,84,0.1); }
+@keyframes pulse-blue {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37,99,235,0.3); }
+  50%      { box-shadow: 0 0 20px 4px rgba(37,99,235,0.1); }
 }
 
 @keyframes shine-sweep {
@@ -1157,15 +1157,15 @@ background-size: 32px 32px;`} />
         <SubHeading>Zona de Segurança</SubHeading>
         <Label>Área mínima de respiro ao redor do logo. A unidade &quot;x&quot; é definida pela altura do símbolo.</Label>
         <div className="flex justify-center">
-          <div className="relative inline-flex items-center justify-center rounded-2xl border-2 border-dashed border-[var(--color-signal-green)]/30 bg-[var(--bg-secondary)] px-20 py-16">
-            <div className="absolute left-4 top-1/2 -translate-y-1/2 font-mono text-[10px] text-[var(--color-signal-green)]">1x</div>
-            <div className="absolute right-4 top-1/2 -translate-y-1/2 font-mono text-[10px] text-[var(--color-signal-green)]">1x</div>
-            <div className="absolute left-1/2 top-3 -translate-x-1/2 font-mono text-[10px] text-[var(--color-signal-green)]">1x</div>
-            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 font-mono text-[10px] text-[var(--color-signal-green)]">1x</div>
-            <div className="absolute left-2 top-2 h-3 w-3 border-l border-t border-[var(--color-signal-green)]/50" />
-            <div className="absolute right-2 top-2 h-3 w-3 border-r border-t border-[var(--color-signal-green)]/50" />
-            <div className="absolute bottom-2 left-2 h-3 w-3 border-b border-l border-[var(--color-signal-green)]/50" />
-            <div className="absolute bottom-2 right-2 h-3 w-3 border-b border-r border-[var(--color-signal-green)]/50" />
+          <div className="relative inline-flex items-center justify-center rounded-2xl border-2 border-dashed border-[var(--color-signal-blue)]/30 bg-[var(--bg-secondary)] px-20 py-16">
+            <div className="absolute left-4 top-1/2 -translate-y-1/2 font-mono text-[10px] text-[var(--color-signal-blue)]">1x</div>
+            <div className="absolute right-4 top-1/2 -translate-y-1/2 font-mono text-[10px] text-[var(--color-signal-blue)]">1x</div>
+            <div className="absolute left-1/2 top-3 -translate-x-1/2 font-mono text-[10px] text-[var(--color-signal-blue)]">1x</div>
+            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 font-mono text-[10px] text-[var(--color-signal-blue)]">1x</div>
+            <div className="absolute left-2 top-2 h-3 w-3 border-l border-t border-[var(--color-signal-blue)]/50" />
+            <div className="absolute right-2 top-2 h-3 w-3 border-r border-t border-[var(--color-signal-blue)]/50" />
+            <div className="absolute bottom-2 left-2 h-3 w-3 border-b border-l border-[var(--color-signal-blue)]/50" />
+            <div className="absolute bottom-2 right-2 h-3 w-3 border-b border-r border-[var(--color-signal-blue)]/50" />
             <OCLogo size="lg" color="var(--text-primary)" />
           </div>
         </div>
@@ -1177,21 +1177,21 @@ background-size: 32px 32px;`} />
           <div className="flex flex-col items-center gap-3 rounded-xl border border-[var(--border-default)] bg-[var(--bg-secondary)] p-6">
             <OCLogo size="sm" color="var(--text-primary)" />
             <div className="text-center">
-              <p className="font-mono text-xs text-[var(--color-signal-green)]">24px</p>
+              <p className="font-mono text-xs text-[var(--color-signal-blue)]">24px</p>
               <p className="text-[10px] text-[var(--text-tertiary)]">MÍN. DIGITAL (logo completo)</p>
             </div>
           </div>
           <div className="flex flex-col items-center gap-3 rounded-xl border border-[var(--border-default)] bg-[var(--bg-secondary)] p-6">
             <OCSymbol size={16} color="var(--text-primary)" />
             <div className="text-center">
-              <p className="font-mono text-xs text-[var(--color-signal-green)]">16px</p>
+              <p className="font-mono text-xs text-[var(--color-signal-blue)]">16px</p>
               <p className="text-[10px] text-[var(--text-tertiary)]">MÍN. DIGITAL (apenas símbolo)</p>
             </div>
           </div>
           <div className="flex flex-col items-center gap-3 rounded-xl border border-[var(--border-default)] bg-[var(--bg-secondary)] p-6">
             <OCLogo size="sm" color="var(--text-primary)" />
             <div className="text-center">
-              <p className="font-mono text-xs text-[var(--color-signal-green)]">8mm</p>
+              <p className="font-mono text-xs text-[var(--color-signal-blue)]">8mm</p>
               <p className="text-[10px] text-[var(--text-tertiary)]">MÍN. IMPRESSO</p>
             </div>
           </div>

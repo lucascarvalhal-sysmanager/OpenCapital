@@ -18,7 +18,7 @@ export default function AInfraestruturaPage() {
           <div className="relative space-y-8">
             {/* main quote */}
             <div className="flex gap-4">
-              <Quote className="mt-1 shrink-0 text-[var(--color-signal-green)]" size={28} />
+              <Quote className="mt-1 shrink-0 text-[var(--color-signal-blue)]" size={28} />
               <p className="gradient-text text-2xl font-bold leading-tight md:text-3xl">
                 A infraestrutura mudou. Quem opera com dados vence.
               </p>
@@ -56,7 +56,7 @@ export default function AInfraestruturaPage() {
         <div className="mb-12 grid gap-6 md:grid-cols-3">
           {/* Essência */}
           <div className="glow-card rounded-2xl bg-[var(--bg-secondary)] p-6">
-            <span className="mb-2 block font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-green)]">Essência</span>
+            <span className="mb-2 block font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-blue)]">Essência</span>
             <p className="text-lg font-semibold">A infraestrutura da nova inteligência financeira.</p>
             <p className="mt-2 text-sm text-[var(--text-secondary)]">
               Um ecossistema universal de inteligência artificial especializado em ciência de dados aplicada às finanças.
@@ -65,7 +65,7 @@ export default function AInfraestruturaPage() {
 
           {/* Missão */}
           <div className="glow-card rounded-2xl bg-[var(--bg-secondary)] p-6">
-            <span className="mb-2 block font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-green)]">Missão</span>
+            <span className="mb-2 block font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-blue)]">Missão</span>
             <p className="text-lg font-semibold">Elevar o padrão financeiro da humanidade.</p>
             <p className="mt-2 text-sm text-[var(--text-secondary)]">
               Criamos sistemas que aumentam a capacidade intelectual de traders e investidores. Não substituímos o humano — amplificamos sua inteligência.
@@ -107,7 +107,7 @@ export default function AInfraestruturaPage() {
           {/* Sage */}
           <div className="glow-card space-y-4 rounded-2xl bg-[var(--bg-secondary)] p-6">
             <div className="flex items-center justify-between">
-              <h3 className="text-lg font-bold">Sábio <span className="text-[var(--color-signal-green)]">50%</span></h3>
+              <h3 className="text-lg font-bold">Sábio <span className="text-[var(--color-signal-blue)]">50%</span></h3>
               <span className="font-mono text-xs text-[var(--text-tertiary)]">Dominante</span>
             </div>
             <div className="space-y-2 text-sm text-[var(--text-secondary)]">
@@ -122,7 +122,7 @@ export default function AInfraestruturaPage() {
           {/* Magician */}
           <div className="glow-card space-y-4 rounded-2xl bg-[var(--bg-secondary)] p-6">
             <div className="flex items-center justify-between">
-              <h3 className="text-lg font-bold">Mago <span className="text-[var(--color-signal-green)]">30%</span></h3>
+              <h3 className="text-lg font-bold">Mago <span className="text-[var(--color-signal-blue)]">30%</span></h3>
               <span className="font-mono text-xs text-[var(--text-tertiary)]">Transformador</span>
             </div>
             <div className="space-y-2 text-sm text-[var(--text-secondary)]">
@@ -137,7 +137,7 @@ export default function AInfraestruturaPage() {
           {/* Ruler */}
           <div className="glow-card space-y-4 rounded-2xl bg-[var(--bg-secondary)] p-6">
             <div className="flex items-center justify-between">
-              <h3 className="text-lg font-bold">Governante <span className="text-[var(--color-signal-green)]">20%</span></h3>
+              <h3 className="text-lg font-bold">Governante <span className="text-[var(--color-signal-blue)]">20%</span></h3>
               <span className="font-mono text-xs text-[var(--text-tertiary)]">Autoridade</span>
             </div>
             <div className="space-y-2 text-sm text-[var(--text-secondary)]">
@@ -164,13 +164,13 @@ export default function AInfraestruturaPage() {
         <div className="mb-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {/* Categoria */}
           <div className="glow-card rounded-2xl bg-[var(--bg-secondary)] p-6">
-            <span className="mb-2 block font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-green)]">Categoria</span>
+            <span className="mb-2 block font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-blue)]">Categoria</span>
             <p className="text-lg font-semibold">Infraestrutura de inteligência financeira com IA</p>
           </div>
 
           {/* Diferencial */}
           <div className="glow-card rounded-2xl bg-[var(--bg-secondary)] p-6">
-            <span className="mb-2 block font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-green)]">Diferencial</span>
+            <span className="mb-2 block font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-blue)]">Diferencial</span>
             <p className="text-lg font-semibold">Arquitetura proprietária de processamento em tempo real</p>
           </div>
 
@@ -186,8 +186,8 @@ export default function AInfraestruturaPage() {
 
         {/* Declaração de Posicionamento */}
         <div className="mb-12 rounded-2xl border border-[var(--border-default)] bg-[var(--bg-secondary)] p-8">
-          <span className="mb-4 block font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-green)]">Declaração de Posicionamento</span>
-          <blockquote className="border-l-2 border-[var(--color-signal-green)] pl-6 text-base leading-relaxed text-[var(--text-secondary)] md:text-lg">
+          <span className="mb-4 block font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-blue)]">Declaração de Posicionamento</span>
+          <blockquote className="border-l-2 border-[var(--color-signal-blue)] pl-6 text-base leading-relaxed text-[var(--text-secondary)] md:text-lg">
             Para <strong className="text-[var(--text-primary)]">traders e investidores</strong> que buscam <strong className="text-[var(--text-primary)]">vantagem competitiva baseada em dados</strong>, a <strong className="gradient-text">OpenCapital</strong> é a <strong className="text-[var(--text-primary)]">infraestrutura de inteligência financeira</strong> que <strong className="text-[var(--text-primary)]">transforma dados em tempo real em decisões operacionais</strong>, diferente de <strong className="text-[var(--text-primary)]">ferramentas tradicionais</strong> porque <strong className="text-[var(--text-primary)]">opera com arquitetura proprietária de IA especializada em ciência de dados financeiros</strong>.
           </blockquote>
         </div>
@@ -196,8 +196,8 @@ export default function AInfraestruturaPage() {
         <div className="grid gap-6 md:grid-cols-2">
           <div className="glow-card rounded-2xl bg-[var(--bg-secondary)] p-6">
             <div className="mb-3 flex items-center gap-2">
-              <Activity className="text-[var(--color-signal-green)]" size={18} />
-              <span className="font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-green)]">Público Primário</span>
+              <Activity className="text-[var(--color-signal-blue)]" size={18} />
+              <span className="font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-blue)]">Público Primário</span>
             </div>
             <h3 className="mb-3 text-lg font-bold">Traders Ativos</h3>
             <ul className="space-y-2 text-sm text-[var(--text-secondary)]">
@@ -210,8 +210,8 @@ export default function AInfraestruturaPage() {
 
           <div className="glow-card rounded-2xl bg-[var(--bg-secondary)] p-6">
             <div className="mb-3 flex items-center gap-2">
-              <Users className="text-[var(--color-signal-green)]" size={18} />
-              <span className="font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-green)]">Público Secundário</span>
+              <Users className="text-[var(--color-signal-blue)]" size={18} />
+              <span className="font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-blue)]">Público Secundário</span>
             </div>
             <h3 className="mb-3 text-lg font-bold">Investidores Sofisticados</h3>
             <ul className="space-y-2 text-sm text-[var(--text-secondary)]">
@@ -229,7 +229,7 @@ export default function AInfraestruturaPage() {
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {/* Herói */}
           <div className="glow-card rounded-2xl bg-[var(--bg-secondary)] p-6">
-            <span className="mb-1 block font-mono text-xs font-bold text-[var(--color-signal-green)]">01</span>
+            <span className="mb-1 block font-mono text-xs font-bold text-[var(--color-signal-blue)]">01</span>
             <h3 className="mb-3 text-lg font-bold">Herói</h3>
             <p className="text-sm leading-relaxed text-[var(--text-secondary)]">
               O trader ou investidor que sabe que existe vantagem competitiva nos dados, mas não consegue acessá-la. Opera com ferramentas limitadas, informação atrasada, e uma desvantagem estrutural contra algoritmos institucionais.
@@ -238,7 +238,7 @@ export default function AInfraestruturaPage() {
 
           {/* Guia */}
           <div className="glow-card rounded-2xl bg-[var(--bg-secondary)] p-6">
-            <span className="mb-1 block font-mono text-xs font-bold text-[var(--color-signal-green)]">02</span>
+            <span className="mb-1 block font-mono text-xs font-bold text-[var(--color-signal-blue)]">02</span>
             <h3 className="mb-3 text-lg font-bold">Guia</h3>
             <p className="text-sm leading-relaxed text-[var(--text-secondary)]">
               A OpenCapital: expertise técnica comprovada em ciência de dados financeiros + compreensão genuína do desafio do operador individual. Demonstra autoridade com dados, não com promessas.
@@ -247,7 +247,7 @@ export default function AInfraestruturaPage() {
 
           {/* Problema */}
           <div className="glow-card rounded-2xl bg-[var(--bg-secondary)] p-6">
-            <span className="mb-1 block font-mono text-xs font-bold text-[var(--color-signal-green)]">03</span>
+            <span className="mb-1 block font-mono text-xs font-bold text-[var(--color-signal-blue)]">03</span>
             <h3 className="mb-3 text-lg font-bold">Problema</h3>
             <div className="space-y-3 text-sm text-[var(--text-secondary)]">
               <p><span className="font-semibold text-[var(--text-primary)]">Externo:</span> Ferramentas acessíveis são rasas; as profundas são inacessíveis</p>
@@ -258,7 +258,7 @@ export default function AInfraestruturaPage() {
 
           {/* Plano */}
           <div className="glow-card rounded-2xl bg-[var(--bg-secondary)] p-6">
-            <span className="mb-1 block font-mono text-xs font-bold text-[var(--color-signal-green)]">04</span>
+            <span className="mb-1 block font-mono text-xs font-bold text-[var(--color-signal-blue)]">04</span>
             <h3 className="mb-3 text-lg font-bold">Plano</h3>
             <div className="space-y-2 text-sm text-[var(--text-secondary)]">
               <p><span className="gradient-text font-bold">1.</span> <strong className="text-[var(--text-primary)]">Conecte-se</strong> — Acesse o ecossistema e comece a explorar dados</p>
@@ -270,16 +270,16 @@ export default function AInfraestruturaPage() {
 
           {/* Chamada à Ação */}
           <div className="glow-card rounded-2xl bg-[var(--bg-secondary)] p-6">
-            <span className="mb-1 block font-mono text-xs font-bold text-[var(--color-signal-green)]">05</span>
+            <span className="mb-1 block font-mono text-xs font-bold text-[var(--color-signal-blue)]">05</span>
             <h3 className="mb-3 text-lg font-bold">Chamada à Ação</h3>
-            <blockquote className="border-l-2 border-[var(--color-signal-green)] pl-4 text-sm italic text-[var(--text-secondary)]">
+            <blockquote className="border-l-2 border-[var(--color-signal-blue)] pl-4 text-sm italic text-[var(--text-secondary)]">
               &ldquo;Comece a operar com dados. Não pedimos fé — pedimos disciplina.&rdquo;
             </blockquote>
           </div>
 
           {/* Sucesso */}
           <div className="glow-card rounded-2xl bg-[var(--bg-secondary)] p-6">
-            <span className="mb-1 block font-mono text-xs font-bold text-[var(--color-signal-green)]">06</span>
+            <span className="mb-1 block font-mono text-xs font-bold text-[var(--color-signal-blue)]">06</span>
             <h3 className="mb-3 text-lg font-bold">Sucesso</h3>
             <p className="text-sm leading-relaxed text-[var(--text-secondary)]">
               Operações fundamentadas em dados, decisões mais rápidas e precisas, vantagem competitiva real. O operador se torna referência entre seus pares. Prosperidade como consequência natural.
@@ -310,7 +310,7 @@ export default function AInfraestruturaPage() {
           ].map(({ num, line, uso }) => (
             <div key={num} className="glow-card flex flex-col justify-between rounded-2xl bg-[var(--bg-secondary)] p-6">
               <div>
-                <span className="mb-3 block font-mono text-xs font-bold text-[var(--color-signal-green)]">{num}</span>
+                <span className="mb-3 block font-mono text-xs font-bold text-[var(--color-signal-blue)]">{num}</span>
                 <p className="text-base font-semibold leading-snug">&ldquo;{line}&rdquo;</p>
               </div>
               <p className="mt-4 text-xs text-[var(--text-tertiary)]">{uso}</p>
@@ -357,9 +357,9 @@ export default function AInfraestruturaPage() {
         {/* Do / Don't columns */}
         <div className="mb-12 grid gap-6 md:grid-cols-2">
           {/* Assim sim */}
-          <div className="rounded-2xl border border-[var(--color-signal-green)]/20 bg-[var(--bg-secondary)] p-6">
-            <h3 className="mb-6 flex items-center gap-2 text-lg font-bold text-[var(--color-signal-green)]">
-              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[var(--color-signal-green)]/10 text-xs">&#10003;</span>
+          <div className="rounded-2xl border border-[var(--color-signal-blue)]/20 bg-[var(--bg-secondary)] p-6">
+            <h3 className="mb-6 flex items-center gap-2 text-lg font-bold text-[var(--color-signal-blue)]">
+              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[var(--color-signal-blue)]/10 text-xs">&#10003;</span>
               Assim sim
             </h3>
             <div className="space-y-5">
@@ -404,7 +404,7 @@ export default function AInfraestruturaPage() {
           <div className="glow-card rounded-2xl bg-[var(--bg-secondary)] p-6">
             <div className="mb-3 flex items-center justify-between">
               <h3 className="text-lg font-bold">Voz Institucional</h3>
-              <span className="rounded-full bg-[var(--color-signal-green)]/10 px-3 py-1 font-mono text-xs font-bold text-[var(--color-signal-green)]">80%</span>
+              <span className="rounded-full bg-[var(--color-signal-blue)]/10 px-3 py-1 font-mono text-xs font-bold text-[var(--color-signal-blue)]">80%</span>
             </div>
             <ul className="space-y-1.5 text-sm text-[var(--text-secondary)]">
               <li>Direto e objetivo, sem floreios</li>
@@ -418,7 +418,7 @@ export default function AInfraestruturaPage() {
           <div className="glow-card rounded-2xl bg-[var(--bg-secondary)] p-6">
             <div className="mb-3 flex items-center justify-between">
               <h3 className="text-lg font-bold">Voz do Fundador</h3>
-              <span className="rounded-full bg-[var(--color-signal-green)]/10 px-3 py-1 font-mono text-xs font-bold text-[var(--color-signal-green)]">20%</span>
+              <span className="rounded-full bg-[var(--color-signal-blue)]/10 px-3 py-1 font-mono text-xs font-bold text-[var(--color-signal-blue)]">20%</span>
             </div>
             <ul className="mb-4 space-y-1.5 text-sm text-[var(--text-secondary)]">
               <li>Mais pessoal e provocativo</li>
@@ -426,7 +426,7 @@ export default function AInfraestruturaPage() {
               <li>Conta histórias com dados</li>
               <li>Redes sociais, artigos de opinião, entrevistas</li>
             </ul>
-            <blockquote className="border-l-2 border-[var(--color-signal-green)] pl-4 text-xs italic text-[var(--text-tertiary)]">
+            <blockquote className="border-l-2 border-[var(--color-signal-blue)] pl-4 text-xs italic text-[var(--text-tertiary)]">
               &ldquo;Você ainda está operando com base em intuição enquanto algoritmos processam 2 milhões de pontos de dados por segundo. A nova era do dinheiro não é sobre sorte. É sobre infraestrutura.&rdquo;
             </blockquote>
           </div>
@@ -437,8 +437,8 @@ export default function AInfraestruturaPage() {
       <Section id="vocabulario" num="09" title="Vocabulário" subtitle="As palavras que constroem — e as que destroem — a percepção da marca.">
         <div className="grid gap-6 md:grid-cols-2">
           {/* Palavras de Poder */}
-          <div className="rounded-2xl border border-[var(--color-signal-green)]/20 bg-[var(--bg-secondary)] p-6">
-            <h3 className="mb-6 font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-green)]">Palavras de Poder — USAR</h3>
+          <div className="rounded-2xl border border-[var(--color-signal-blue)]/20 bg-[var(--bg-secondary)] p-6">
+            <h3 className="mb-6 font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-blue)]">Palavras de Poder — USAR</h3>
             <div className="space-y-3">
               {[
                 { word: "Infraestrutura", why: "Somos a base, não o produto final" },
@@ -453,8 +453,8 @@ export default function AInfraestruturaPage() {
                 { word: "Evolução", why: "Crescimento contínuo e fundamentado" },
               ].map(({ word, why }) => (
                 <div key={word} className="flex items-start gap-3">
-                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[var(--color-signal-green)]/10">
-                    <ArrowUpRight size={10} className="text-[var(--color-signal-green)]" />
+                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[var(--color-signal-blue)]/10">
+                    <ArrowUpRight size={10} className="text-[var(--color-signal-blue)]" />
                   </span>
                   <div>
                     <span className="text-sm font-semibold">{word}</span>
@@ -501,7 +501,7 @@ export default function AInfraestruturaPage() {
         {/* visual timeline */}
         <div className="relative">
           {/* connecting line */}
-          <div className="absolute left-6 top-0 hidden h-full w-px bg-gradient-to-b from-[var(--color-signal-green)] via-[var(--color-signal-green)]/40 to-transparent md:block" />
+          <div className="absolute left-6 top-0 hidden h-full w-px bg-gradient-to-b from-[var(--color-signal-blue)] via-[var(--color-signal-blue)]/40 to-transparent md:block" />
 
           <div className="space-y-8">
             {[
@@ -532,13 +532,13 @@ export default function AInfraestruturaPage() {
             ].map(({ num, title, description }) => (
               <div key={num} className="relative flex gap-6 md:pl-16">
                 {/* timeline dot */}
-                <div className="absolute left-3.5 top-2 hidden h-5 w-5 items-center justify-center rounded-full border-2 border-[var(--color-signal-green)] bg-[var(--bg-primary)] md:flex">
-                  <div className="h-2 w-2 rounded-full bg-[var(--color-signal-green)]" />
+                <div className="absolute left-3.5 top-2 hidden h-5 w-5 items-center justify-center rounded-full border-2 border-[var(--color-signal-blue)] bg-[var(--bg-primary)] md:flex">
+                  <div className="h-2 w-2 rounded-full bg-[var(--color-signal-blue)]" />
                 </div>
 
                 <div className="glow-card flex-1 rounded-2xl bg-[var(--bg-secondary)] p-6">
                   <div className="mb-2 flex items-center gap-3">
-                    <span className="font-mono text-xs font-bold text-[var(--color-signal-green)]">Fase {num}</span>
+                    <span className="font-mono text-xs font-bold text-[var(--color-signal-blue)]">Fase {num}</span>
                     <span className="text-xs text-[var(--text-tertiary)]">&mdash;</span>
                     <h3 className="text-lg font-bold">{title}</h3>
                   </div>
@@ -555,13 +555,13 @@ export default function AInfraestruturaPage() {
         <div className="grid gap-8 md:grid-cols-2">
           {/* OpenCapital promete */}
           <div className="space-y-6">
-            <h3 className="flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-green)]">
-              <Shield size={14} className="text-[var(--color-signal-green)]" />
+            <h3 className="flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-blue)]">
+              <Shield size={14} className="text-[var(--color-signal-blue)]" />
               A OpenCapital promete
             </h3>
 
             <div className="glow-card rounded-2xl bg-[var(--bg-secondary)] p-6">
-              <span className="mb-1 block font-mono text-xs font-bold text-[var(--color-signal-green)]">01</span>
+              <span className="mb-1 block font-mono text-xs font-bold text-[var(--color-signal-blue)]">01</span>
               <h4 className="mb-2 font-semibold">Inteligência sem caixas-pretas</h4>
               <p className="text-sm text-[var(--text-secondary)]">
                 Cada insight, cada sinal, cada recomendação é rastreável até sua fonte. Transparência total sobre dados e metodologias.
@@ -569,7 +569,7 @@ export default function AInfraestruturaPage() {
             </div>
 
             <div className="glow-card rounded-2xl bg-[var(--bg-secondary)] p-6">
-              <span className="mb-1 block font-mono text-xs font-bold text-[var(--color-signal-green)]">02</span>
+              <span className="mb-1 block font-mono text-xs font-bold text-[var(--color-signal-blue)]">02</span>
               <h4 className="mb-2 font-semibold">Infraestrutura, não dependência</h4>
               <p className="text-sm text-[var(--text-secondary)]">
                 Construímos ferramentas que amplificam sua inteligência. A decisão sempre é sua. Nunca invertemos essa hierarquia.
@@ -577,7 +577,7 @@ export default function AInfraestruturaPage() {
             </div>
 
             <div className="glow-card rounded-2xl bg-[var(--bg-secondary)] p-6">
-              <span className="mb-1 block font-mono text-xs font-bold text-[var(--color-signal-green)]">03</span>
+              <span className="mb-1 block font-mono text-xs font-bold text-[var(--color-signal-blue)]">03</span>
               <h4 className="mb-2 font-semibold">Evolução contínua</h4>
               <p className="text-sm text-[var(--text-secondary)]">
                 A infraestrutura cresce com os mercados. Dados em tempo real, modelos atualizados, sem obsolescência programada.
@@ -612,7 +612,7 @@ export default function AInfraestruturaPage() {
 
         {/* Pacto mútuo */}
         <div className="mt-12 rounded-2xl border border-[var(--border-active)] bg-[var(--bg-secondary)] p-8 text-center">
-          <span className="mb-4 block font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-green)]">Pacto Mútuo</span>
+          <span className="mb-4 block font-mono text-xs font-bold uppercase tracking-widest text-[var(--color-signal-blue)]">Pacto Mútuo</span>
           <blockquote className="text-lg font-semibold leading-relaxed md:text-xl">
             A OpenCapital trata cada usuário como parceiro na construção da nova era financeira.{" "}
             <span className="gradient-text">Ambos investem — ambos prosperam.</span>

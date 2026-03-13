@@ -13,12 +13,12 @@ const downloads = [
 ];
 
 const dos = [
-  "Usar Signal Green como acento, não como cor dominante (30% máx)",
+  "Usar Signal Blue como acento, não como cor dominante (30% máx)",
   "Manter espaçamento generoso, ar é premium",
   "Oferecer ambos os temas (dark e light) e respeitar as diretrizes de cada um",
   "Usar JetBrains Mono para todo dado numérico financeiro",
   "Manter contraste WCAG AA mínimo em todas as combinações",
-  "Usar gradiente de texto para headlines de impacto",
+  "Usar gradiente de texto (azul) para headlines de impacto",
   "Manter zona de segurança de 1x ao redor do logo",
   "Usar logo branco em fundos escuros, preto em claros",
   "Usar versão monocromática quando impressão colorida não for possível",
@@ -26,9 +26,9 @@ const dos = [
 ];
 
 const donts = [
-  "Não usar verde sobre verde (variantes próximas)",
+  "Não usar azul sobre azul (variantes próximas)",
   "Não exceder 2 pesos tipográficos por composição",
-  "Não usar mais de 3 cores por composição (black + white + green)",
+  "Não usar mais de 3 cores por composição (black + white + blue)",
   "Não aplicar efeitos no logo (sombra, brilho, 3D)",
   "Não usar fundos coloridos fora da paleta aprovada",
   "Não usar animações longas ou chamativas, sobriedade é lei",
@@ -45,7 +45,7 @@ const changelog = [
     current: true,
     items: [
       "Identidade visual completa definida",
-      "Paleta Capital Black + Signal Green + neutrals",
+      "Paleta Capital Black + Signal Blue + Signal Purple + neutrals",
       "Tipografia Inter + JetBrains Mono",
       "Design tokens, componentes e animações",
       "Manifesto, arquétipos e tom de voz",
@@ -85,8 +85,8 @@ export default function RecursosPage() {
               key={item.name}
               className="glow-card group flex items-start gap-4 rounded-2xl border border-[var(--border-default)] bg-[var(--bg-secondary)] p-5 transition"
             >
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--color-signal-green)]/10">
-                <Download size={18} className="text-[var(--color-signal-green)]" />
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--color-signal-blue)]/10">
+                <Download size={18} className="text-[var(--color-signal-blue)]" />
               </div>
               <div className="min-w-0 flex-1">
                 <div className="mb-1 flex items-center gap-2">
@@ -107,12 +107,12 @@ export default function RecursosPage() {
       <Section id="dos-donts" num="02" title="Do's & Don'ts" subtitle="Diretrizes de uso para manter a consistência da marca em todas as aplicações.">
         <div className="grid gap-8 md:grid-cols-2">
           {/* Do's */}
-          <div className="rounded-2xl border border-[var(--color-signal-green)]/20 bg-[var(--bg-secondary)] p-6">
+          <div className="rounded-2xl border border-[var(--color-signal-blue)]/20 bg-[var(--bg-secondary)] p-6">
             <div className="mb-6 flex items-center gap-2">
-              <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[var(--color-signal-green)]/10">
-                <Check size={14} className="text-[var(--color-signal-green)]" />
+              <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[var(--color-signal-blue)]/10">
+                <Check size={14} className="text-[var(--color-signal-blue)]" />
               </div>
-              <h3 className="text-sm font-bold uppercase tracking-widest text-[var(--color-signal-green)]">Faça</h3>
+              <h3 className="text-sm font-bold uppercase tracking-widest text-[var(--color-signal-blue)]">Faça</h3>
             </div>
             <div className="space-y-4">
               {dos.map((text) => (
@@ -146,20 +146,20 @@ export default function RecursosPage() {
               {/* Timeline dot */}
               <div
                 className={`absolute -left-[calc(2rem+5px)] top-0 h-2.5 w-2.5 rounded-full ${
-                  entry.current ? "bg-[var(--color-signal-green)] shadow-[0_0_8px_var(--color-signal-green)]" : "bg-[var(--text-tertiary)]"
+                  entry.current ? "bg-[var(--color-signal-blue)] shadow-[0_0_8px_var(--color-signal-blue)]" : "bg-[var(--text-tertiary)]"
                 }`}
               />
 
               <div
                 className={`rounded-2xl border bg-[var(--bg-secondary)] p-6 ${
-                  entry.current ? "border-[var(--color-signal-green)]/30" : "border-[var(--border-default)]"
+                  entry.current ? "border-[var(--color-signal-blue)]/30" : "border-[var(--border-default)]"
                 }`}
               >
                 <div className="mb-4 flex items-center gap-3">
                   <span className="font-mono text-lg font-bold">{entry.version}</span>
                   <span className="text-sm text-[var(--text-tertiary)]">{entry.date}</span>
                   {entry.current && (
-                    <span className="rounded-full bg-[var(--color-signal-green)]/10 px-2.5 py-0.5 font-mono text-[10px] font-bold text-[var(--color-signal-green)]">
+                    <span className="rounded-full bg-[var(--color-signal-blue)]/10 px-2.5 py-0.5 font-mono text-[10px] font-bold text-[var(--color-signal-blue)]">
                       ATUAL
                     </span>
                   )}
@@ -167,7 +167,7 @@ export default function RecursosPage() {
                 <ul className="space-y-2">
                   {entry.items.map((item) => (
                     <li key={item} className="flex items-start gap-2 text-sm text-[var(--text-secondary)]">
-                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-signal-green)]" />
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-signal-blue)]" />
                       {item}
                     </li>
                   ))}
@@ -187,13 +187,13 @@ export default function RecursosPage() {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="glow-card group flex items-start justify-between gap-4 rounded-2xl border border-[var(--border-default)] bg-[var(--bg-secondary)] p-5 transition hover:border-[var(--color-signal-green)]/20"
+              className="glow-card group flex items-start justify-between gap-4 rounded-2xl border border-[var(--border-default)] bg-[var(--bg-secondary)] p-5 transition hover:border-[var(--color-signal-blue)]/20"
             >
               <div>
-                <h3 className="mb-1 text-sm font-semibold transition group-hover:text-[var(--color-signal-green)]">{link.name}</h3>
+                <h3 className="mb-1 text-sm font-semibold transition group-hover:text-[var(--color-signal-blue)]">{link.name}</h3>
                 <p className="text-xs text-[var(--text-tertiary)]">{link.description}</p>
               </div>
-              <ArrowUpRight size={16} className="shrink-0 text-[var(--text-tertiary)] transition group-hover:text-[var(--color-signal-green)]" />
+              <ArrowUpRight size={16} className="shrink-0 text-[var(--text-tertiary)] transition group-hover:text-[var(--color-signal-blue)]" />
             </a>
           ))}
         </div>

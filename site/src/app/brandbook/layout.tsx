@@ -164,7 +164,7 @@ export default function BrandbookLayout({ children }: { children: React.ReactNod
               {hasSections && (
                 <button
                   onClick={() => setSidebarOpen(!sidebarOpen)}
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-[var(--border-default)] bg-[var(--bg-secondary)] text-[var(--text-secondary)] transition hover:border-[var(--border-active)] hover:text-[var(--color-signal-green)] lg:hidden"
+                  className="flex h-9 w-9 items-center justify-center rounded-full border border-[var(--border-default)] bg-[var(--bg-secondary)] text-[var(--text-secondary)] transition hover:border-[var(--border-active)] hover:text-[var(--color-signal-blue)] lg:hidden"
                   aria-label="Abrir navegação"
                 >
                   <List size={16} />
@@ -178,7 +178,7 @@ export default function BrandbookLayout({ children }: { children: React.ReactNod
             <div className="flex items-center gap-3">
               <button
                 onClick={toggleTheme}
-                className="relative flex h-9 w-9 items-center justify-center rounded-full border border-[var(--border-default)] bg-[var(--bg-secondary)] text-[var(--text-secondary)] transition-all duration-300 hover:border-[var(--border-active)] hover:text-[var(--color-signal-green)]"
+                className="relative flex h-9 w-9 items-center justify-center rounded-full border border-[var(--border-default)] bg-[var(--bg-secondary)] text-[var(--text-secondary)] transition-all duration-300 hover:border-[var(--border-active)] hover:text-[var(--color-signal-blue)]"
                 aria-label={theme === "light" ? "Mudar para dark mode" : "Mudar para light mode"}
                 title={theme === "light" ? "Dark mode" : "Light mode"}
               >
@@ -198,7 +198,7 @@ export default function BrandbookLayout({ children }: { children: React.ReactNod
                   href={tab.href}
                   className={`shrink-0 border-b-2 px-4 py-3 text-sm font-medium transition ${
                     active
-                      ? "border-[var(--color-signal-green)] text-[var(--color-signal-green)]"
+                      ? "border-[var(--color-signal-blue)] text-[var(--color-signal-blue)]"
                       : "border-transparent text-[var(--text-tertiary)] hover:text-[var(--text-secondary)]"
                   }`}
                 >
@@ -247,13 +247,13 @@ export default function BrandbookLayout({ children }: { children: React.ReactNod
                         onClick={() => scrollTo(s.id)}
                         className={`group flex w-full items-center gap-2.5 rounded-lg px-3 py-2 text-left text-[13px] leading-tight transition-all ${
                           isActive
-                            ? "bg-[var(--color-signal-green)]/10 font-medium text-[var(--color-signal-green)]"
+                            ? "bg-[var(--color-signal-blue)]/10 font-medium text-[var(--color-signal-blue)]"
                             : "text-[var(--text-tertiary)] hover:bg-[var(--bg-secondary)] hover:text-[var(--text-primary)]"
                         }`}
                       >
                         <span
                           className={`shrink-0 font-mono text-[10px] font-bold tabular-nums ${
-                            isActive ? "text-[var(--color-signal-green)]" : "text-[var(--text-tertiary)]"
+                            isActive ? "text-[var(--color-signal-blue)]" : "text-[var(--text-tertiary)]"
                           }`}
                         >
                           {s.num}
